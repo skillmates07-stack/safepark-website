@@ -3,12 +3,9 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true,
-    domains: ['res.cloudinary.com', 'images.unsplash.com']
+    unoptimized: true
   },
-  experimental: {
-    optimizeCss: true
-  }
+  // Remove any experimental optimizeCss option
 }
 
 module.exports = nextConfig
