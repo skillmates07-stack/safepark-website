@@ -34,6 +34,31 @@ export default function Features() {
 
   return (
     <main className="min-h-screen pt-24 px-4">
+      {/* Navigation */}
+      <nav className="glass fixed top-0 left-0 right-0 z-50 p-4 m-4 rounded-2xl">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">S</span>
+            </div>
+            <a href="/" className="text-white font-bold text-xl">SafePark</a>
+          </div>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="/features" className="text-white transition-colors">Features</a>
+            <a href="/gallery" className="text-white/80 hover:text-white transition-colors">Gallery</a>
+            <a href="/sizes" className="text-white/80 hover:text-white transition-colors">Sizes</a>
+            <a href="/contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
+          </div>
+          
+          <div className="flex items-center space-x-4">
+            <a href="tel:+919600840058" className="glass-button text-white px-4 py-2 rounded-lg font-medium">
+              Call Now
+            </a>
+          </div>
+        </div>
+      </nav>
+
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h1 className="text-5xl font-bold text-white mb-6">
@@ -55,43 +80,14 @@ export default function Features() {
         ))}
       </div>
 
-      {/* Comparison Table */}
-      <div className="max-w-6xl mx-auto glass p-8 rounded-2xl">
-        <h2 className="text-3xl font-bold text-white text-center mb-8">
-          SafePark vs Traditional Sheds
-        </h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-white">
-            <thead>
-              <tr className="border-b border-white/20">
-                <th className="text-left py-4">Feature</th>
-                <th className="text-center py-4">Traditional Shed</th>
-                <th className="text-center py-4">SafePark Carport</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-white/10">
-                <td className="py-4">Portability</td>
-                <td className="text-center py-4">❌ Fixed</td>
-                <td className="text-center py-4">✅ Retractable & Movable</td>
-              </tr>
-              <tr className="border-b border-white/10">
-                <td className="py-4">Installation</td>
-                <td className="text-center py-4">❌ Complex</td>
-                <td className="text-center py-4">✅ Quick Installation</td>
-              </tr>
-              <tr className="border-b border-white/10">
-                <td className="py-4">Material</td>
-                <td className="text-center py-4">❌ Low-grade Steel</td>
-                <td className="text-center py-4">✅ Rust-resistant GI Frame</td>
-              </tr>
-              <tr>
-                <td className="py-4">Space Efficiency</td>
-                <td className="text-center py-4">❌ Occupies Fixed Space</td>
-                <td className="text-center py-4">✅ Collapsible When Not in Use</td>
-              </tr>
-            </tbody>
-          </table>
+      {/* Call to Action */}
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="glass p-8 rounded-2xl">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Protect Your Vehicle?</h2>
+          <p className="text-white/70 mb-6">Get your custom SafePark carport today</p>
+          <a href="tel:+919600840058" className="bg-gradient-primary text-white px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform inline-block">
+            Call +91 9600840058
+          </a>
         </div>
       </div>
     </main>
