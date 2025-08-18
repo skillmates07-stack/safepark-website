@@ -4,7 +4,9 @@ export default function HomePage() {
   return (
     <main className="pt-[120px] bg-gradient-to-br from-[#191825] to-[#21155c] min-h-screen">
       {/* HERO SECTION */}
-      <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-12">
+      {/* Replace the hero section opening tag with this: */}
+<section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-4">
+
         <div className="flex-1 max-w-3xl">
           <div className="inline-flex items-center px-3 py-1 rounded-full glass border border-white/20 text-xs text-white/90 mb-4">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
@@ -245,3 +247,4 @@ export default function HomePage() {
     </main>
   );
 }
+
