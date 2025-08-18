@@ -1,59 +1,58 @@
-// src/app/page.tsx - TIGHTER PROFESSIONAL LAYOUT
+// src/app/page.tsx - COMPLETE PROFESSIONAL HOMEPAGE
 
 export default function HomePage() {
   return (
-    <main className="pt-20 relative overflow-hidden">
+    <main className="pt-16 relative overflow-hidden">
       {/* Floating Background Elements */}
       <div className="floating-shapes"></div>
       
-      {/* HERO SECTION - Compact & Professional */}
-      <section className="relative min-h-screen flex items-center justify-between px-8 lg:px-16 py-8">
+      {/* HERO SECTION */}
+      <section className="relative min-h-screen flex items-center justify-between px-8 lg:px-16 py-4">
         <div className="flex-1 max-w-3xl animate-slide-up">
           {/* Premium Badge */}
-          <div className="inline-flex items-center px-3 py-1 rounded-full glass border border-white/20 text-xs text-white/90 mb-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full glass border border-white/20 text-xs text-white/90 mb-3">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
             Made in India • Premium Quality
           </div>
           
-          {/* Hero Title - Tighter Spacing */}
-          <h1 className="text-6xl lg:text-7xl font-black leading-none mb-4">
+          {/* Hero Title */}
+          <h1 className="text-5xl lg:text-6xl font-black leading-tight mb-3">
             <span className="gradient-text">Smart Shelters.</span><br/>
             <span className="text-white">Lasting</span><br/>
             <span className="text-white">Protection.</span>
           </h1>
           
-          {/* Compact Subtitle */}
-          <p className="text-lg lg:text-xl text-white/80 leading-relaxed mb-4 max-w-2xl">
+          {/* Subtitle */}
+          <p className="text-lg lg:text-xl text-white/80 leading-relaxed mb-3 max-w-2xl">
             Because your car deserves more than just a cover. 
             <span className="text-white font-medium"> Stylish, portable & weatherproof protection</span> 
             for your luxury, classic, and everyday cars.
           </p>
           
-          <p className="text-base text-white/60 mb-6 max-w-xl">
+          <p className="text-base text-white/60 mb-4 max-w-xl">
             Designed for elegance, built for durability in Coimbatore.
           </p>
           
-          {/* Compact Feature Pills */}
-          <div className="flex flex-wrap gap-2 mb-6">
+          {/* Feature Pills */}
+          <div className="flex flex-wrap gap-2 mb-4">
             {[
               "Retractable & Movable",
               "Rust-resistant GI Frame", 
               "Oxford 600D Fabric",
               "UV & Heat Protection"
             ].map((feature, idx) => (
-              <div key={idx} className="glass px-4 py-2 rounded-full border border-white/20 backdrop-blur-xl text-sm">
+              <div key={idx} className="glass px-3 py-1 rounded-full border border-white/20 backdrop-blur-xl text-sm">
                 <span className="text-green-400 mr-2">✓</span>
                 <span className="text-white font-medium">{feature}</span>
               </div>
             ))}
           </div>
           
-          {/* Compact CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-8">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <a href="tel:+919600840058" 
                className="btn-primary px-6 py-3 rounded-xl text-base font-semibold inline-flex items-center justify-center group relative overflow-hidden">
               <span className="relative z-10">Book Your Carport Now</span>
-              <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </a>
             
             <a href="#get-quote" 
@@ -66,7 +65,7 @@ export default function HomePage() {
           </div>
         </div>
         
-        {/* Compact Product Card */}
+        {/* Product Card */}
         <div className="flex-1 max-w-md ml-8 animate-fade-in">
           <div className="card-glass p-6 rounded-2xl relative">
             {/* Quality Badge */}
@@ -84,7 +83,7 @@ export default function HomePage() {
             <h3 className="text-xl font-bold text-white mb-2">SafePark Retractable Carport</h3>
             <p className="text-white/70 mb-4 text-sm">Premium Protection for Your Vehicle</p>
             
-            <div className="space-y-2 mb-6">
+            <div className="space-y-2 mb-4">
               {[
                 "✨ Galvanized Iron Frame",
                 "🔵 Oxford 600D Fabric", 
@@ -99,41 +98,145 @@ export default function HomePage() {
             
             <a href="#gallery" 
                className="w-full bg-gradient-secondary text-white py-2 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center text-sm">
-              <svg className="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-              </svg>
               See Gallery
             </a>
           </div>
         </div>
       </section>
       
-      {/* Compact Location Card */}
-      <section className="px-8 lg:px-16 -mt-16 relative z-10 pb-8">
-        <div className="glass p-6 rounded-2xl max-w-2xl border border-white/20 backdrop-blur-xl">
-          <div className="flex items-center mb-3">
-            <div className="w-3 h-3 bg-red-500 rounded-full mr-3 animate-pulse"></div>
-            <span className="text-white font-bold text-base">Made in Coimbatore, Tamil Nadu</span>
+      {/* FEATURES SECTION */}
+      <section id="features" className="scroll-mt-24 px-8 lg:px-16 py-16 relative">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Why Choose SafePark?</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: "🛡️",
+                title: "Premium Protection",
+                desc: "Oxford 600D fabric with 100% UV protection and waterproof coating"
+              },
+              {
+                icon: "⚡",
+                title: "Quick Setup",
+                desc: "Install in minutes with our retractable design and galvanized iron frame"
+              },
+              {
+                icon: "🏠",
+                title: "Perfect Fit",
+                desc: "Designed for Indian homes and weather conditions in Coimbatore"
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="card-glass p-6 rounded-xl text-center">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-white/70">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY SECTION */}
+      <section id="gallery" className="scroll-mt-24 px-8 lg:px-16 py-16 bg-black/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">See SafePark in Action</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1,2,3,4,5,6].map((item) => (
+              <div key={item} className="glass rounded-xl p-4">
+                <div className="bg-gradient-primary rounded-lg h-48 flex items-center justify-center">
+                  <span className="text-white text-2xl">🚗</span>
+                </div>
+                <p className="text-white/80 text-sm mt-2">CarPort Installation #{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS SECTION */}
+      <section className="px-8 lg:px-16 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">What Our Customers Say</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                name: "Rajesh Kumar",
+                location: "Coimbatore",
+                text: "SafePark saved my car from the harsh sun. Quality is excellent!"
+              },
+              {
+                name: "Priya Sharma", 
+                location: "Tamil Nadu",
+                text: "Easy installation and looks great. Highly recommend SafePark!"
+              }
+            ].map((review, idx) => (
+              <div key={idx} className="glass p-6 rounded-xl">
+                <p className="text-white/80 mb-4">"{review.text}"</p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gradient-primary rounded-full mr-3"></div>
+                  <div>
+                    <div className="text-white font-semibold">{review.name}</div>
+                    <div className="text-white/60 text-sm">{review.location}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section id="contact" className="scroll-mt-24 px-8 lg:px-16 py-16 bg-black/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">Ready to Protect Your Car?</h2>
+          <p className="text-xl text-white/80 mb-8">Get your premium SafePark carport installed today</p>
+          
+          <div className="glass p-8 rounded-2xl mb-8">
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-2xl mb-2">📞</div>
+                <h3 className="font-bold text-white mb-1">Call Us</h3>
+                <a href="tel:+919600840058" className="text-white/80 hover:text-white">+91 9600840058</a>
+              </div>
+              <div>
+                <div className="text-2xl mb-2">💬</div>
+                <h3 className="font-bold text-white mb-1">WhatsApp</h3>
+                <a href="https://wa.me/919600840058" className="text-white/80 hover:text-white">Message Us</a>
+              </div>
+              <div>
+                <div className="text-2xl mb-2">📍</div>
+                <h3 className="font-bold text-white mb-1">Location</h3>
+                <p className="text-white/80">Coimbatore, Tamil Nadu</p>
+              </div>
+            </div>
           </div>
           
-          <div className="flex flex-wrap gap-4 text-white/80 text-sm">
-            <a href="tel:+919600840058" className="flex items-center hover:text-white transition-colors">
-              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              +91 9600840058
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+919600840058" 
+               className="btn-primary px-8 py-4 rounded-xl text-lg font-semibold">
+              Call for Free Quote
             </a>
-            
-            <a href="https://wa.me/919600840058" className="flex items-center hover:text-white transition-colors">
-              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-                <path d="M11.893 8.334c-.144-.307-.298-.314-.454-.314-.121-.01-.26-.009-.398-.009-.406 0-.967.145-1.473.725-.506.579-.967 1.388-.967 3.377 0 1.99 1.145 3.598 1.305 3.846.159.248 2.246 3.777 5.604 5.028 2.789 1.04 3.359.833 3.966.78.607-.052 1.946-.8 2.219-1.571.273-.771.273-1.434.191-1.571-.083-.138-.303-.22-.633-.386-.33-.165-1.955-.964-2.258-1.075-.303-.111-.525-.166-.746.166-.22.33-.853 1.075-1.048 1.297-.194.22-.387.248-.718.083-.33-.166-1.398-.515-2.662-1.642-.985-.877-1.65-1.962-1.844-2.292-.195-.33-.021-.508.145-.672.148-.148.33-.386.495-.58.165-.193.22-.33.33-.55.111-.22.056-.414-.027-.58-.083-.165-.746-1.797-1.023-2.462z"/>
-              </svg>
-              WhatsApp
+            <a href="https://wa.me/919600840058" 
+               className="glass-button px-8 py-4 rounded-xl text-lg font-semibold border border-white/30">
+              WhatsApp Now
             </a>
           </div>
         </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className="bg-black/40 px-8 lg:px-16 py-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <span className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center text-white font-bold">
+              S
+            </span>
+            <span className="text-white font-bold text-xl">SafePark</span>
+          </div>
+          <p className="text-white/60 mb-4">Premium Retractable Carport Solutions</p>
+          <p className="text-white/40 text-sm">© 2025 SafePark. Made in Coimbatore, Tamil Nadu</p>
+        </div>
+      </footer>
     </main>
   );
 }
