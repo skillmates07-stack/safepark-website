@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 export default function Sizes() {
   const [selectedSize, setSelectedSize] = useState(2);
-
   const sizes = [
     {
       id: 1,
@@ -36,202 +35,126 @@ export default function Sizes() {
       color: "from-pink-500 to-red-600"
     }
   ];
-
   const selectedModel = sizes.find(size => size.id === selectedSize);
 
   return (
-    <main className="min-h-screen pt-24 px-4">
-      {/* Navigation */}
-      <nav className="glass fixed top-0 left-0 right-0 z-50 p-4 m-4 rounded-2xl">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">S</span>
-            </div>
-            <a href="/" className="text-white font-bold text-xl">SafePark</a>
-          </div>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="/features" className="text-white/80 hover:text-white transition-colors">Features</a>
-            <a href="/gallery" className="text-white/80 hover:text-white transition-colors">Gallery</a>
-            <a href="/sizes" className="text-white transition-colors">Sizes</a>
-            <a href="/contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
-          </div>
-          
-          <div className="flex items-center space-x-4">
-            <a href="tel:+919600840058" className="glass-button text-white px-4 py-2 rounded-lg font-medium">
-              Call Now
-            </a>
-          </div>
-        </div>
-      </nav>
-
+    <main className="min-h-screen pt-20 px-4 bg-gradient-to-br from-[#191825] to-[#21155c]">
       {/* Header */}
-      <div className="max-w-7xl mx-auto text-center mb-16">
-        <h1 className="text-5xl font-bold text-white mb-6">
-          Choose Your <span className="gradient-text">SafePark</span> Size
+      <div className="max-w-7xl mx-auto text-center mb-10">
+        <h1 className="text-5xl font-bold text-white mb-4">
+          Choose Your <span className="bg-gradient-to-tr from-purple-400 to-blue-400 bg-clip-text text-transparent">SafePark</span> Size
         </h1>
         <p className="text-xl text-white/70 max-w-3xl mx-auto">
           Find the perfect carport size for your vehicle. All models feature premium GI frame and Oxford 600D fabric.
         </p>
       </div>
-
       {/* Size Selector Cards */}
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8 mb-16">
+      <div className="max-w-7xl mx-auto grid gap-8 lg:grid-cols-3 mb-10">
         {sizes.map((size) => (
-          <div 
+          <div
             key={size.id}
-            className={`glass p-8 rounded-2xl cursor-pointer transition-all hover:scale-105 ${
-              selectedSize === size.id ? 'ring-2 ring-purple-500 scale-105' : ''
-            } ${size.popular ? 'relative' : ''}`}
+            className={`bg-white/10 backdrop-blur-md border ${size.popular ? 'border-purple-400/80' : 'border-white/20'
+              } p-8 rounded-2xl cursor-pointer transition-all hover:scale-105 shadow-xl relative
+              ${selectedSize === size.id ? 'ring-2 ring-purple-400 scale-105' : ''}
+              `}
             onClick={() => setSelectedSize(size.id)}
           >
             {size.popular && (
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-gradient-primary text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                  ⭐ Most Popular
-                </span>
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">⭐ Most Popular</span>
               </div>
             )}
-            
-            <div className="text-center mb-6">
+
+            <div className="text-center mb-5">
               <div className={`w-16 h-16 bg-gradient-to-r ${size.color} rounded-2xl mx-auto mb-4 flex items-center justify-center`}>
                 <span className="text-white text-2xl font-bold">{size.id}</span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">{size.name}</h3>
-              <p className="text-3xl font-bold gradient-text mb-2">{size.price}</p>
-              <p className="text-white/60">One-time payment + installation</p>
+              <p className="text-3xl font-bold bg-gradient-to-tr from-purple-400 to-blue-400 bg-clip-text text-transparent mb-1">{size.price}</p>
+              <p className="text-white/60 text-xs">One-time payment + installation</p>
             </div>
-
             <div className="space-y-4 mb-6">
-              <div className="glass-dark p-4 rounded-xl">
-                <h4 className="text-white font-semibold mb-2">📏 Dimensions</h4>
+              <div className="bg-black/20 p-4 rounded-xl">
+                <h4 className="text-white font-semibold mb-1">📏 Dimensions</h4>
                 <p className="text-white/80 font-mono text-sm">{size.dimensions}</p>
               </div>
-              
-              <div className="glass-dark p-4 rounded-xl">
-                <h4 className="text-white font-semibold mb-2">🚗 Suitable For</h4>
+              <div className="bg-black/20 p-4 rounded-xl">
+                <h4 className="text-white font-semibold mb-1">🚗 Suitable For</h4>
                 <p className="text-white/80">{size.suitable}</p>
               </div>
-              
-              <div className="glass-dark p-4 rounded-xl">
-                <h4 className="text-white font-semibold mb-2">🔧 Example Vehicles</h4>
+              <div className="bg-black/20 p-4 rounded-xl">
+                <h4 className="text-white font-semibold mb-1">🔧 Example Vehicles</h4>
                 <ul className="text-white/70 text-sm space-y-1">
                   {size.vehicles.map((vehicle, idx) => (
                     <li key={idx} className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-gradient-primary rounded-full"></span>
+                      <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-600 rounded-full"></span>
                       <span>{vehicle}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-
-            <button 
-              className={`w-full py-3 rounded-xl font-semibold transition-all ${
-                selectedSize === size.id 
-                  ? 'bg-gradient-primary text-white shadow-lg' 
-                  : 'glass-button text-white/80 hover:text-white'
-              }`}
+            <button
+              className={`w-full py-3 rounded-xl font-semibold transition-all
+                ${selectedSize === size.id
+                  ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg'
+                  : 'bg-white/10 text-white/80 hover:text-white hover:bg-white/20'}
+              `}
             >
               {selectedSize === size.id ? '✓ Selected' : 'Select This Size'}
             </button>
           </div>
         ))}
       </div>
-
       {/* Selected Model Details */}
       {selectedModel && (
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="glass p-8 rounded-2xl">
+        <div className="max-w-4xl mx-auto mb-10">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-2xl">
             <h2 className="text-3xl font-bold text-white text-center mb-8">
               {selectedModel.name} - Specifications
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
-                    <span className="text-2xl">🏗️</span>
-                    <span>Frame Materials</span>
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span className="text-2xl">🏗️</span>Frame Materials
                   </h3>
-                  <ul className="text-white/70 space-y-2">
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                      <span>Galvanized Iron (GI) frame</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                      <span>Rust-resistant coating</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                      <span>Industrial-grade strength</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                      <span>10-year warranty on frame</span>
-                    </li>
+                  <ul className="text-white/70 space-y-2 text-sm">
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-green-500 rounded-full"></span>Galvanized Iron (GI) frame</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-green-500 rounded-full"></span>Rust-resistant coating</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-green-500 rounded-full"></span>Industrial-grade strength</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-green-500 rounded-full"></span>10-year warranty on frame</li>
                   </ul>
                 </div>
-                
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
-                    <span className="text-2xl">⚓</span>
-                    <span>Anchoring System</span>
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span className="text-2xl">⚓</span>Anchoring System
                   </h3>
-                  <ul className="text-white/70 space-y-2">
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                      <span>Ground-level anchoring</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                      <span>Wind-resistant up to 60 kmph</span>
-                    </li>
+                  <ul className="text-white/70 space-y-2 text-sm">
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-blue-500 rounded-full"></span>Ground-level anchoring</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-blue-500 rounded-full"></span>Wind-resistant up to 60 kmph</li>
                   </ul>
                 </div>
               </div>
-              
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
-                    <span className="text-2xl">🛡️</span>
-                    <span>Fabric Protection</span>
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span className="text-2xl">🛡️</span>Fabric Protection
                   </h3>
-                  <ul className="text-white/70 space-y-2">
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                      <span>Oxford 600D material</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                      <span>100% waterproof</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                      <span>UV-resistant</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                      <span>5-year fade-proof guarantee</span>
-                    </li>
+                  <ul className="text-white/70 space-y-2 text-sm">
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-purple-500 rounded-full"></span>Oxford 600D material</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-purple-500 rounded-full"></span>100% waterproof</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-purple-500 rounded-full"></span>UV-resistant</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-purple-500 rounded-full"></span>5-year fade-proof guarantee</li>
                   </ul>
                 </div>
-                
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
-                    <span className="text-2xl">📍</span>
-                    <span>Installation</span>
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span className="text-2xl">📍</span>Installation
                   </h3>
-                  <ul className="text-white/70 space-y-2">
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                      <span>Free installation in Coimbatore</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                      <span>Setup completed in 2-4 hours</span>
-                    </li>
+                  <ul className="text-white/70 space-y-2 text-sm">
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-yellow-500 rounded-full"></span>Free installation in Coimbatore</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-yellow-500 rounded-full"></span>Setup completed in 2-4 hours</li>
                   </ul>
                 </div>
               </div>
@@ -239,34 +162,30 @@ export default function Sizes() {
           </div>
         </div>
       )}
-
       {/* Order Now Section */}
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="glass p-8 rounded-2xl">
+      <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-2xl">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Order Your SafePark?</h2>
-          <p className="text-white/70 mb-6">
+          <p className="text-white/70 mb-4">
             Selected: <span className="font-semibold text-white">{selectedModel?.name}</span> - {selectedModel?.price}
           </p>
-          <p className="text-white/60 mb-8">Free delivery and installation in Coimbatore • 1-year complete warranty</p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <a href="tel:+919600840058" className="bg-gradient-primary text-white px-12 py-4 rounded-xl text-xl font-semibold hover:scale-105 transition-transform">
-              📞 Call +91 9600840058
+          <p className="text-white/60 mb-6 text-sm">Free delivery and installation in Coimbatore &bull; 1-year warranty</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-3">
+            <a href="tel:+919600840058"
+              className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-12 py-4 rounded-xl text-lg font-semibold hover:scale-105 transition">
+              📞 Call {selectedModel?.price}
             </a>
-            <a href="https://wa.me/919600840058?text=Hi! I'm interested in SafePark Model 2 - Standard for ₹18,500. Please send me more details." 
-               target="_blank" rel="noopener noreferrer"
-               className="glass-button text-white px-12 py-4 rounded-xl text-xl font-semibold flex items-center justify-center space-x-2">
-              <span>💬</span>
-              <span>WhatsApp Quote</span>
+            <a href={`https://wa.me/919600840058?text=Hi! I'm interested in ${encodeURIComponent(selectedModel?.name || '')} for ${selectedModel?.price}. Please send me more details.`}
+              target="_blank" rel="noopener noreferrer"
+              className="bg-white/10 text-white px-12 py-4 rounded-xl text-lg font-semibold hover:bg-white/20 transition">
+              💬 WhatsApp Quote
             </a>
           </div>
-          
-          <p className="text-white/60 text-sm">
-            📍 Gandhi Nagar, Urumandapalayam, Coimbatore, Tamil Nadu - 641030
+          <p className="text-white/60 text-xs mt-2">
+            📍 Gandhi Nagar, Coimbatore, Tamil Nadu - 641030
           </p>
         </div>
       </div>
     </main>
   );
 }
-
