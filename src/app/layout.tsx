@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Glassy Frosted Header - REDUCED HEIGHT */}
+        {/* Frosted Glass Fixed Header */}
         <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[98vw] max-w-6xl rounded-2xl shadow-xl">
           <nav
             className="flex items-center justify-between w-full px-8 py-2
@@ -64,8 +64,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
         
-        {/* Main with TIGHT spacing - REDUCED PADDING */}
-        <main className="pt-20 bg-gradient-to-br from-[#191825] to-[#21155c] min-h-screen">
+        {/* Main content area with tight spacing to hero section */}
+        <main className="pt-16 bg-gradient-to-br from-[#191825] to-[#21155c] min-h-screen">
           {children}
         </main>
       </body>
