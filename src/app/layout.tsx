@@ -1,3 +1,5 @@
+// src/app/layout.tsx
+
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -20,18 +22,21 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 w-full h-20">
           <nav className="glass h-full backdrop-blur-md bg-white/10 dark:bg-black/20 border border-white/10 flex items-center">
             <div className="flex justify-between items-center w-full px-8">
+              {/* Logo */}
               <div className="flex items-center space-x-2">
                 <span className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
                   S
                 </span>
                 <span className="text-white font-bold text-xl">SafePark</span>
               </div>
+              {/* Navigation */}
               <nav className="flex space-x-6">
                 <a href="#features" className="text-white/80 hover:text-white transition-colors">Features</a>
                 <a href="#gallery" className="text-white/80 hover:text-white transition-colors">Gallery</a>
                 <a href="#sizes" className="text-white/80 hover:text-white transition-colors">Sizes</a>
                 <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
               </nav>
+              {/* Actions */}
               <div className="flex items-center space-x-4">
                 <a href="tel:+919600840058" className="glass-button text-white px-4 py-2 rounded-lg font-medium">
                   Call Now
@@ -43,6 +48,8 @@ export default function RootLayout({
             </div>
           </nav>
         </header>
+
+        {/* Main Content with padding to prevent overlay */}
         <main className="pt-20">
           {children}
         </main>
