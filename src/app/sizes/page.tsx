@@ -1,9 +1,9 @@
 "use client";
-import { useState } from 'react';
+import { useState } from "react";
 
-export default function Sizes() {
-  const [selectedSize, setSelectedSize] = useState(2);
-  const sizes = [
+export default function Pricing() {
+  const [selectedPrice, setSelectedPrice] = useState(2);
+  const models = [
     {
       id: 1,
       name: "Model 1 - Compact",
@@ -16,7 +16,7 @@ export default function Sizes() {
     },
     {
       id: 2,
-      name: "Model 2 - Standard", 
+      name: "Model 2 - Standard",
       dimensions: "6.0m (L) × 2.6m (W) × 2.5m (H)",
       suitable: "Most Sedans & Mid-size SUVs",
       vehicles: ["Toyota Camry", "Honda Accord", "Hyundai Verna", "Skoda Octavia", "Mahindra XUV500"],
@@ -35,57 +35,57 @@ export default function Sizes() {
       color: "from-pink-500 to-red-600"
     }
   ];
-  const selectedModel = sizes.find(size => size.id === selectedSize);
+  const selectedModel = models.find((model) => model.id === selectedPrice);
 
   return (
     <main className="min-h-screen pt-20 px-4 bg-gradient-to-br from-[#191825] to-[#21155c]">
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-10">
         <h1 className="text-5xl font-bold text-white mb-4">
-          Choose Your <span className="bg-gradient-to-tr from-purple-400 to-blue-400 bg-clip-text text-transparent">SafePark</span> Size
+          Choose Your <span className="bg-gradient-to-tr from-purple-400 to-blue-400 bg-clip-text text-transparent">SafePark</span> Pricing
         </h1>
         <p className="text-xl text-white/70 max-w-3xl mx-auto">
-          Find the perfect carport size for your vehicle. All models feature premium GI frame and Oxford 600D fabric.
+          Find the perfect plan for your vehicle. All models use a premium GI frame and Oxford 600D fabric.
         </p>
       </div>
-      {/* Size Selector Cards */}
+
+      {/* Pricing Selector Cards */}
       <div className="max-w-7xl mx-auto grid gap-8 lg:grid-cols-3 mb-10">
-        {sizes.map((size) => (
+        {models.map((model) => (
           <div
-            key={size.id}
-            className={`bg-white/10 backdrop-blur-md border ${size.popular ? 'border-purple-400/80' : 'border-white/20'
+            key={model.id}
+            className={`bg-white/10 backdrop-blur-md border ${model.popular ? "border-purple-400/80" : "border-white/20"
               } p-8 rounded-2xl cursor-pointer transition-all hover:scale-105 shadow-xl relative
-              ${selectedSize === size.id ? 'ring-2 ring-purple-400 scale-105' : ''}
+              ${selectedPrice === model.id ? "ring-2 ring-purple-400 scale-105" : ""}
               `}
-            onClick={() => setSelectedSize(size.id)}
+            onClick={() => setSelectedPrice(model.id)}
           >
-            {size.popular && (
+            {model.popular && (
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">⭐ Most Popular</span>
               </div>
             )}
-
             <div className="text-center mb-5">
-              <div className={`w-16 h-16 bg-gradient-to-r ${size.color} rounded-2xl mx-auto mb-4 flex items-center justify-center`}>
-                <span className="text-white text-2xl font-bold">{size.id}</span>
+              <div className={`w-16 h-16 bg-gradient-to-r ${model.color} rounded-2xl mx-auto mb-4 flex items-center justify-center`}>
+                <span className="text-white text-2xl font-bold">{model.id}</span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">{size.name}</h3>
-              <p className="text-3xl font-bold bg-gradient-to-tr from-purple-400 to-blue-400 bg-clip-text text-transparent mb-1">{size.price}</p>
+              <h3 className="text-2xl font-bold text-white mb-2">{model.name}</h3>
+              <p className="text-3xl font-bold bg-gradient-to-tr from-purple-400 to-blue-400 bg-clip-text text-transparent mb-1">{model.price}</p>
               <p className="text-white/60 text-xs">One-time payment + installation</p>
             </div>
             <div className="space-y-4 mb-6">
               <div className="bg-black/20 p-4 rounded-xl">
                 <h4 className="text-white font-semibold mb-1">📏 Dimensions</h4>
-                <p className="text-white/80 font-mono text-sm">{size.dimensions}</p>
+                <p className="text-white/80 font-mono text-sm">{model.dimensions}</p>
               </div>
               <div className="bg-black/20 p-4 rounded-xl">
                 <h4 className="text-white font-semibold mb-1">🚗 Suitable For</h4>
-                <p className="text-white/80">{size.suitable}</p>
+                <p className="text-white/80">{model.suitable}</p>
               </div>
               <div className="bg-black/20 p-4 rounded-xl">
                 <h4 className="text-white font-semibold mb-1">🔧 Example Vehicles</h4>
                 <ul className="text-white/70 text-sm space-y-1">
-                  {size.vehicles.map((vehicle, idx) => (
+                  {model.vehicles.map((vehicle, idx) => (
                     <li key={idx} className="flex items-center space-x-2">
                       <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-600 rounded-full"></span>
                       <span>{vehicle}</span>
@@ -96,12 +96,12 @@ export default function Sizes() {
             </div>
             <button
               className={`w-full py-3 rounded-xl font-semibold transition-all
-                ${selectedSize === size.id
+                ${selectedPrice === model.id
                   ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg'
                   : 'bg-white/10 text-white/80 hover:text-white hover:bg-white/20'}
               `}
             >
-              {selectedSize === size.id ? '✓ Selected' : 'Select This Size'}
+              {selectedPrice === model.id ? '✓ Selected' : 'Select This Option'}
             </button>
           </div>
         ))}
@@ -162,6 +162,7 @@ export default function Sizes() {
           </div>
         </div>
       )}
+
       {/* Order Now Section */}
       <div className="max-w-4xl mx-auto text-center mb-16">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-2xl">
@@ -171,13 +172,18 @@ export default function Sizes() {
           </p>
           <p className="text-white/60 mb-6 text-sm">Free delivery and installation in Coimbatore &bull; 1-year warranty</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-3">
-            <a href="tel:+919600840058"
-              className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-12 py-4 rounded-xl text-lg font-semibold hover:scale-105 transition">
-              📞 Call {selectedModel?.price}
+            <a
+              href="tel:+919600840058"
+              className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:scale-105 transition"
+            >
+              📞 Call +91 9600840058 for {selectedModel?.price}
             </a>
-            <a href={`https://wa.me/919600840058?text=Hi! I'm interested in ${encodeURIComponent(selectedModel?.name || '')} for ${selectedModel?.price}. Please send me more details.`}
-              target="_blank" rel="noopener noreferrer"
-              className="bg-white/10 text-white px-12 py-4 rounded-xl text-lg font-semibold hover:bg-white/20 transition">
+            <a
+              href={`https://wa.me/919600840058?text=Hi! I'm interested in ${encodeURIComponent(selectedModel?.name || "")} for ${selectedModel?.price}. Please send me more details.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/10 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/20 transition"
+            >
               💬 WhatsApp Quote
             </a>
           </div>
