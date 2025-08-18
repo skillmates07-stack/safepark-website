@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 { name: "Features", href: "/#features" },
                 { name: "Gallery", href: "/#gallery" },
                 { name: "Pricing", href: "/pricing" },
-                { name: "Contact", href: "/#contact" }
+                { name: "Sizes", href: "/#sizes" }
               ].map((link) => (
                 <a
                   key={link.name}
@@ -72,5 +72,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
 
 
