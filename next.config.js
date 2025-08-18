@@ -3,9 +3,17 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true
+    unoptimized: true,
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/pricing',
+        destination: '/sizes',
+      },
+    ];
   },
   // Remove any experimental optimizeCss option
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
