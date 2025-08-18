@@ -1,52 +1,55 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+// src/app/layout.tsx
 
-const inter = Inter({ subsets: ['latin'] })
+import "./globals.css";
+import { Inter } from "next/font/google";
 
-export const metadata: Metadata = {
-  title: 'SafePark - Premium Retractable Carports | Coimbatore',
-  description: 'SafePark offers stylish, portable & weatherproof retractable carports. Protect your luxury cars with our galvanized frames and Oxford 600D fabric. Made in Coimbatore.',
-  keywords: 'retractable carport, car shelter, vehicle protection, Coimbatore, weatherproof carport, luxury car protection, galvanized frame, Oxford 600D fabric',
-  authors: [{ name: 'SafePark India' }],
-  viewport: 'width=device-width, initial-scale=1',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'SafePark - Premium Retractable Carports',
-    description: 'Protect your luxury cars with SafePark retractable carports. Made in Coimbatore with premium materials.',
-    type: 'website',
-    locale: 'en_IN',
-  }
-}
+const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export const metadata = {
+  title: "SafePark",
+  description: "Premium Retractable Carport Solutions",
+};
+
+export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen antialiased`}>
-        {/* Animated background gradients */}
-        <div className="fixed inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-900/20 to-pink-900/20 animate-pulse"></div>
-        <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-slate-900/10 to-transparent"></div>
+    <html lang="en">
+      <body className={inter.className}>
+        {/* Sticky Header */}
+        <header className="sticky top-0 z-50 w-full h-20">
+          <nav className="glass h-full backdrop-blur-md bg-white/10 dark:bg-black/20 border border-white/10 flex items-center">
+            <div className="flex justify-between items-center w-full px-8">
+              {/* Left: Logo */}
+              <div className="flex items-center space-x-2">
+                <span className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                  S
+                </span>
+                <span className="text-white font-bold text-xl">SafePark</span>
+              </div>
+              {/* Middle: Nav Links */}
+              <nav className="flex space-x-6">
+                <a href="#features" className="text-white/80 hover:text-white transition-colors">Features</a>
+                <a href="#gallery" className="text-white/80 hover:text-white transition-colors">Gallery</a>
+                <a href="#sizes" className="text-white/80 hover:text-white transition-colors">Sizes</a>
+                <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
+              </nav>
+              {/* Right: Buttons */}
+              <div className="flex items-center space-x-4">
+                <a href="tel:+919600840058" className="glass-button text-white px-4 py-2 rounded-lg font-medium">
+                  Call Now
+                </a>
+                <a href="#get-quote" className="bg-gradient-primary text-white px-6 py-2 rounded-lg font-medium hover:scale-105 transition-transform">
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </nav>
+        </header>
         
-        {/* Floating glass orbs for ambient effect */}
-        <div className="fixed top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-xl animate-float"></div>
-        <div className="fixed bottom-10 right-10 w-40 h-40 bg-gradient-to-r from-pink-500/10 to-blue-500/10 rounded-full blur-xl animate-float" style={{animationDelay: '2s'}}></div>
-        
-        {/* Main content */}
-        <div className="relative z-10 min-h-screen">
+        {/* Main Content with top padding */}
+        <main className="pt-20">
           {children}
-        </div>
-        
-        {/* Noise texture overlay for premium feel */}
-        <div className="fixed inset-0 opacity-20 mix-blend-soft-light pointer-events-none"
-             style={{
-               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-             }}>
-        </div>
+        </main>
       </body>
     </html>
-  )
+  );
 }
