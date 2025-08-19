@@ -23,19 +23,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Header with Dark Green Theme */}
-        <header className="fixed top-4 left-1/2 -translate-x-1/2 z-40 w-[98vw] max-w-6xl rounded-2xl shadow-xl shadow-green-900/20">
-          <nav className="flex items-center justify-between w-full px-8 py-2 bg-black/90 backdrop-blur-md border border-green-600/30 rounded-2xl">
+        {/* Enhanced Glassy Header */}
+        <header className="fixed top-4 left-1/2 -translate-x-1/2 z-40 w-[95vw] max-w-6xl">
+          <nav className="flex items-center justify-between w-full px-8 py-4 bg-black/30 backdrop-blur-xl border border-green-400/20 rounded-2xl shadow-2xl shadow-green-900/20 transition-all duration-300 hover:bg-black/40 hover:shadow-green-900/30">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-2">
-              <span className="w-8 h-8 bg-gradient-to-tr from-green-500 to-green-400 rounded-lg flex items-center justify-center text-black font-bold text-lg shadow-lg shadow-green-500/30">
+            <a href="/" className="flex items-center gap-3 hover:scale-105 transition-transform duration-300">
+              <span className="w-10 h-10 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center text-black font-bold text-xl shadow-lg shadow-green-500/30">
                 S
               </span>
-              <span className="text-white font-extrabold text-lg tracking-tight">SafePark</span>
+              <span className="text-white font-extrabold text-xl tracking-tight">SafePark</span>
             </a>
 
-            {/* Navigation */}
-            <nav className="hidden md:flex gap-10 flex-1 justify-center">
+            {/* Navigation Links */}
+            <nav className="hidden md:flex gap-8 flex-1 justify-center">
               {[
                 { name: "Features", href: "/#features" },
                 { name: "Gallery", href: "/#gallery" },
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a
                   key={link.name}
                   href={link.href}
-                  className="relative text-gray-300 hover:text-white font-medium px-2 py-1 transition before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-0 before:bg-green-500 before:rounded-full before:transition-all hover:before:w-full"
+                  className="relative text-gray-200 hover:text-white font-semibold px-3 py-2 rounded-lg transition-all duration-300 hover:bg-green-500/10 before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-0 before:bg-green-400 before:rounded-full before:transition-all hover:before:w-full"
                 >
                   {link.name}
                 </a>
@@ -56,13 +56,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex items-center gap-3">
               <a
                 href="tel:+919600840058"
-                className="border border-green-600 text-white text-sm px-4 py-2 rounded-md font-semibold shadow-md hover:bg-green-900/50 transition"
+                className="border border-green-400/40 bg-green-500/10 backdrop-blur-sm text-white text-sm px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-green-500/20 hover:border-green-400/60 transition-all duration-300"
               >
                 Call Now
               </a>
               <button
                 onClick={() => setShowFeedback(true)}
-                className="bg-green-600 hover:bg-green-700 text-white text-sm px-6 py-2 rounded-md font-semibold shadow-md shadow-green-500/20 hover:shadow-lg transition"
+                className="bg-green-600/90 backdrop-blur-sm hover:bg-green-600 text-white text-sm px-5 py-2.5 rounded-lg font-semibold shadow-lg shadow-green-600/20 hover:scale-105 hover:shadow-green-600/30 transition-all duration-300"
               >
                 💬 Feedback
               </button>
@@ -70,26 +70,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
         
-        {/* Main Content with Dark Green Background */}
-        <main className="pt-6 bg-gradient-to-br from-black via-[#081c15] to-[#084d3d] min-h-screen">
+        {/* Main Content with Adjusted Padding */}
+        <main className="pt-24 bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
           {children}
         </main>
 
-        {/* Feedback Modal with Dark Green Theme */}
+        {/* Enhanced Feedback Modal */}
         {showFeedback && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-gradient-to-br from-[#03241e] to-[#042c27] backdrop-blur-md border border-green-600/30 rounded-2xl p-8 max-w-md w-full shadow-2xl shadow-green-900/20">
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            <div className="bg-black/40 backdrop-blur-xl border border-green-400/20 rounded-2xl p-8 max-w-md w-full shadow-2xl shadow-green-900/30">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-2xl font-bold text-white">Share Your Feedback</h3>
                 <button
                   onClick={() => setShowFeedback(false)}
-                  className="text-gray-400 hover:text-white text-2xl transition"
+                  className="text-gray-400 hover:text-white text-2xl transition-colors duration-300"
                 >
                   ×
                 </button>
               </div>
               
-              <p className="text-green-400 text-center mb-6 text-sm">
+              <p className="text-green-400/80 text-center mb-6 text-sm">
                 Your thoughts help us improve SafePark! Share questions, suggestions, or any feedback.
               </p>
               
@@ -97,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 value={feedbackText}
                 onChange={(e) => setFeedbackText(e.target.value)}
                 placeholder="What's on your mind? Write anything here..."
-                className="w-full h-32 bg-black/50 border border-green-600/30 rounded-xl p-4 text-white placeholder-green-400/50 resize-none outline-none mb-6 focus:border-green-500 transition"
+                className="w-full h-32 bg-black/30 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 text-white placeholder-green-400/50 resize-none outline-none mb-6 focus:border-green-400/50 focus:bg-black/40 transition-all duration-300"
                 autoFocus
               />
               
@@ -107,14 +107,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     setShowFeedback(false);
                     setFeedbackText('');
                   }}
-                  className="flex-1 bg-black/50 text-white py-3 rounded-xl border border-green-600/30 hover:bg-green-900/30 transition"
+                  className="flex-1 bg-white/10 backdrop-blur-sm text-white py-3 rounded-xl border border-gray-500/20 hover:bg-white/20 transition-all duration-300"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleSubmitFeedback}
                   disabled={!feedbackText.trim()}
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition disabled:opacity-50"
+                  className="flex-1 bg-green-600/90 backdrop-blur-sm hover:bg-green-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 disabled:opacity-50 shadow-lg shadow-green-600/20"
                 >
                   Send Feedback
                 </button>
