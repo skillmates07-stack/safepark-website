@@ -1,29 +1,29 @@
 export default function HomePage() {
   return (
-    <main className="pt-[120px] bg-gradient-to-br from-[#191825] to-[#21155c] min-h-screen">
+    <main className="pt-[120px] bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 min-h-screen">
       {/* HERO SECTION */}
       <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-4">
         <div className="flex-1 max-w-3xl">
-          <div className="inline-flex items-center px-3 py-1 rounded-full glass border border-white/20 text-xs text-white/90 mb-4">
-            <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-blue-300/20 text-xs text-blue-100 mb-4">
+            <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></span>
             Made in India • Premium Quality
           </div>
           
           <h1 className="text-5xl lg:text-6xl font-black leading-tight mb-4">
-            <span className="bg-gradient-to-tr from-purple-400 to-blue-400 bg-clip-text text-transparent">Smart Shelters.</span><br/>
-            <span className="text-white">Lasting</span><br/>
-            <span className="text-white">Protection.</span>
+            <span className="bg-gradient-to-tr from-blue-400 to-cyan-300 bg-clip-text text-transparent">Smart Shelters.</span><br/>
+            <span className="text-blue-100">Lasting</span><br/>
+            <span className="text-blue-100">Protection.</span>
           </h1>
           
-          <p className="text-lg lg:text-xl text-white/80 mb-4 max-w-2xl">
-            Because your car deserves more than just a cover. <span className="font-medium text-white">Stylish, portable & weatherproof protection</span> for your luxury, classic, and everyday cars.
+          <p className="text-lg lg:text-xl text-blue-200/80 mb-4 max-w-2xl">
+            Because your car deserves more than just a cover. <span className="font-medium text-blue-100">Stylish, portable & weatherproof protection</span> for your luxury, classic, and everyday cars.
           </p>
           
-          <p className="text-base text-white/60 mb-6 max-w-xl">
+          <p className="text-base text-blue-200/60 mb-6 max-w-xl">
             Designed for elegance, built for durability in Coimbatore.
           </p>
           
-          {/* Glassy Feature Pills */}
+          {/* Feature Pills */}
           <div className="flex flex-wrap gap-3 mb-6">
             {[
               "Retractable & Movable",
@@ -31,21 +31,21 @@ export default function HomePage() {
               "Oxford 600D Fabric",
               "UV & Heat Protection"
             ].map((feature, idx) => (
-              <div key={idx} className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-sm shadow-lg">
-                <span className="text-green-400 mr-2">✓</span>
-                <span className="text-white font-medium">{feature}</span>
+              <div key={idx} className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-blue-300/20 text-sm shadow-lg shadow-blue-500/10">
+                <span className="text-cyan-400 mr-2">✓</span>
+                <span className="text-blue-100 font-medium">{feature}</span>
               </div>
             ))}
           </div>
           
-          {/* Glowing Gradient Buttons */}
+          {/* Action Buttons */}
           <div className="flex gap-4 mb-8">
             <a href="tel:+919600840058" 
-               className="bg-gradient-to-tr from-purple-400 to-blue-400 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300">
+               className="bg-gradient-to-tr from-blue-500 to-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-xl shadow-blue-500/30 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300">
               Book Your Carport Now
             </a>
             <a href="#get-quote" 
-               className="bg-white/10 backdrop-blur-md border border-white/30 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-xl hover:scale-105 hover:shadow-2xl hover:bg-white/20 transition-all duration-300">
+               className="bg-white/10 backdrop-blur-md border border-blue-300/30 px-8 py-4 rounded-xl text-lg font-semibold text-blue-100 shadow-xl shadow-blue-500/10 hover:scale-105 hover:shadow-2xl hover:bg-white/20 transition-all duration-300">
               Get a Free Quote
             </a>
           </div>
@@ -53,19 +53,19 @@ export default function HomePage() {
         
         {/* Product Card */}
         <div className="flex-1 max-w-md ml-8">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl relative shadow-2xl">
-            <div className="absolute -top-4 -right-4 bg-gradient-to-tr from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+          <div className="bg-white/10 backdrop-blur-md border border-blue-300/20 p-8 rounded-3xl relative shadow-2xl shadow-blue-500/20">
+            <div className="absolute -top-4 -right-4 bg-gradient-to-tr from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg shadow-blue-500/30">
               100% UV Protected
               <br/>
               <span className="font-normal">Waterproof & Fadeproof</span>
             </div>
             
-            <div className="w-20 h-20 bg-gradient-to-tr from-purple-400 to-blue-400 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+            <div className="w-20 h-20 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center mb-6 shadow-xl shadow-blue-500/30">
               <span className="text-3xl">🚗</span>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-3">SafePark Retractable Carport</h3>
-            <p className="text-white/70 mb-6">Premium Protection for Your Vehicle</p>
+            <h3 className="text-2xl font-bold text-blue-100 mb-3">SafePark Retractable Carport</h3>
+            <p className="text-blue-200/70 mb-6">Premium Protection for Your Vehicle</p>
             
             <div className="space-y-3 mb-8">
               {[
@@ -73,7 +73,7 @@ export default function HomePage() {
                 "🔵 Oxford 600D Fabric", 
                 "⚡ Quick Installation"
               ].map((feature, idx) => (
-                <div key={idx} className="flex items-center text-white/80">
+                <div key={idx} className="flex items-center text-blue-200/80">
                   <span className="mr-3">{feature.split(' ')[0]}</span>
                   <span>{feature.split(' ').slice(1).join(' ')}</span>
                 </div>
@@ -81,7 +81,7 @@ export default function HomePage() {
             </div>
             
             <a href="#gallery" 
-               className="w-full bg-gradient-to-tr from-pink-400 to-violet-500 text-white py-3 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center shadow-lg">
+               className="w-full bg-gradient-to-tr from-cyan-500 to-blue-600 text-white py-3 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center shadow-lg shadow-blue-500/30">
               See Gallery
             </a>
           </div>
@@ -91,7 +91,7 @@ export default function HomePage() {
       {/* FEATURES SECTION */}
       <section id="features" className="scroll-mt-32 px-8 lg:px-16 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">Why Choose SafePark?</h2>
+          <h2 className="text-4xl font-bold text-blue-100 mb-12 text-center">Why Choose SafePark?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -110,20 +110,20 @@ export default function HomePage() {
                 desc: "Designed for Indian homes and weather conditions in Coimbatore"
               }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl text-center shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+              <div key={idx} className="bg-white/10 backdrop-blur-md border border-blue-300/20 p-8 rounded-2xl text-center shadow-lg shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 transition-all duration-300">
                 <div className="text-5xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-white/70">{item.desc}</p>
+                <h3 className="text-xl font-bold text-blue-100 mb-3">{item.title}</h3>
+                <p className="text-blue-200/70">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* GALLERY SECTION - WITH REAL IMAGES */}
+      {/* GALLERY SECTION */}
       <section id="gallery" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-black/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">See SafePark in Action</h2>
+          <h2 className="text-4xl font-bold text-blue-100 mb-12 text-center">See SafePark in Action</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -160,7 +160,7 @@ export default function HomePage() {
             ].map((item, idx) => (
               <div
                 key={item.src}
-                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-lg hover:shadow-2xl hover:scale-105 hover:border-blue-400 transition-all duration-300 group"
+                className="bg-white/10 backdrop-blur-md border border-blue-300/20 rounded-2xl p-4 shadow-lg shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 hover:border-blue-400/40 transition-all duration-300 group"
               >
                 {item.type === "video" ? (
                   <video
@@ -180,8 +180,8 @@ export default function HomePage() {
                   />
                 )}
                 <div className="px-2">
-                  <h3 className="text-white/80 text-lg font-semibold mb-1">{item.caption}</h3>
-                  <p className="text-white/50 text-xs">
+                  <h3 className="text-blue-100/80 text-lg font-semibold mb-1">{item.caption}</h3>
+                  <p className="text-blue-200/50 text-xs">
                     {item.type === "video" ? "Video Demo" : `Installation #${idx + 1}`}
                   </p>
                 </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
       {/* TESTIMONIALS SECTION */}
       <section className="px-8 lg:px-16 py-20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">What Our Customers Say</h2>
+          <h2 className="text-4xl font-bold text-blue-100 mb-12 text-center">What Our Customers Say</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
@@ -210,20 +210,20 @@ export default function HomePage() {
                 rating: 5
               }
             ].map((review, idx) => (
-              <div key={idx} className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div key={idx} className="bg-white/10 backdrop-blur-md border border-blue-300/20 p-8 rounded-2xl shadow-lg shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300">
                 <div className="flex mb-4">
                   {[...Array(review.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-lg">⭐</span>
+                    <span key={i} className="text-cyan-400 text-lg">⭐</span>
                   ))}
                 </div>
-                <p className="text-white/80 mb-6 text-lg">"{review.text}"</p>
+                <p className="text-blue-200/80 mb-6 text-lg">"{review.text}"</p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-tr from-purple-400 to-blue-400 rounded-full mr-4 flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-full mr-4 flex items-center justify-center text-white font-bold shadow-lg shadow-blue-500/30">
                     {review.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="text-white font-semibold">{review.name}</div>
-                    <div className="text-white/60 text-sm">{review.location}</div>
+                    <div className="text-blue-100 font-semibold">{review.name}</div>
+                    <div className="text-blue-200/60 text-sm">{review.location}</div>
                   </div>
                 </div>
               </div>
@@ -235,36 +235,36 @@ export default function HomePage() {
       {/* CONTACT SECTION */}
       <section id="contact" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">Ready to Protect Your Car?</h2>
-          <p className="text-xl text-white/80 mb-12">Get your premium SafePark carport installed today</p>
+          <h2 className="text-4xl font-bold text-blue-100 mb-8">Ready to Protect Your Car?</h2>
+          <p className="text-xl text-blue-200/80 mb-12">Get your premium SafePark carport installed today</p>
           
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-10 rounded-3xl mb-12 shadow-2xl">
+          <div className="bg-white/10 backdrop-blur-md border border-blue-300/20 p-10 rounded-3xl mb-12 shadow-2xl shadow-blue-500/20">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl mb-3">📞</div>
-                <h3 className="font-bold text-white mb-2">Call Us</h3>
-                <a href="tel:+919600840058" className="text-white/80 hover:text-white transition">+91 9600840058</a>
+                <h3 className="font-bold text-blue-100 mb-2">Call Us</h3>
+                <a href="tel:+919600840058" className="text-blue-200/80 hover:text-blue-100 transition">+91 9600840058</a>
               </div>
               <div className="text-center">
                 <div className="text-3xl mb-3">💬</div>
-                <h3 className="font-bold text-white mb-2">WhatsApp</h3>
-                <a href="https://wa.me/919600840058" className="text-white/80 hover:text-white transition">Message Us</a>
+                <h3 className="font-bold text-blue-100 mb-2">WhatsApp</h3>
+                <a href="https://wa.me/919600840058" className="text-blue-200/80 hover:text-blue-100 transition">Message Us</a>
               </div>
               <div className="text-center">
                 <div className="text-3xl mb-3">📍</div>
-                <h3 className="font-bold text-white mb-2">Location</h3>
-                <p className="text-white/80">Coimbatore, Tamil Nadu</p>
+                <h3 className="font-bold text-blue-100 mb-2">Location</h3>
+                <p className="text-blue-200/80">Coimbatore, Tamil Nadu</p>
               </div>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a href="tel:+919600840058" 
-               className="bg-gradient-to-tr from-purple-400 to-blue-400 px-10 py-4 rounded-xl text-lg font-semibold text-white shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300">
+               className="bg-gradient-to-tr from-blue-500 to-cyan-400 px-10 py-4 rounded-xl text-lg font-semibold text-white shadow-xl shadow-blue-500/30 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300">
               Call for Free Quote
             </a>
             <a href="https://wa.me/919600840058" 
-               className="bg-white/10 backdrop-blur-md border border-white/30 px-10 py-4 rounded-xl text-lg font-semibold text-white shadow-xl hover:scale-105 hover:shadow-2xl hover:bg-white/20 transition-all duration-300">
+               className="bg-white/10 backdrop-blur-md border border-blue-300/30 px-10 py-4 rounded-xl text-lg font-semibold text-blue-100 shadow-xl shadow-blue-500/10 hover:scale-105 hover:shadow-2xl hover:bg-white/20 transition-all duration-300">
               WhatsApp Now
             </a>
           </div>
@@ -272,16 +272,16 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-gradient-to-tr from-purple-400/20 to-blue-400/20 backdrop-blur-md border-t border-white/20 px-8 lg:px-16 py-12">
+      <footer className="bg-gradient-to-tr from-blue-900/30 to-cyan-900/30 backdrop-blur-md border-t border-blue-300/20 px-8 lg:px-16 py-12">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <span className="w-10 h-10 bg-gradient-to-tr from-purple-400 to-blue-400 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+            <span className="w-10 h-10 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/30">
               S
             </span>
-            <span className="text-white font-bold text-2xl">SafePark</span>
+            <span className="text-blue-100 font-bold text-2xl">SafePark</span>
           </div>
-          <p className="text-white/70 mb-4 text-lg">Premium Retractable Carport Solutions</p>
-          <p className="text-white/50">© 2025 SafePark. Made in Coimbatore, Tamil Nadu</p>
+          <p className="text-blue-200/70 mb-4 text-lg">Premium Retractable Carport Solutions</p>
+          <p className="text-blue-200/50">© 2025 SafePark. Made in Coimbatore, Tamil Nadu</p>
         </div>
       </footer>
     </main>
