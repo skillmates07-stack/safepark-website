@@ -1,8 +1,8 @@
 export default function HomePage() {
   return (
-    <main className="pt-[120px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
+    <main className="pt-[80px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
       {/* HERO SECTION */}
-      <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-4">
+      <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-8">
         <div className="flex-1 max-w-3xl">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-green-600/30 text-xs text-white mb-4">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
