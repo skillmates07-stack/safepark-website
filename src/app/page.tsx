@@ -191,10 +191,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
-      <section className="px-8 lg:px-16 py-20">
+      {/* TESTIMONIALS SECTION - DARKER THEME */}
+      <section className="px-8 lg:px-16 py-20 bg-gradient-to-br from-black via-[#030b08] to-[#041f15]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">What Our Customers Say</h2>
+          <h2 className="text-4xl font-bold text-white mb-16 text-center">What Our Customers Say</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
@@ -210,24 +210,35 @@ export default function HomePage() {
                 rating: 5
               }
             ].map((review, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-[#03241e] to-[#042c27] border border-green-600/30 p-8 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-green-900/20 transition-all duration-300">
-                <div className="flex mb-4">
+              <div key={idx} className="bg-black/60 backdrop-blur-sm border border-green-600/20 p-8 rounded-2xl shadow-2xl shadow-green-900/10 hover:shadow-green-900/20 hover:border-green-500/30 transition-all duration-300">
+                <div className="flex mb-6">
                   {[...Array(review.rating)].map((_, i) => (
-                    <span key={i} className="text-green-500 text-lg">⭐</span>
+                    <span key={i} className="text-green-400 text-xl">⭐</span>
                   ))}
                 </div>
-                <p className="text-gray-300 mb-6 text-lg">"{review.text}"</p>
+                <blockquote className="text-gray-200 mb-8 text-lg italic leading-relaxed">
+                  "{review.text}"
+                </blockquote>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-tr from-green-500 to-green-400 rounded-full mr-4 flex items-center justify-center text-black font-bold">
+                  <div className="w-14 h-14 bg-gradient-to-tr from-green-500 to-green-400 rounded-full mr-4 flex items-center justify-center text-black font-bold text-xl shadow-lg shadow-green-500/20">
                     {review.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="text-white font-semibold">{review.name}</div>
-                    <div className="text-green-400 text-sm">{review.location}</div>
+                    <div className="text-white font-semibold text-lg">{review.name}</div>
+                    <div className="text-green-400/80 text-sm">{review.location}</div>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* CTA in testimonial section */}
+          <div className="text-center mt-16">
+            <p className="text-green-400/70 text-lg mb-6">Join 500+ satisfied customers in Coimbatore</p>
+            <a href="tel:+919600840058" 
+               className="bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-green-600/20 hover:shadow-green-500/30 transition-all duration-300">
+              Get Your Quote Today
+            </a>
           </div>
         </div>
       </section>
@@ -271,17 +282,70 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-gradient-to-tr from-[#03241e]/50 to-[#042c27]/50 backdrop-blur-md border-t border-green-600/30 px-8 lg:px-16 py-12">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-3 mb-6">
-            <span className="w-10 h-10 bg-gradient-to-tr from-green-500 to-green-400 rounded-lg flex items-center justify-center text-black font-bold text-lg">
-              S
-            </span>
-            <span className="text-white font-bold text-2xl">SafePark</span>
+      {/* FOOTER - DARKEST THEME */}
+      <footer className="bg-gradient-to-br from-black via-[#020804] to-[#031b11] border-t border-green-600/10 px-8 lg:px-16 py-16">
+        <div className="max-w-6xl mx-auto">
+          {/* Main Footer Content */}
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Brand Column */}
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-3 mb-6">
+                <span className="w-12 h-12 bg-gradient-to-tr from-green-500 to-green-400 rounded-lg flex items-center justify-center text-black font-bold text-xl shadow-lg shadow-green-500/20">
+                  S
+                </span>
+                <span className="text-white font-bold text-3xl">SafePark</span>
+              </div>
+              <p className="text-green-400/80 text-lg mb-4 leading-relaxed">
+                Premium Retractable Carport Solutions designed for elegance, built for durability in Coimbatore.
+              </p>
+              <div className="flex space-x-4">
+                <div className="text-green-500 text-sm">⭐⭐⭐⭐⭐</div>
+                <span className="text-gray-400 text-sm">500+ Happy Customers</span>
+              </div>
+            </div>
+            
+            {/* Contact Column */}
+            <div>
+              <h4 className="text-white font-semibold text-lg mb-6">Contact</h4>
+              <div className="space-y-4">
+                <a href="tel:+919600840058" className="flex items-center text-green-400 hover:text-green-300 transition">
+                  <span className="mr-3">📞</span>
+                  +91 9600840058
+                </a>
+                <a href="https://wa.me/919600840058" className="flex items-center text-green-400 hover:text-green-300 transition">
+                  <span className="mr-3">💬</span>
+                  WhatsApp
+                </a>
+                <div className="flex items-center text-gray-400">
+                  <span className="mr-3">📍</span>
+                  Coimbatore, Tamil Nadu
+                </div>
+              </div>
+            </div>
+            
+            {/* Services Column */}
+            <div>
+              <h4 className="text-white font-semibold text-lg mb-6">Services</h4>
+              <div className="space-y-3">
+                <a href="#features" className="block text-gray-400 hover:text-green-400 transition">Premium Carports</a>
+                <a href="#gallery" className="block text-gray-400 hover:text-green-400 transition">Installation</a>
+                <a href="#contact" className="block text-gray-400 hover:text-green-400 transition">Consultation</a>
+                <a href="/pricing" className="block text-gray-400 hover:text-green-400 transition">Custom Sizes</a>
+              </div>
+            </div>
           </div>
-          <p className="text-green-400 mb-4 text-lg">Premium Retractable Carport Solutions</p>
-          <p className="text-gray-400">© 2025 SafePark. Made in Coimbatore, Tamil Nadu</p>
+          
+          {/* Bottom Footer */}
+          <div className="border-t border-green-600/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-500 text-sm">
+              © 2025 SafePark. Made with ❤️ in Coimbatore, Tamil Nadu
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="#" className="text-gray-500 hover:text-green-400 text-sm transition">Privacy Policy</a>
+              <a href="#" className="text-gray-500 hover:text-green-400 text-sm transition">Terms of Service</a>
+              <a href="#contact" className="text-gray-500 hover:text-green-400 text-sm transition">Support</a>
+            </div>
+          </div>
         </div>
       </footer>
     </main>
