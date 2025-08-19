@@ -1,13 +1,13 @@
 export default function PricingPage() {
   return (
-    <main className="pt-[120px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
+    <main className="pt-[80px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
       {/* PRICING SECTION */}
-      <section className="px-8 lg:px-16 py-20">
+      <section className="px-8 lg:px-16 py-16">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl lg:text-6xl font-black mb-6">
             Choose Your <span className="bg-gradient-to-tr from-green-400 to-green-300 bg-clip-text text-transparent">SafePark</span> Pricing
           </h1>
-          <p className="text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
             Find the perfect plan for your vehicle. All models use a premium GI frame and Oxford 600D fabric.
           </p>
 
