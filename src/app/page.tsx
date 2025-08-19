@@ -191,8 +191,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION - DARKER THEME */}
-      <section className="px-8 lg:px-16 py-20 bg-gradient-to-br from-black via-[#030b08] to-[#041f15]">
+      {/* TESTIMONIALS SECTION - FIXED VISIBILITY */}
+      <section className="px-8 lg:px-16 py-20 bg-gradient-to-br from-black via-[#0a0f0a] to-[#051b0a]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-16 text-center">What Our Customers Say</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -210,22 +210,22 @@ export default function HomePage() {
                 rating: 5
               }
             ].map((review, idx) => (
-              <div key={idx} className="bg-black/60 backdrop-blur-sm border border-green-600/20 p-8 rounded-2xl shadow-2xl shadow-green-900/10 hover:shadow-green-900/20 hover:border-green-500/30 transition-all duration-300">
+              <div key={idx} className="bg-gradient-to-br from-green-900/20 to-black/80 border border-green-600/30 p-8 rounded-2xl shadow-2xl shadow-green-900/20 hover:shadow-green-900/40 hover:border-green-500/50 transition-all duration-300">
                 <div className="flex mb-6">
                   {[...Array(review.rating)].map((_, i) => (
                     <span key={i} className="text-green-400 text-xl">⭐</span>
                   ))}
                 </div>
-                <blockquote className="text-gray-200 mb-8 text-lg italic leading-relaxed">
+                <blockquote className="text-gray-100 mb-8 text-lg italic leading-relaxed font-medium">
                   "{review.text}"
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="w-14 h-14 bg-gradient-to-tr from-green-500 to-green-400 rounded-full mr-4 flex items-center justify-center text-black font-bold text-xl shadow-lg shadow-green-500/20">
+                  <div className="w-14 h-14 bg-gradient-to-tr from-green-500 to-green-400 rounded-full mr-4 flex items-center justify-center text-black font-bold text-xl shadow-lg shadow-green-500/30">
                     {review.name.charAt(0)}
                   </div>
                   <div>
                     <div className="text-white font-semibold text-lg">{review.name}</div>
-                    <div className="text-green-400/80 text-sm">{review.location}</div>
+                    <div className="text-green-400 text-sm">{review.location}</div>
                   </div>
                 </div>
               </div>
@@ -234,42 +234,42 @@ export default function HomePage() {
           
           {/* CTA in testimonial section */}
           <div className="text-center mt-16">
-            <p className="text-green-400/70 text-lg mb-6">Join 500+ satisfied customers in Coimbatore</p>
+            <p className="text-green-400/80 text-lg mb-6">Join 500+ satisfied customers in Coimbatore</p>
             <a href="tel:+919600840058" 
-               className="bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-green-600/20 hover:shadow-green-500/30 transition-all duration-300">
+               className="bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-green-600/30 hover:shadow-green-500/40 transition-all duration-300">
               Get Your Quote Today
             </a>
           </div>
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
-      <section id="contact" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-black/30">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* CONTACT SECTION - BETTER CENTERED */}
+      <section id="contact" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-black via-[#081c15] to-[#084d3d]">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-8">Ready to Protect Your Car?</h2>
-          <p className="text-xl text-green-400 mb-12">Get your premium SafePark carport installed today</p>
+          <p className="text-xl text-green-400/90 mb-12 max-w-2xl mx-auto">Get your premium SafePark carport installed today</p>
           
-          <div className="bg-gradient-to-br from-[#03241e] to-[#042c27] border border-green-600/30 p-10 rounded-3xl mb-12 shadow-2xl shadow-green-900/20">
+          <div className="bg-gradient-to-br from-[#03241e] to-[#042c27] border border-green-600/30 p-10 rounded-3xl mb-12 shadow-2xl shadow-green-900/20 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-3xl mb-3">📞</div>
-                <h3 className="font-bold text-white mb-2">Call Us</h3>
-                <a href="tel:+919600840058" className="text-green-400 hover:text-green-300 transition">+91 9600840058</a>
+                <div className="text-4xl mb-4">📞</div>
+                <h3 className="font-bold text-white mb-3 text-lg">Call Us</h3>
+                <a href="tel:+919600840058" className="text-green-400 hover:text-green-300 transition text-base">+91 9600840058</a>
               </div>
               <div className="text-center">
-                <div className="text-3xl mb-3">💬</div>
-                <h3 className="font-bold text-white mb-2">WhatsApp</h3>
-                <a href="https://wa.me/919600840058" className="text-green-400 hover:text-green-300 transition">Message Us</a>
+                <div className="text-4xl mb-4">💬</div>
+                <h3 className="font-bold text-white mb-3 text-lg">WhatsApp</h3>
+                <a href="https://wa.me/919600840058" className="text-green-400 hover:text-green-300 transition text-base">Message Us</a>
               </div>
               <div className="text-center">
-                <div className="text-3xl mb-3">📍</div>
-                <h3 className="font-bold text-white mb-2">Location</h3>
-                <p className="text-green-400">Coimbatore, Tamil Nadu</p>
+                <div className="text-4xl mb-4">📍</div>
+                <h3 className="font-bold text-white mb-3 text-lg">Location</h3>
+                <p className="text-green-400 text-base">Coimbatore, Tamil Nadu</p>
               </div>
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-lg mx-auto">
             <a href="tel:+919600840058" 
                className="bg-green-600 hover:bg-green-700 px-10 py-4 rounded-xl text-lg font-semibold text-white shadow-xl shadow-green-600/20 hover:shadow-2xl transition-all duration-300">
               Call for Free Quote
