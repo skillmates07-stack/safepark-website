@@ -1,12 +1,9 @@
 // src/app/page.tsx
-
 export default function HomePage() {
   return (
     <main className="pt-[120px] bg-gradient-to-br from-[#191825] to-[#21155c] min-h-screen">
       {/* HERO SECTION */}
-      {/* Replace the hero section opening tag with this: */}
-<section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-4">
-
+      <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-4">
         <div className="flex-1 max-w-3xl">
           <div className="inline-flex items-center px-3 py-1 rounded-full glass border border-white/20 text-xs text-white/90 mb-4">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
@@ -124,27 +121,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GALLERY SECTION - FIXED */}
+      {/* GALLERY SECTION - WITH REAL IMAGES */}
       <section id="gallery" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-black/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">See SafePark in Action</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "Luxury car protection setup",
-              "Bike shelter installation", 
-              "Retractable carport demo",
-              "Weather protection test",
-              "Quick setup process",
-              "Customer satisfaction"
+              {
+                src: "/gallery/gallery1.jpg",
+                alt: "Luxury car protection setup",
+                caption: "Luxury Car Protection"
+              },
+              {
+                src: "/gallery/gallery2.jpg",
+                alt: "SafePark carport covered in greenery",
+                caption: "All-Weather Protection"
+              },
+              {
+                src: "/gallery/gallery3.jpg",
+                alt: "Car and bike protected together",
+                caption: "Car & Bike Protected"
+              },
+              {
+                src: "/gallery/gallery4.jpg",
+                alt: "Multiple vehicles protected",
+                caption: "Multiple Vehicle Coverage"
+              },
+              {
+                src: "/gallery/gallery5.jpg",
+                alt: "Compact urban installation",
+                caption: "Compact Urban Use"
+              },
+              {
+                src: "/gallery/gallery-video.mp4",
+                alt: "SafePark installation demo",
+                caption: "Installation Demo",
+                type: "video"
+              }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:scale-105 hover:border-purple-400/50 transition-all duration-300 group">
-                <div className="bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-xl h-48 flex items-center justify-center mb-4 group-hover:from-purple-400/30 group-hover:to-blue-400/30 transition-all duration-300">
-                  <div className="text-center">
-                    <span className="text-4xl mb-2 block">🚗</span>
-                    <p className="text-white/60 text-sm">{item}</p>
-                  </div>
+              <div
+                key={item.src}
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-lg hover:shadow-2xl hover:scale-105 hover:border-blue-400 transition-all duration-300 group"
+              >
+                {item.type === "video" ? (
+                  <video
+                    src={item.src}
+                    controls
+                    className="w-full h-48 object-cover rounded-xl mb-3"
+                    poster="/gallery/gallery1.jpg"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-48 object-cover rounded-xl mb-3 group-hover:scale-105 transition"
+                    loading="lazy"
+                  />
+                )}
+                <div className="px-2">
+                  <h3 className="text-white/80 text-lg font-semibold mb-1">{item.caption}</h3>
+                  <p className="text-white/50 text-xs">
+                    {item.type === "video" ? "Video Demo" : `Installation #${idx + 1}`}
+                  </p>
                 </div>
-                <p className="text-white/80 text-sm font-medium">Installation #{idx + 1}</p>
               </div>
             ))}
           </div>
@@ -247,75 +288,3 @@ export default function HomePage() {
     </main>
   );
 }
-<section id="gallery" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-black/20">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl font-bold text-white mb-12 text-center">See SafePark in Action</h2>
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {[
-        {
-          src: "/gallery/WhatsApp-Image-2025-08-18-at-19.22.39_c2bd6007.jpg",
-          alt: "Luxury car protection in front of modern house",
-          caption: "Luxury Car Protection"
-        },
-        {
-          src: "/gallery/WhatsApp-Image-2025-08-18-at-19.22.39_5518aab5.jpg",
-          alt: "SafePark carport covered, surrounded by greenery",
-          caption: "All-Weather Protection"
-        },
-        {
-          src: "/gallery/WhatsApp-Image-2025-08-18-at-19.22.40_e451f765.jpg",
-          alt: "Customer side view install",
-          caption: "Customer Installation"
-        },
-        {
-          src: "/gallery/WhatsApp-Image-2025-08-18-at-19.22.40_f68f4a32.jpg",
-          alt: "Multiple car protection, neat outdoor",
-          caption: "Multiple Vehicles Protected"
-        },
-        {
-          src: "/gallery/WhatsApp-Image-2025-08-18-at-19.22.40_d5b87ffb.jpg",
-          alt: "Carport installed in compact residential area",
-          caption: "Compact Urban Use"
-        },
-        {
-          src: "/gallery/WhatsApp-Video-2025-08-18-at-19.22.41_0a905b99.mp4",
-          alt: "Installation demo video",
-          caption: "Installation Demo Video",
-          type: "video"
-        }
-      ].map((item, idx) => (
-        <div
-          key={item.src}
-          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-lg hover:shadow-2xl hover:scale-105 hover:border-blue-400 transition-all duration-300 group"
-        >
-          {item.type === "video" ? (
-            <video
-              src={item.src}
-              controls
-              className="w-full h-48 object-cover rounded-xl mb-3"
-              poster="/gallery/WhatsApp-Image-2025-08-18-at-19.22.39_c2bd6007.jpg"
-            >
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <img
-              src={item.src}
-              alt={item.alt}
-              className="w-full h-48 object-cover rounded-xl mb-3 group-hover:scale-105 group-hover:shadow-xl transition"
-              loading="lazy"
-            />
-          )}
-          <div className="px-2">
-            <h3 className="text-white/80 text-lg font-semibold mb-1">{item.caption}</h3>
-            <p className="text-white/50 text-xs">
-              {item.type === "video" ? "Video Demo" : `Installation #${idx + 1}`}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
-
