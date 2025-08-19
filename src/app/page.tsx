@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (
-    <main className="pt-[120px] bg-gradient-to-br from-black via-[#081c15] to-[#084d3d] min-h-screen">
+    <main className="pt-[120px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
       {/* HERO SECTION */}
       <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-4">
         <div className="flex-1 max-w-3xl">
@@ -53,7 +53,7 @@ export default function HomePage() {
         
         {/* Product Card */}
         <div className="flex-1 max-w-md ml-8">
-          <div className="bg-gradient-to-br from-[#03241e] to-[#042c27] border border-green-600/30 p-8 rounded-3xl relative shadow-2xl shadow-green-900/20">
+          <div className="bg-gradient-to-br from-[#0a1a0f]/60 to-[#0d2818]/80 border border-green-600/30 p-8 rounded-3xl relative shadow-2xl shadow-green-900/20">
             <div className="absolute -top-4 -right-4 bg-green-600 text-white px-4 py-2 rounded-full text-xs font-bold">
               100% UV Protected
               <br/>
@@ -89,7 +89,7 @@ export default function HomePage() {
       </section>
 
       {/* FEATURES SECTION */}
-      <section id="features" className="scroll-mt-32 px-8 lg:px-16 py-20">
+      <section id="features" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-black/50 via-[#0a1a0f]/30 to-[#0d2818]/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Why Choose SafePark?</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -110,7 +110,7 @@ export default function HomePage() {
                 desc: "Designed for Indian homes and weather conditions in Coimbatore"
               }
             ].map((item, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-[#03241e] to-[#042c27] border border-green-600/30 p-8 rounded-2xl text-center shadow-lg hover:shadow-xl hover:shadow-green-900/20 hover:scale-105 transition-all duration-300">
+              <div key={idx} className="bg-gradient-to-br from-[#0a1a0f]/60 to-[#0d2818]/80 border border-green-600/30 p-8 rounded-2xl text-center shadow-lg hover:shadow-xl hover:shadow-green-900/20 hover:scale-105 transition-all duration-300">
                 <div className="text-5xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                 <p className="text-green-400">{item.desc}</p>
@@ -121,7 +121,7 @@ export default function HomePage() {
       </section>
 
       {/* GALLERY SECTION */}
-      <section id="gallery" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-black/30">
+      <section id="gallery" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-black/70 via-[#0a1a0f]/50 to-[#0d2818]/70">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">See SafePark in Action</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -160,7 +160,7 @@ export default function HomePage() {
             ].map((item, idx) => (
               <div
                 key={item.src}
-                className="bg-gradient-to-br from-[#03241e] to-[#042c27] border border-green-600/30 rounded-2xl p-4 shadow-lg hover:shadow-xl hover:shadow-green-900/20 hover:scale-105 hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-gradient-to-br from-[#0a1a0f]/60 to-[#0d2818]/80 border border-green-600/30 rounded-2xl p-4 shadow-lg hover:shadow-xl hover:shadow-green-900/20 hover:scale-105 hover:border-green-500/50 transition-all duration-300 group"
               >
                 {item.type === "video" ? (
                   <video
@@ -191,8 +191,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION - FIXED VISIBILITY */}
-      <section className="px-8 lg:px-16 py-20 bg-gradient-to-br from-black via-[#0a0f0a] to-[#051b0a]">
+      {/* TESTIMONIALS SECTION - UNIFIED GRADIENT */}
+      <section className="px-8 lg:px-16 py-20 bg-gradient-to-br from-black via-[#051008] to-[#081c0f]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-16 text-center">What Our Customers Say</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -210,7 +210,7 @@ export default function HomePage() {
                 rating: 5
               }
             ].map((review, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-green-900/20 to-black/80 border border-green-600/30 p-8 rounded-2xl shadow-2xl shadow-green-900/20 hover:shadow-green-900/40 hover:border-green-500/50 transition-all duration-300">
+              <div key={idx} className="bg-gradient-to-br from-[#0a1a0f]/40 to-[#0d2818]/60 border border-green-600/30 p-8 rounded-2xl shadow-2xl shadow-green-900/20 hover:shadow-green-900/40 hover:border-green-500/50 transition-all duration-300">
                 <div className="flex mb-6">
                   {[...Array(review.rating)].map((_, i) => (
                     <span key={i} className="text-green-400 text-xl">⭐</span>
@@ -243,13 +243,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CONTACT SECTION - BETTER CENTERED */}
-      <section id="contact" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-black via-[#081c15] to-[#084d3d]">
+      {/* CONTACT SECTION - UNIFIED GRADIENT */}
+      <section id="contact" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-black/80 via-[#0a1a0f]/60 to-[#0d2818]/80">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-8">Ready to Protect Your Car?</h2>
           <p className="text-xl text-green-400/90 mb-12 max-w-2xl mx-auto">Get your premium SafePark carport installed today</p>
           
-          <div className="bg-gradient-to-br from-[#03241e] to-[#042c27] border border-green-600/30 p-10 rounded-3xl mb-12 shadow-2xl shadow-green-900/20 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-[#0a1a0f]/60 to-[#0d2818]/80 border border-green-600/30 p-10 rounded-3xl mb-12 shadow-2xl shadow-green-900/20 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-4xl mb-4">📞</div>
@@ -282,8 +282,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER - DARKEST THEME */}
-      <footer className="bg-gradient-to-br from-black via-[#020804] to-[#031b11] border-t border-green-600/10 px-8 lg:px-16 py-16">
+      {/* FOOTER - UNIFIED GRADIENT */}
+      <footer className="bg-gradient-to-br from-black via-[#040b06] to-[#071410] border-t border-green-600/10 px-8 lg:px-16 py-16">
         <div className="max-w-6xl mx-auto">
           {/* Main Footer Content */}
           <div className="grid md:grid-cols-4 gap-8 mb-12">
