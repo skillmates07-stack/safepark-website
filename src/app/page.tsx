@@ -1,89 +1,102 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* HERO SECTION - Designer-Level Spacing */}
-      <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-8 -mt-8 z-10" style={{ minHeight: "calc(100vh - 56px)" }}>
+      {/* HERO SECTION - Top 1% Designer Level */}
+      <section className="relative flex flex-col lg:flex-row items-start justify-between px-8 lg:px-16 py-12 -mt-8 z-10 gap-12 lg:gap-16" style={{ minHeight: "calc(100vh - 56px)" }}>
+        
+        {/* Left Column - Content */}
         <div className="flex-1 max-w-3xl">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-green-600/30 text-xs text-white mb-4 shadow-[0_1px_6px_0_rgba(0,255,132,0.08)]">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-green-600/30 text-xs text-white mb-6 shadow-[0_2px_12px_0_rgba(0,255,132,0.12)] font-medium">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
             Made in India • Premium Quality
           </div>
           
-          <h1 className="text-6xl lg:text-7xl font-black leading-none mb-5 tracking-tight">
-            <span className="bg-gradient-to-tr from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_6px_25px_rgba(0,255,132,0.14)]">Smart Shelters.</span><br/>
+          <h1 className="text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] mb-8 tracking-tight">
+            <span className="bg-gradient-to-tr from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_6px_25px_rgba(0,255,132,0.15)]">Smart Shelters.</span><br/>
             <span className="text-white drop-shadow-lg">Lasting</span><br/>
             <span className="text-white">Protection.</span>
           </h1>
           
-          <p className="text-xl lg:text-2xl text-gray-200 mb-5 max-w-2xl font-light">
+          <p className="text-xl lg:text-2xl text-gray-200 mb-6 max-w-2xl font-light leading-relaxed">
             Because your car deserves more than just a cover.<br/>
             <span className="font-semibold text-white">Stylish, portable &amp; weatherproof protection</span> for your luxury, classic, and everyday cars.
           </p>
           
-          <p className="text-base text-green-400 mb-7 max-w-xl font-medium">
+          <p className="text-base lg:text-lg text-green-400 mb-8 max-w-xl font-medium">
             Designed for elegance, built for durability in Coimbatore.
           </p>
           
           {/* Feature Pills */}
-          <div className="flex flex-wrap gap-3 mb-8">
+          <div className="flex flex-wrap gap-3 mb-10">
             {[
               "Retractable & Movable",
               "Rust-resistant GI Frame", 
               "Oxford 600D Fabric",
               "UV & Heat Protection"
             ].map((feature, idx) => (
-              <div key={idx} className="bg-black/70 backdrop-blur-md px-4 py-2 rounded-full border border-green-600/40 text-sm font-medium text-white shadow-[0_1px_6px_0_rgba(0,255,132,0.09)]">
-                <span className="text-green-400 mr-2">✓</span>
+              <div key={idx} className="bg-black/70 backdrop-blur-md px-4 py-2.5 rounded-full border border-green-600/40 text-sm font-medium text-white shadow-[0_2px_12px_0_rgba(0,255,132,0.1)] hover:shadow-[0_4px_20px_0_rgba(0,255,132,0.15)] transition-all duration-300">
+                <span className="text-green-400 mr-2 font-bold">✓</span>
                 {feature}
               </div>
             ))}
           </div>
           
           {/* Action Buttons */}
-          <div className="flex gap-5 mb-7">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a href="tel:+919600840058" 
-               className="bg-gradient-to-tr from-green-600 to-green-500 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-xl shadow-green-500/20 hover:scale-[1.035] hover:shadow-green-400/30 transition-all duration-200">
+               className="bg-gradient-to-tr from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 px-8 py-4 rounded-xl text-lg font-bold text-white shadow-2xl shadow-green-500/25 hover:shadow-green-400/35 hover:scale-[1.02] transition-all duration-300 text-center">
               Book Your Carport Now
             </a>
-            <a href="#get-quote" 
-               className="bg-black/65 border border-green-600 hover:border-green-400 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-md hover:bg-green-900/30 transition-all duration-200">
+            <a href="#contact" 
+               className="bg-black/65 border-2 border-green-600/60 hover:border-green-400 hover:bg-green-900/20 px-8 py-4 rounded-xl text-lg font-bold text-white shadow-xl hover:scale-[1.02] transition-all duration-300 text-center">
               Get a Free Quote
             </a>
           </div>
         </div>
         
-        {/* Product Card */}
-        <div className="flex-1 max-w-md ml-8 z-10">
-          <div className="bg-gradient-to-br from-[#0a1a0f]/65 to-[#0d2818]/85 border border-green-600/40 p-8 rounded-3xl relative shadow-2xl shadow-green-800/20 backdrop-blur-2xl">
-            <div className="absolute -top-4 -right-4 bg-green-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+        {/* Right Column - Premium Info Card */}
+        <div className="flex-1 max-w-lg w-full lg:sticky lg:top-24">
+          <div className="bg-black/40 backdrop-blur-2xl border border-green-600/30 p-10 rounded-3xl relative shadow-2xl shadow-green-900/20 hover:shadow-green-600/25 hover:scale-[1.01] transition-all duration-500 group">
+            
+            {/* Premium Badge */}
+            <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-600 to-green-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg shadow-green-600/30 z-10">
               100% UV Protected
               <br/>
-              <span className="font-normal">Waterproof & Fadeproof</span>
+              <span className="font-normal text-xs">Waterproof & Fadeproof</span>
             </div>
             
-            <div className="w-20 h-20 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-6 shadow-xl shadow-green-500/30">
-              <span className="text-3xl text-black">🚗</span>
+            {/* Icon */}
+            <div className="w-24 h-24 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-8 shadow-2xl shadow-green-500/25 group-hover:shadow-green-400/35 transition-all duration-500 mx-auto">
+              <span className="text-4xl text-black">🚗</span>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-3">SafePark Retractable Carport</h3>
-            <p className="text-green-400 mb-6">Premium Protection for Your Vehicle</p>
+            {/* Title & Description */}
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-black text-white mb-4 tracking-tight">SafePark Retractable Carport</h3>
+              <p className="text-green-400 text-lg font-medium">Premium Protection for Your Vehicle</p>
+            </div>
             
-            <div className="space-y-3 mb-8">
+            {/* Features List */}
+            <div className="space-y-5 mb-10">
               {[
-                "✨ Galvanized Iron Frame",
-                "🔵 Oxford 600D Fabric", 
-                "⚡ Quick Installation"
+                { icon: "✨", text: "Galvanized Iron Frame", color: "from-yellow-400 to-orange-400" },
+                { icon: "🔵", text: "Oxford 600D Fabric", color: "from-blue-400 to-cyan-400" },
+                { icon: "⚡", text: "Quick Installation", color: "from-purple-400 to-pink-400" }
               ].map((feature, idx) => (
-                <div key={idx} className="flex items-center text-gray-200 font-medium">
-                  <span className="mr-3">{feature.split(' ')[0]}</span>
-                  <span>{feature.split(' ').slice(1).join(' ')}</span>
+                <div key={idx} className="flex items-center group/item hover:scale-105 transition-all duration-300">
+                  <div className={`w-12 h-12 bg-gradient-to-tr ${feature.color} rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover/item:shadow-xl transition-all duration-300`}>
+                    <span className="text-lg">{feature.icon}</span>
+                  </div>
+                  <span className="text-white font-semibold text-lg">{feature.text}</span>
                 </div>
               ))}
             </div>
             
+            {/* CTA Button */}
             <a href="#gallery" 
-               className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition flex items-center justify-center shadow-md hover:scale-[1.04]">
+               className="w-full bg-gradient-to-tr from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white py-4 rounded-xl text-lg font-bold shadow-xl shadow-green-600/25 hover:shadow-green-500/35 hover:scale-[1.02] transition-all duration-300 flex items-center justify-center">
               See Gallery
+              <span className="ml-2 text-xl">→</span>
             </a>
           </div>
         </div>
