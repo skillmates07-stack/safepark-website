@@ -1,4 +1,3 @@
-// src/app/page.tsx
 export default function HomePage() {
   return (
     <main className="pt-[120px] bg-gradient-to-br from-[#191825] to-[#21155c] min-h-screen">
