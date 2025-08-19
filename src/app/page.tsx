@@ -1,60 +1,61 @@
 export default function HomePage() {
   return (
-    <main className="pt-[80px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* HERO SECTION */}
-      <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-8">
+    <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
+      {/* HERO SECTION - Designer-Level Spacing */}
+      <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-8 -mt-8 z-10" style={{ minHeight: "calc(100vh - 56px)" }}>
         <div className="flex-1 max-w-3xl">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-green-600/30 text-xs text-white mb-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-green-600/30 text-xs text-white mb-4 shadow-[0_1px_6px_0_rgba(0,255,132,0.08)]">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
             Made in India • Premium Quality
           </div>
           
-          <h1 className="text-5xl lg:text-6xl font-black leading-tight mb-4">
-            <span className="bg-gradient-to-tr from-green-400 to-green-300 bg-clip-text text-transparent">Smart Shelters.</span><br/>
-            <span className="text-white">Lasting</span><br/>
+          <h1 className="text-6xl lg:text-7xl font-black leading-none mb-5 tracking-tight">
+            <span className="bg-gradient-to-tr from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_6px_25px_rgba(0,255,132,0.14)]">Smart Shelters.</span><br/>
+            <span className="text-white drop-shadow-lg">Lasting</span><br/>
             <span className="text-white">Protection.</span>
           </h1>
           
-          <p className="text-lg lg:text-xl text-gray-300 mb-4 max-w-2xl">
-            Because your car deserves more than just a cover. <span className="font-medium text-white">Stylish, portable & weatherproof protection</span> for your luxury, classic, and everyday cars.
+          <p className="text-xl lg:text-2xl text-gray-200 mb-5 max-w-2xl font-light">
+            Because your car deserves more than just a cover.<br/>
+            <span className="font-semibold text-white">Stylish, portable &amp; weatherproof protection</span> for your luxury, classic, and everyday cars.
           </p>
           
-          <p className="text-base text-green-400 mb-6 max-w-xl">
+          <p className="text-base text-green-400 mb-7 max-w-xl font-medium">
             Designed for elegance, built for durability in Coimbatore.
           </p>
           
           {/* Feature Pills */}
-          <div className="flex flex-wrap gap-3 mb-6">
+          <div className="flex flex-wrap gap-3 mb-8">
             {[
               "Retractable & Movable",
               "Rust-resistant GI Frame", 
               "Oxford 600D Fabric",
               "UV & Heat Protection"
             ].map((feature, idx) => (
-              <div key={idx} className="bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-green-600/30 text-sm">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-white font-medium">{feature}</span>
+              <div key={idx} className="bg-black/70 backdrop-blur-md px-4 py-2 rounded-full border border-green-600/40 text-sm font-medium text-white shadow-[0_1px_6px_0_rgba(0,255,132,0.09)]">
+                <span className="text-green-400 mr-2">✓</span>
+                {feature}
               </div>
             ))}
           </div>
           
           {/* Action Buttons */}
-          <div className="flex gap-4 mb-8">
+          <div className="flex gap-5 mb-7">
             <a href="tel:+919600840058" 
-               className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-xl shadow-green-600/20 hover:shadow-2xl hover:shadow-green-600/30 transition-all duration-300">
+               className="bg-gradient-to-tr from-green-600 to-green-500 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-xl shadow-green-500/20 hover:scale-[1.035] hover:shadow-green-400/30 transition-all duration-200">
               Book Your Carport Now
             </a>
             <a href="#get-quote" 
-               className="bg-black/50 border border-green-600 px-8 py-4 rounded-xl text-lg font-semibold text-white hover:bg-green-900/30 transition-all duration-300">
+               className="bg-black/65 border border-green-600 hover:border-green-400 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-md hover:bg-green-900/30 transition-all duration-200">
               Get a Free Quote
             </a>
           </div>
         </div>
         
         {/* Product Card */}
-        <div className="flex-1 max-w-md ml-8">
-          <div className="bg-gradient-to-br from-[#0a1a0f]/60 to-[#0d2818]/80 border border-green-600/30 p-8 rounded-3xl relative shadow-2xl shadow-green-900/20">
-            <div className="absolute -top-4 -right-4 bg-green-600 text-white px-4 py-2 rounded-full text-xs font-bold">
+        <div className="flex-1 max-w-md ml-8 z-10">
+          <div className="bg-gradient-to-br from-[#0a1a0f]/65 to-[#0d2818]/85 border border-green-600/40 p-8 rounded-3xl relative shadow-2xl shadow-green-800/20 backdrop-blur-2xl">
+            <div className="absolute -top-4 -right-4 bg-green-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
               100% UV Protected
               <br/>
               <span className="font-normal">Waterproof & Fadeproof</span>
@@ -73,7 +74,7 @@ export default function HomePage() {
                 "🔵 Oxford 600D Fabric", 
                 "⚡ Quick Installation"
               ].map((feature, idx) => (
-                <div key={idx} className="flex items-center text-gray-300">
+                <div key={idx} className="flex items-center text-gray-200 font-medium">
                   <span className="mr-3">{feature.split(' ')[0]}</span>
                   <span>{feature.split(' ').slice(1).join(' ')}</span>
                 </div>
@@ -81,7 +82,7 @@ export default function HomePage() {
             </div>
             
             <a href="#gallery" 
-               className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition flex items-center justify-center">
+               className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition flex items-center justify-center shadow-md hover:scale-[1.04]">
               See Gallery
             </a>
           </div>
