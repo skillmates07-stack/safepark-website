@@ -1,97 +1,97 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* FULL-SCREEN CONTAINED HERO SECTION */}
-      <section className="relative min-h-[calc(100vh-56px)] flex items-center pb-16">
-        <div className="w-full max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start lg:items-center">
+      {/* OPTIMIZED FULL-SCREEN HERO - Proper Separation */}
+      <section className="relative min-h-[calc(100vh-56px)] flex items-center pb-24 lg:pb-32">
+        <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             
-            {/* LEFT COLUMN - Wider Text Block (60%) */}
-            <div className="lg:col-span-3 space-y-6">
-              {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg">
+            {/* LEFT COLUMN - Optimized Content (7/12 = 58%) */}
+            <div className="lg:col-span-7 space-y-5">
+              {/* Compact Badge */}
+              <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                Made in India &bull; Premium Quality
+                Made in India • Premium Quality
               </div>
 
-              {/* Headline */}
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] tracking-tight">
+              {/* Tighter Headline */}
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.95] tracking-tight">
                 <span className="text-white">Everyday Risks.</span><br/>
                 <span className="bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(0,255,132,0.25)]">Lasting Protection.</span>
               </h1>
 
-              {/* Supporting Text */}
-              <p className="text-lg lg:text-xl text-gray-200 font-light leading-relaxed max-w-2xl">
+              {/* Compact Supporting Text */}
+              <p className="text-lg lg:text-xl text-gray-200 font-light leading-[1.4] max-w-2xl">
                 Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-green-400 font-medium">complete peace of mind</span>.
               </p>
 
-              {/* Benefit Icons Grid */}
-              <div className="grid grid-cols-2 gap-3 max-w-2xl">
+              {/* Compact Benefit Icons Grid - 2x2 Layout */}
+              <div className="grid grid-cols-2 gap-3 max-w-xl">
                 {[
                   { icon: "🔥", title: "Fire Protection", desc: "Heat & flame resistant" },
                   { icon: "🌧️", title: "Rain Protection", desc: "100% waterproof coating" },
                   { icon: "🛡️", title: "Scratch-Proof", desc: "Durable Oxford fabric" },
                   { icon: "👶", title: "Safe for Kids", desc: "Rounded edges, stable" }
                 ].map((benefit, idx) => (
-                  <div key={idx} className="flex items-start gap-3 p-3 bg-black/30 backdrop-blur-sm rounded-xl border border-green-600/20 hover:border-green-500/40 transition-all duration-300">
-                    <div className="w-8 h-8 bg-gradient-to-tr from-green-500/20 to-green-400/20 rounded-lg flex items-center justify-center text-lg flex-shrink-0">
+                  <div key={idx} className="flex items-start gap-2.5 p-2.5 bg-black/30 backdrop-blur-sm rounded-lg border border-green-600/20 hover:border-green-500/40 transition-all duration-300">
+                    <div className="w-7 h-7 bg-gradient-to-tr from-green-500/20 to-green-400/20 rounded-lg flex items-center justify-center text-base flex-shrink-0">
                       {benefit.icon}
                     </div>
                     <div className="min-w-0">
-                      <h4 className="text-white font-semibold text-sm">{benefit.title}</h4>
+                      <h4 className="text-white font-semibold text-sm leading-tight">{benefit.title}</h4>
                       <p className="text-gray-400 text-xs leading-tight">{benefit.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              {/* Trust Signals */}
-              <div className="flex items-center gap-4 py-2">
+              {/* Compact Trust Signals */}
+              <div className="flex items-center gap-3 py-1">
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[1,2,3,4,5].map((star) => (
-                      <span key={star} className="text-green-400 text-lg">⭐</span>
+                      <span key={star} className="text-green-400 text-base">⭐</span>
                     ))}
                   </div>
-                  <span className="text-gray-300 font-semibold">2,000+ Protected Cars</span>
+                  <span className="text-gray-300 font-semibold text-sm">2,000+ Protected Cars</span>
                 </div>
-                <div className="text-gray-500">&bull;</div>
-                <span className="text-green-400 font-semibold">2-Year Warranty</span>
+                <div className="text-gray-500 text-sm">•</div>
+                <span className="text-green-400 font-semibold text-sm">2-Year Warranty</span>
               </div>
 
-              {/* Side-by-Side CTA Buttons */}
-              <div className="flex gap-4 max-w-2xl">
-                <button className="flex-1 px-6 py-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white text-lg font-bold rounded-xl shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-105 transition-all duration-300">
+              {/* Optimized Side-by-Side CTA Buttons */}
+              <div className="flex gap-3 max-w-xl pt-2">
+                <button className="flex-1 px-6 py-3.5 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white text-base font-bold rounded-xl shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-[1.02] transition-all duration-300">
                   🛡️ Protect My Car Now
                 </button>
-                <button className="flex-1 px-6 py-4 bg-black/60 border border-green-500/40 hover:border-green-400 hover:bg-green-900/20 text-white text-lg font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+                <button className="flex-1 px-6 py-3.5 bg-black/60 border border-green-500/40 hover:border-green-400 hover:bg-green-900/20 text-white text-base font-semibold rounded-xl shadow-lg hover:scale-[1.02] transition-all duration-300">
                   View Gallery
                 </button>
               </div>
 
-              {/* Urgency */}
+              {/* Compact Urgency */}
               <p className="text-green-400/90 text-sm font-medium">
                 🔥 <span className="font-bold">August Special:</span> Free installation + consultation (Save ₹3,000)
               </p>
             </div>
 
-            {/* RIGHT COLUMN - Slimmer Product Card (40%) */}
-            <div className="lg:col-span-2">
-              <div className="bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-6 py-8 hover:shadow-green-600/20 hover:scale-[1.02] transition-all duration-500 relative max-w-sm mx-auto lg:mx-0">
+            {/* RIGHT COLUMN - Optimized Product Card (5/12 = 42%) */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-start">
+              <div className="bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-6 py-8 hover:shadow-green-600/20 hover:scale-[1.01] transition-all duration-500 relative w-full max-w-sm">
                 
-                {/* Premium Badge */}
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-600 to-green-400 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-xl border border-green-400/20 z-10">
+                {/* Compact Premium Badge */}
+                <div className="absolute -top-2.5 -right-2.5 bg-gradient-to-r from-green-600 to-green-400 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg border border-green-400/20 z-10">
                   100% UV Protected
                 </div>
 
-                {/* Product Icon */}
-                <div className="w-16 h-16 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-6 shadow-2xl shadow-green-500/30 mx-auto">
+                {/* Compact Product Icon */}
+                <div className="w-14 h-14 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center mb-5 shadow-xl shadow-green-500/30 mx-auto">
                   <span className="text-2xl">🚗</span>
                 </div>
                 
-                {/* Product Title */}
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-black text-white mb-2 tracking-tight">SafePark Retractable Carport</h3>
+                {/* Compact Product Title */}
+                <div className="text-center mb-5">
+                  <h3 className="text-lg font-black text-white mb-2 tracking-tight leading-tight">SafePark Retractable Carport</h3>
                   <p className="text-green-400 text-sm font-semibold">Premium Protection for Your Vehicle</p>
                 </div>
                 
@@ -104,7 +104,7 @@ export default function HomePage() {
                   ].map((feature, idx) => (
                     <li key={idx} className="group hover:scale-105 transition-all duration-300">
                       <div className="flex items-center gap-3">
-                        <div className={`w-8 h-8 bg-gradient-to-tr ${feature.color} rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
+                        <div className={`w-7 h-7 bg-gradient-to-tr ${feature.color} rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
                           <span className="text-sm">{feature.icon}</span>
                         </div>
                         <span className="text-white font-semibold text-sm">{feature.text}</span>
@@ -113,15 +113,15 @@ export default function HomePage() {
                   ))}
                 </ul>
                 
-                {/* Card CTA */}
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-base font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-105 transition-all duration-300 mb-4">
+                {/* Compact Card CTA */}
+                <button className="w-full px-5 py-3 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-base font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-[1.02] transition-all duration-300 mb-3">
                   See Gallery →
                 </button>
 
-                {/* Trust Elements */}
+                {/* Compact Trust Elements */}
                 <div className="flex items-center justify-center gap-2 text-green-400/80 text-xs">
                   <span>Warranty</span>
-                  <span className="text-gray-600">&bull;</span>
+                  <span className="text-gray-600">•</span>
                   <span>Free Consultation</span>
                 </div>
               </div>
@@ -130,8 +130,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FEATURES SECTION - Starts After Hero */}
-      <section id="features" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-black/50 via-[#0a1a0f]/30 to-[#0d2818]/50">
+      {/* VISUAL SEPARATOR - Clean Break */}
+      <div className="w-full h-16 bg-gradient-to-b from-transparent via-[#0a1a0f]/20 to-[#0a1a0f]/60"></div>
+
+      {/* FEATURES SECTION - Starts After Clear Separation */}
+      <section id="features" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-[#0a1a0f]/80 via-black/60 to-[#0d2818]/70">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Why Choose SafePark?</h2>
           <div className="grid md:grid-cols-3 gap-8">
