@@ -1,112 +1,110 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* HERO SECTION - Conversion-Optimized */}
-      <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 xl:px-8 py-10 min-h-[80vh]">
-        {/* Left: Headline, social proof, CTAs */}
-        <div>
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-green-500/20 text-xs text-white mb-5 font-medium shadow">
+      {/* HERO SECTION - Premium Conversion/Emotion */}
+      <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 px-4 xl:px-8 py-12 min-h-[85vh]">
+        {/* LEFT COLUMN - Emotional Storytelling */}
+        <div className="space-y-6">
+          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
             Made in India • Premium Quality
           </div>
-          <h1 className="text-[2.5rem] lg:text-[3.2rem] font-black leading-[1.08] mb-4 tracking-tight">
-            <span className="bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">Smart Shelters.</span>
-            <br />
-            <span className="text-white">Lasting Protection.</span>
+          <h1 className="text-[3rem] lg:text-[3.8rem] font-black leading-[1.05] tracking-tight">
+            <span className="text-white">Everyday Risks.</span><br/>
+            <span className="bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(0,255,132,0.25)]">Lasting Protection.</span>
           </h1>
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[1,2,3,4,5].map((star) => (
-                  <span key={star} className="text-green-400 text-sm">⭐</span>
-                ))}
-              </div>
-              <span className="text-gray-300 text-sm font-medium">2,000+ Happy Customers</span>
-            </div>
-            <div className="text-gray-400 text-xs">•</div>
-            <span className="text-green-400 text-sm font-medium">2-Year Warranty</span>
-          </div>
-          <p className="text-lg text-gray-200 mb-2 font-light max-w-xl">
-            Because your car deserves more than just a cover.
-            <br />
-            <span className="font-semibold text-white">
-              Stylish, portable & weatherproof protection
-            </span>{" "}
-            for your luxury, classic, and everyday cars.
+          <p className="text-xl text-gray-200 font-light leading-relaxed max-w-lg">
+            Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected hail to kids playing nearby, give yourself <span className="text-green-400 font-medium">complete peace of mind</span>.
           </p>
-          <p className="text-base text-green-400 mb-5 font-medium">
-            Designed for elegance, built for durability in Coimbatore.
-          </p>
-          <div className="flex flex-wrap gap-2 mb-5">
+          <div className="flex flex-wrap gap-3">
             {[
-              "Retractable & Movable",
-              "Rust-resistant GI Frame",
-              "Oxford 600D Fabric",
-              "UV & Heat Protection"
-            ].map((feature, idx) => (
-              <div key={idx} className="bg-black/70 px-4 py-1.5 rounded-full border border-green-700/20 text-xs font-medium text-white flex items-center">
-                <span className="text-green-400 mr-1 font-bold">✓</span>{feature}
+              { emoji: "🌧️", text: "Weather Damage" },
+              { emoji: "🔥", text: "UV & Heat" },
+              { emoji: "👶", text: "Kids Playing" },
+              { emoji: "🏠", text: "Falling Objects" }
+            ].map((risk, idx) => (
+              <div key={idx} className="flex items-center px-4 py-2 bg-red-900/20 border border-red-500/20 rounded-full text-sm font-medium text-red-200 hover:bg-red-900/30 transition-all duration-300">
+                <span className="mr-2">{risk.emoji}</span>
+                {risk.text}
               </div>
             ))}
           </div>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex items-center gap-4 pt-2">
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[1,2,3,4,5].map((star) => (
+                  <span key={star} className="text-green-400 text-lg">⭐</span>
+                ))}
+              </div>
+              <span className="text-gray-300 font-semibold">2,000+ Protected Cars</span>
+            </div>
+            <div className="text-gray-500">•</div>
+            <span className="text-green-400 font-semibold">✅ 2-Year Warranty</span>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a
               href="tel:+919600840058"
-              className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 px-5 py-2.5 rounded-lg text-base font-bold text-white shadow-md hover:scale-105 transition text-center flex items-center justify-center"
+              className="group bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 px-7 py-3.5 rounded-xl text-lg font-bold text-white shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-105 transition-all duration-300 text-center flex items-center justify-center"
             >
-              📞 Get Free Quote Today
-              <span className="ml-2 bg-yellow-400 text-black text-xs px-2 py-0.5 rounded-full font-bold">FREE</span>
+              🛡️ Protect My Car Now
+              <span className="ml-2 bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-bold">FREE QUOTE</span>
             </a>
             <a
               href="#gallery"
-              className="bg-black/70 border border-green-600 px-5 py-2.5 rounded-lg text-base font-semibold text-white shadow hover:bg-green-950/50 hover:scale-105 transition text-center"
+              className="px-7 py-3.5 bg-black/60 border border-green-500/40 hover:border-green-400 hover:bg-green-900/20 rounded-xl text-lg font-semibold text-white shadow-lg hover:scale-105 transition-all duration-300 text-center"
             >
-              View Gallery
+              See Protection Examples
             </a>
           </div>
-          <p className="text-green-400/80 text-sm mt-3">
-            🔥 <span className="font-semibold">Limited Time:</span> Free installation for August orders
+          <p className="text-green-400/90 text-sm font-medium pt-2">
+            🔥 <span className="font-bold">August Special:</span> Free installation + Free consultation (Save ₹3,000)
           </p>
         </div>
-
-        {/* Right: Card */}
-        <div className="flex w-full justify-center">
-          <div className="relative w-full max-w-xs bg-black/40 border border-green-600/20 shadow-xl rounded-2xl px-7 py-8 flex flex-col items-center">
-            <div className="absolute -top-3 right-5 bg-gradient-to-r from-green-600 to-green-400 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold shadow border border-green-500/20">
+        {/* RIGHT COLUMN - Product Card */}
+        <div className="flex justify-center lg:justify-end">
+          <div className="relative w-full max-w-sm bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-8 py-10 hover:shadow-green-600/20 hover:scale-[1.02] transition-all duration-500">
+            <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-600 to-green-400 text-white px-4 py-2.5 rounded-full text-sm font-bold shadow-xl border border-green-400/20 z-10">
               100% UV Protected<br/>
               <span className="font-normal text-xs">Waterproof & Fadeproof</span>
             </div>
-            <div className="w-12 h-12 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center mb-5 shadow-lg">
-              <span className="text-xl">🚗</span>
+            <div className="w-16 h-16 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-6 shadow-2xl shadow-green-500/30 mx-auto">
+              <span className="text-3xl">🚗</span>
             </div>
-            <div className="text-center mb-5">
-              <h3 className="text-lg font-extrabold text-white mb-1">SafePark Retractable Carport</h3>
-              <p className="text-green-400 text-sm font-medium leading-tight">Premium Protection for Your Vehicle</p>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-black text-white mb-3 tracking-tight">SafePark Retractable Carport</h3>
+              <p className="text-green-400 text-base font-semibold">Premium Protection for Your Vehicle</p>
             </div>
-            <ul className="w-full space-y-3 mb-7">
+            <ul className="space-y-4 mb-8">
               {[
-                { icon: "✨", text: "Galvanized Iron Frame", color: "bg-yellow-400/90" },
-                { icon: "🔵", text: "Oxford 600D Fabric", color: "bg-blue-400/90" },
-                { icon: "⚡", text: "Quick Installation", color: "bg-purple-500/90" },
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-lg ${item.color}`}>
-                    <span className="text-sm">{item.icon}</span>
-                  </span>
-                  <span className="text-white/90 font-medium text-sm">{item.text}</span>
+                { icon: "✨", text: "Galvanized Iron Frame", desc: "Rust-resistant & durable", color: "from-yellow-400 to-orange-400" },
+                { icon: "🔵", text: "Oxford 600D Fabric", desc: "100% waterproof material", color: "from-blue-400 to-cyan-400" },
+                { icon: "⚡", text: "Quick Installation", desc: "Ready in 2-3 hours", color: "from-purple-400 to-pink-400" }
+              ].map((feature, idx) => (
+                <li key={idx} className="group hover:scale-105 transition-all duration-300">
+                  <div className="flex items-start gap-3">
+                    <div className={`w-8 h-8 bg-gradient-to-tr ${feature.color} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
+                      <span className="text-base">{feature.icon}</span>
+                    </div>
+                    <div>
+                      <span className="text-white font-bold text-base block">{feature.text}</span>
+                      <span className="text-gray-400 text-sm">{feature.desc}</span>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>
             <a
               href="#gallery"
-              className="w-full bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white py-2.5 rounded-lg font-bold text-base shadow hover:scale-105 transition flex items-center justify-center"
+              className="w-full bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white py-4 rounded-xl text-lg font-bold shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-105 transition-all duration-300 flex items-center justify-center mb-4"
             >
-              See Gallery <span className="ml-1 text-base">→</span>
+              View Gallery <span className="ml-2 text-xl">→</span>
             </a>
-            <div className="mt-4 flex items-center gap-2 text-green-400 text-xs justify-center">
-              <span>Warranty Included</span>
-              <span className="text-gray-500">|</span>
+            <div className="flex items-center justify-center gap-4 text-green-400/80 text-xs">
+              <span>2-Year Warranty</span>
+              <span className="text-gray-600">•</span>
               <span>Free Consultation</span>
+              <span className="text-gray-600">•</span>
+              <span>Money-Back Guarantee</span>
             </div>
           </div>
         </div>
@@ -255,7 +253,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          
           <div className="text-center mt-16">
             <p className="text-green-400/80 text-lg mb-6">Join 2,000+ satisfied customers in Coimbatore</p>
             <a href="tel:+919600840058" 
@@ -271,7 +268,6 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-8">Ready to Protect Your Car?</h2>
           <p className="text-xl text-green-400/90 mb-12 max-w-2xl mx-auto">Get your premium SafePark carport installed today</p>
-          
           <div className="bg-gradient-to-br from-[#0a1a0f]/60 to-[#0d2818]/80 border border-green-600/30 p-10 rounded-3xl mb-12 shadow-2xl shadow-green-900/20 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -291,7 +287,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          
           <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-lg mx-auto">
             <a href="tel:+919600840058" 
                className="bg-green-600 hover:bg-green-700 px-10 py-4 rounded-xl text-lg font-semibold text-white shadow-xl shadow-green-600/20 hover:shadow-2xl transition-all duration-300">
@@ -324,7 +319,6 @@ export default function HomePage() {
                 <span className="text-gray-400 text-sm">2,000+ Happy Customers</span>
               </div>
             </div>
-            
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Contact</h4>
               <div className="space-y-4">
@@ -342,7 +336,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Services</h4>
               <div className="space-y-3">
@@ -353,7 +346,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          
           <div className="border-t border-green-600/10 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm">
               © 2025 SafePark. Made with ❤️ in Coimbatore, Tamil Nadu
