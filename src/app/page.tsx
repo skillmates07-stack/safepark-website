@@ -1,13 +1,13 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* HERO SECTION - Minimal Top Gap */}
-      <section className="relative min-h-[calc(100vh-56px)] flex items-start pt-6 pb-4">
+      {/* HERO SECTION - Minimal Top Space */}
+      <section className="relative min-h-[calc(100vh-56px)] flex items-start pt-2 pb-4">
         <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start lg:items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             
             {/* LEFT COLUMN - Content (7/12 = 58%) */}
-            <div className="lg:col-span-7 space-y-4">
+            <div className="lg:col-span-7 space-y-3">
               {/* Badge */}
               <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
@@ -15,30 +15,30 @@ export default function HomePage() {
               </div>
 
               {/* Headline */}
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.95] tracking-tight">
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.9] tracking-tight">
                 <span className="text-white">Everyday Risks.</span><br/>
                 <span className="bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(0,255,132,0.25)]">Lasting Protection.</span>
               </h1>
 
               {/* Supporting Text */}
-              <p className="text-lg lg:text-xl text-gray-200 font-light leading-[1.4] max-w-2xl">
+              <p className="text-lg lg:text-xl text-gray-200 font-light leading-[1.3] max-w-2xl">
                 Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-green-400 font-medium">complete peace of mind</span>.
               </p>
 
               {/* Benefit Icons Grid - 2x2 Layout */}
-              <div className="grid grid-cols-2 gap-3 max-w-xl">
+              <div className="grid grid-cols-2 gap-2.5 max-w-xl">
                 {[
                   { icon: "🔥", title: "Fire Protection", desc: "Heat & flame resistant" },
                   { icon: "🌧️", title: "Rain Protection", desc: "100% waterproof coating" },
                   { icon: "🛡️", title: "Scratch-Proof", desc: "Durable Oxford fabric" },
                   { icon: "👶", title: "Safe for Kids", desc: "Rounded edges, stable" }
                 ].map((benefit, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-2.5 bg-black/30 backdrop-blur-sm rounded-lg border border-green-600/20 hover:border-green-500/40 transition-all duration-300">
-                    <div className="w-7 h-7 bg-gradient-to-tr from-green-500/20 to-green-400/20 rounded-lg flex items-center justify-center text-base flex-shrink-0">
+                  <div key={idx} className="flex items-start gap-2 p-2 bg-black/30 backdrop-blur-sm rounded-lg border border-green-600/20 hover:border-green-500/40 transition-all duration-300">
+                    <div className="w-6 h-6 bg-gradient-to-tr from-green-500/20 to-green-400/20 rounded-lg flex items-center justify-center text-sm flex-shrink-0">
                       {benefit.icon}
                     </div>
                     <div className="min-w-0">
-                      <h4 className="text-white font-semibold text-sm leading-tight">{benefit.title}</h4>
+                      <h4 className="text-white font-semibold text-xs leading-tight">{benefit.title}</h4>
                       <p className="text-gray-400 text-xs leading-tight">{benefit.desc}</p>
                     </div>
                   </div>
@@ -46,11 +46,11 @@ export default function HomePage() {
               </div>
 
               {/* Trust Signals */}
-              <div className="flex items-center gap-3 py-1">
+              <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[1,2,3,4,5].map((star) => (
-                      <span key={star} className="text-green-400 text-base">⭐</span>
+                      <span key={star} className="text-green-400 text-sm">⭐</span>
                     ))}
                   </div>
                   <span className="text-gray-300 font-semibold text-sm">2,000+ Protected Cars</span>
@@ -60,7 +60,7 @@ export default function HomePage() {
               </div>
 
               {/* Urgency Message */}
-              <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-400/20 rounded-lg px-4 py-2 backdrop-blur-sm">
+              <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-400/20 rounded-lg px-3 py-1.5 backdrop-blur-sm">
                 <p className="text-orange-300 text-sm font-medium flex items-center">
                   🔥 <span className="font-bold ml-1">August Special:</span> 
                   <span className="ml-1">Free installation + consultation (Save ₹3,000)</span>
@@ -68,38 +68,38 @@ export default function HomePage() {
               </div>
 
               {/* Side-by-Side CTA Buttons */}
-              <div className="flex gap-3 max-w-xl pt-2">
-                <a href="tel:+919600840058" className="flex-1 px-6 py-3.5 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white text-base font-bold rounded-xl shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-[1.02] transition-all duration-300 text-center">
+              <div className="flex gap-3 max-w-xl">
+                <a href="tel:+919600840058" className="flex-1 px-5 py-3 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white text-base font-bold rounded-xl shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-[1.02] transition-all duration-300 text-center">
                   🛡️ Protect My Car Now
                 </a>
-                <a href="#gallery" className="flex-1 px-6 py-3.5 bg-black/60 border border-green-500/40 hover:border-green-400 hover:bg-green-900/20 text-white text-base font-semibold rounded-xl shadow-lg hover:scale-[1.02] transition-all duration-300 text-center">
+                <a href="#gallery" className="flex-1 px-5 py-3 bg-black/60 border border-green-500/40 hover:border-green-400 hover:bg-green-900/20 text-white text-base font-semibold rounded-xl shadow-lg hover:scale-[1.02] transition-all duration-300 text-center">
                   View Gallery
                 </a>
               </div>
             </div>
 
             {/* RIGHT COLUMN - Product Card (5/12 = 42%) */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-start">
-              <div className="bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-6 py-8 hover:shadow-green-600/20 hover:scale-[1.01] transition-all duration-500 relative w-full max-w-sm">
+            <div className="lg:col-span-5 flex justify-center lg:justify-start mt-4 lg:mt-0">
+              <div className="bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-6 py-6 hover:shadow-green-600/20 hover:scale-[1.01] transition-all duration-500 relative w-full max-w-sm">
                 
                 {/* Premium Badge */}
-                <div className="absolute -top-2.5 -right-2.5 bg-gradient-to-r from-green-600 to-green-400 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg border border-green-400/20 z-10">
+                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-green-600 to-green-400 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg border border-green-400/20 z-10">
                   100% UV Protected
                 </div>
 
                 {/* Product Icon */}
-                <div className="w-14 h-14 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center mb-5 shadow-xl shadow-green-500/30 mx-auto">
-                  <span className="text-2xl">🚗</span>
+                <div className="w-12 h-12 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center mb-4 shadow-xl shadow-green-500/30 mx-auto">
+                  <span className="text-xl">🚗</span>
                 </div>
                 
                 {/* Product Title */}
-                <div className="text-center mb-5">
+                <div className="text-center mb-4">
                   <h3 className="text-lg font-black text-white mb-2 tracking-tight leading-tight">SafePark Retractable Carport</h3>
                   <p className="text-green-400 text-sm font-semibold">Premium Protection for Your Vehicle</p>
                 </div>
                 
                 {/* Feature List */}
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2.5 mb-5">
                   {[
                     { icon: "✨", text: "Galvanized Iron Frame", color: "from-yellow-400 to-orange-400" },
                     { icon: "🔵", text: "Oxford 600D Fabric", color: "from-blue-400 to-cyan-400" },
@@ -107,8 +107,8 @@ export default function HomePage() {
                   ].map((feature, idx) => (
                     <li key={idx} className="group hover:scale-105 transition-all duration-300">
                       <div className="flex items-center gap-3">
-                        <div className={`w-7 h-7 bg-gradient-to-tr ${feature.color} rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
-                          <span className="text-sm">{feature.icon}</span>
+                        <div className={`w-6 h-6 bg-gradient-to-tr ${feature.color} rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
+                          <span className="text-xs">{feature.icon}</span>
                         </div>
                         <span className="text-white font-semibold text-sm">{feature.text}</span>
                       </div>
@@ -117,7 +117,7 @@ export default function HomePage() {
                 </ul>
                 
                 {/* Card CTA */}
-                <a href="#gallery" className="w-full px-5 py-3 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-base font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-[1.02] transition-all duration-300 mb-3 text-center block">
+                <a href="#gallery" className="w-full px-4 py-2.5 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-sm font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-[1.02] transition-all duration-300 mb-3 text-center block">
                   See Gallery →
                 </a>
 
