@@ -1,102 +1,87 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* HERO SECTION - Balanced & Professional */}
-      <section className="relative flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-16 -mt-6 gap-12 min-h-[85vh]">
-        
-        {/* Left Column - Content */}
-        <div className="flex-1 max-w-2xl">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-green-600/30 text-xs text-white mb-6 shadow-[0_2px_12px_0_rgba(0,255,132,0.12)] font-medium">
-            <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+      {/* HERO SECTION - Optimized & Properly Sized */}
+      <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 xl:px-8 py-10 min-h-[80vh]">
+        {/* Left: Headline and CTA */}
+        <div>
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-green-500/20 text-xs text-white mb-5 font-medium shadow">
+            <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
             Made in India • Premium Quality
           </div>
-          
-          <h1 className="text-5xl lg:text-6xl font-black leading-[1.1] mb-6 tracking-tight">
-            <span className="bg-gradient-to-tr from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_6px_25px_rgba(0,255,132,0.15)]">Smart Shelters.</span><br/>
-            <span className="text-white drop-shadow-lg">Lasting</span><br/>
-            <span className="text-white">Protection.</span>
+          <h1 className="text-[2.6rem] lg:text-[3.2rem] xl:text-[3.7rem] font-black leading-[1.08] mb-4 tracking-tight">
+            <span className="bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">Smart Shelters.</span>
+            <br />
+            <span className="text-white">Lasting Protection.</span>
           </h1>
-          
-          <p className="text-lg lg:text-xl text-gray-200 mb-5 max-w-xl font-light leading-relaxed">
-            Because your car deserves more than just a cover.<br/>
+          <p className="text-lg text-gray-200 mb-3 font-light max-w-xl">
+            Because your car deserves more than just a cover.<br />
             <span className="font-semibold text-white">Stylish, portable & weatherproof protection</span> for your luxury, classic, and everyday cars.
           </p>
-          
-          <p className="text-base text-green-400 mb-8 font-medium">
+          <p className="text-base text-green-400 mb-6 font-medium">
             Designed for elegance, built for durability in Coimbatore.
           </p>
-          
-          {/* Feature Pills */}
-          <div className="flex flex-wrap gap-3 mb-8">
+          <div className="flex flex-wrap gap-2 mb-6">
             {[
               "Retractable & Movable",
-              "Rust-resistant GI Frame", 
+              "Rust-resistant GI Frame",
               "Oxford 600D Fabric",
               "UV & Heat Protection"
             ].map((feature, idx) => (
-              <div key={idx} className="bg-black/70 backdrop-blur-md px-4 py-2.5 rounded-full border border-green-600/40 text-sm font-medium text-white shadow-[0_2px_12px_0_rgba(0,255,132,0.1)] hover:shadow-[0_4px_20px_0_rgba(0,255,132,0.15)] transition-all duration-300">
-                <span className="text-green-400 mr-2 font-bold">✓</span>
-                {feature}
+              <div key={idx} className="bg-black/70 px-4 py-1.5 rounded-full border border-green-700/20 text-xs font-medium text-white flex items-center">
+                <span className="text-green-400 mr-1 font-bold">✓</span>{feature}
               </div>
             ))}
           </div>
-          
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a href="tel:+919600840058" 
-               className="bg-gradient-to-tr from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 px-8 py-4 rounded-xl text-lg font-bold text-white shadow-2xl shadow-green-500/25 hover:shadow-green-400/35 hover:scale-[1.02] transition-all duration-300 text-center">
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href="tel:+919600840058"
+              className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 px-5 py-2.5 rounded-lg text-base font-bold text-white shadow-md hover:scale-105 transition text-center"
+            >
               Book Your Carport Now
             </a>
-            <a href="#contact" 
-               className="bg-black/65 border-2 border-green-600/60 hover:border-green-400 hover:bg-green-900/20 px-8 py-4 rounded-xl text-lg font-bold text-white shadow-xl hover:scale-[1.02] transition-all duration-300 text-center">
+            <a
+              href="#contact"
+              className="bg-black/70 border border-green-600 px-5 py-2.5 rounded-lg text-base font-bold text-white shadow hover:bg-green-950/50 hover:scale-105 transition text-center"
+            >
               Get a Free Quote
             </a>
           </div>
         </div>
-        
-        {/* Right Column - Premium Info Card */}
-        <div className="flex-1 max-w-md">
-          <div className="bg-black/40 backdrop-blur-2xl border border-green-600/30 p-8 rounded-3xl relative shadow-2xl shadow-green-900/20 hover:shadow-green-600/25 hover:scale-[1.01] transition-all duration-500">
-            
-            {/* Premium Badge */}
-            <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-600 to-green-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg shadow-green-600/30 z-10">
-              100% UV Protected
-              <br/>
+
+        {/* Right: Card */}
+        <div className="flex w-full justify-center">
+          <div className="relative w-full max-w-xs bg-black/40 border border-green-600/20 shadow-xl rounded-2xl px-7 py-8 flex flex-col items-center">
+            <div className="absolute -top-3 right-5 bg-gradient-to-r from-green-600 to-green-400 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold shadow border border-green-500/20">
+              100% UV Protected<br/>
               <span className="font-normal text-xs">Waterproof & Fadeproof</span>
             </div>
-            
-            {/* Icon */}
-            <div className="w-20 h-20 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-6 shadow-2xl shadow-green-500/25 mx-auto">
-              <span className="text-3xl text-black">🚗</span>
+            <div className="w-12 h-12 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center mb-5 shadow-lg">
+              <span className="text-xl">🚗</span>
             </div>
-            
-            {/* Title & Description */}
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-black text-white mb-3 tracking-tight">SafePark Retractable Carport</h3>
-              <p className="text-green-400 text-lg font-medium">Premium Protection for Your Vehicle</p>
+            <div className="text-center mb-5">
+              <h3 className="text-lg font-extrabold text-white mb-1">SafePark Retractable Carport</h3>
+              <p className="text-green-400 text-sm font-medium leading-tight">Premium Protection for Your Vehicle</p>
             </div>
-            
-            {/* Features List */}
-            <div className="space-y-4 mb-8">
+            <ul className="w-full space-y-3 mb-7">
               {[
-                { icon: "✨", text: "Galvanized Iron Frame", color: "from-yellow-400 to-orange-400" },
-                { icon: "🔵", text: "Oxford 600D Fabric", color: "from-blue-400 to-cyan-400" },
-                { icon: "⚡", text: "Quick Installation", color: "from-purple-400 to-pink-400" }
-              ].map((feature, idx) => (
-                <div key={idx} className="flex items-center group/item hover:scale-105 transition-all duration-300">
-                  <div className={`w-10 h-10 bg-gradient-to-tr ${feature.color} rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover/item:shadow-xl transition-all duration-300`}>
-                    <span className="text-lg">{feature.icon}</span>
-                  </div>
-                  <span className="text-white font-semibold text-base">{feature.text}</span>
-                </div>
+                { icon: "✨", text: "Galvanized Iron Frame", color: "bg-yellow-400/90" },
+                { icon: "🔵", text: "Oxford 600D Fabric", color: "bg-blue-400/90" },
+                { icon: "⚡", text: "Quick Installation", color: "bg-purple-500/90" },
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-center gap-3">
+                  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-lg ${item.color}`}>
+                    <span className="text-sm">{item.icon}</span>
+                  </span>
+                  <span className="text-white/90 font-medium text-sm">{item.text}</span>
+                </li>
               ))}
-            </div>
-            
-            {/* CTA Button */}
-            <a href="#gallery" 
-               className="w-full bg-gradient-to-tr from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white py-4 rounded-xl text-lg font-bold shadow-xl shadow-green-600/25 hover:shadow-green-500/35 hover:scale-[1.02] transition-all duration-300 flex items-center justify-center">
-              See Gallery
-              <span className="ml-2 text-xl">→</span>
+            </ul>
+            <a
+              href="#gallery"
+              className="w-full bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white py-2.5 rounded-lg font-bold text-base shadow hover:scale-105 transition flex items-center justify-center"
+            >
+              See Gallery <span className="ml-1 text-base">→</span>
             </a>
           </div>
         </div>
