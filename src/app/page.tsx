@@ -1,26 +1,30 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* HERO SECTION - Premium Conversion/Emotion */}
-      <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 px-4 xl:px-8 py-12 min-h-[85vh]">
-        {/* LEFT COLUMN - Emotional Storytelling */}
-        <div className="space-y-6">
-          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg">
+      {/* BALANCED TWO-COLUMN HERO SECTION */}
+      <section className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between min-h-[80vh] gap-12 px-4 xl:px-8 py-12">
+        {/* LEFT COLUMN */}
+        <div className="flex-1 space-y-8 max-w-lg">
+          {/* Badge */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-            Made in India • Premium Quality
+            Made in India &bull; Premium Quality
           </div>
-          <h1 className="text-[3rem] lg:text-[3.8rem] font-black leading-[1.05] tracking-tight">
+          {/* Headline */}
+          <h1 className="text-4xl lg:text-5xl font-black leading-[1.1] tracking-tight">
             <span className="text-white">Everyday Risks.</span><br/>
             <span className="bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(0,255,132,0.25)]">Lasting Protection.</span>
           </h1>
-          <p className="text-xl text-gray-200 font-light leading-relaxed max-w-lg">
-            Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected hail to kids playing nearby, give yourself <span className="text-green-400 font-medium">complete peace of mind</span>.
+          {/* Supporting Text */}
+          <p className="text-lg text-gray-200 font-light leading-relaxed">
+            Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-green-400 font-medium">complete peace of mind</span>.
           </p>
+          {/* Feature Badges */}
           <div className="flex flex-wrap gap-3">
             {[
-              { emoji: "🌧️", text: "Weather Damage" },
-              { emoji: "🔥", text: "UV & Heat" },
-              { emoji: "👶", text: "Kids Playing" },
+              { emoji: "🌧️", text: "Weather" },
+              { emoji: "☀️", text: "UV" },
+              { emoji: "👶", text: "Kids" },
               { emoji: "🏠", text: "Falling Objects" }
             ].map((risk, idx) => (
               <div key={idx} className="flex items-center px-4 py-2 bg-red-900/20 border border-red-500/20 rounded-full text-sm font-medium text-red-200 hover:bg-red-900/30 transition-all duration-300">
@@ -29,7 +33,8 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="flex items-center gap-4 pt-2">
+          {/* Trust Signals */}
+          <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[1,2,3,4,5].map((star) => (
@@ -38,74 +43,57 @@ export default function HomePage() {
               </div>
               <span className="text-gray-300 font-semibold">2,000+ Protected Cars</span>
             </div>
-            <div className="text-gray-500">•</div>
-            <span className="text-green-400 font-semibold">✅ 2-Year Warranty</span>
+            <div className="text-gray-500">&bull;</div>
+            <span className="text-green-400 font-semibold">2-Year Warranty</span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <a
-              href="tel:+919600840058"
-              className="group bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 px-7 py-3.5 rounded-xl text-lg font-bold text-white shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-105 transition-all duration-300 text-center flex items-center justify-center"
-            >
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="px-7 py-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white text-lg font-bold rounded-xl shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-105 transition-all duration-300">
               🛡️ Protect My Car Now
-              <span className="ml-2 bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-bold">FREE QUOTE</span>
-            </a>
-            <a
-              href="#gallery"
-              className="px-7 py-3.5 bg-black/60 border border-green-500/40 hover:border-green-400 hover:bg-green-900/20 rounded-xl text-lg font-semibold text-white shadow-lg hover:scale-105 transition-all duration-300 text-center"
-            >
-              See Protection Examples
-            </a>
+            </button>
+            <button className="px-7 py-4 bg-black/60 border border-green-500/40 hover:border-green-400 hover:bg-green-900/20 text-white text-lg font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+              Learn More
+            </button>
           </div>
-          <p className="text-green-400/90 text-sm font-medium pt-2">
-            🔥 <span className="font-bold">August Special:</span> Free installation + Free consultation (Save ₹3,000)
+          {/* Urgency */}
+          <p className="text-green-400/90 text-sm font-medium">
+            🔥 <span className="font-bold">August Special:</span> Free installation + consultation (Save ₹3,000)
           </p>
         </div>
-        {/* RIGHT COLUMN - Product Card */}
-        <div className="flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-sm bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-8 py-10 hover:shadow-green-600/20 hover:scale-[1.02] transition-all duration-500">
-            <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-600 to-green-400 text-white px-4 py-2.5 rounded-full text-sm font-bold shadow-xl border border-green-400/20 z-10">
-              100% UV Protected<br/>
-              <span className="font-normal text-xs">Waterproof & Fadeproof</span>
-            </div>
-            <div className="w-16 h-16 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-6 shadow-2xl shadow-green-500/30 mx-auto">
-              <span className="text-3xl">🚗</span>
-            </div>
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-black text-white mb-3 tracking-tight">SafePark Retractable Carport</h3>
-              <p className="text-green-400 text-base font-semibold">Premium Protection for Your Vehicle</p>
-            </div>
-            <ul className="space-y-4 mb-8">
-              {[
-                { icon: "✨", text: "Galvanized Iron Frame", desc: "Rust-resistant & durable", color: "from-yellow-400 to-orange-400" },
-                { icon: "🔵", text: "Oxford 600D Fabric", desc: "100% waterproof material", color: "from-blue-400 to-cyan-400" },
-                { icon: "⚡", text: "Quick Installation", desc: "Ready in 2-3 hours", color: "from-purple-400 to-pink-400" }
-              ].map((feature, idx) => (
-                <li key={idx} className="group hover:scale-105 transition-all duration-300">
-                  <div className="flex items-start gap-3">
-                    <div className={`w-8 h-8 bg-gradient-to-tr ${feature.color} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
-                      <span className="text-base">{feature.icon}</span>
+        {/* RIGHT COLUMN */}
+        <div className="flex-1 max-w-lg flex flex-col justify-between h-full">
+          <div className="bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-8 py-10 flex flex-col h-full justify-between">
+            <div>
+              {/* Product Icon */}
+              <div className="w-20 h-20 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-8 shadow-2xl shadow-green-500/30 mx-auto">
+                <span className="text-3xl">🚗</span>
+              </div>
+              {/* Product Title */}
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-black text-white mb-3 tracking-tight">SafePark Retractable Carport</h3>
+                <p className="text-green-400 text-base font-semibold">Premium Protection for Your Vehicle</p>
+              </div>
+              {/* Feature List */}
+              <ul className="space-y-5 mb-10">
+                {[
+                  { icon: "✨", text: "Galvanized Iron Frame", color: "from-yellow-400 to-orange-400" },
+                  { icon: "🔵", text: "Oxford 600D Fabric", color: "from-blue-400 to-cyan-400" },
+                  { icon: "⚡", text: "Quick Installation", color: "from-purple-400 to-pink-400" }
+                ].map((feature, idx) => (
+                  <li key={idx} className="group hover:scale-105 transition-all duration-300">
+                    <div className="flex items-center gap-4">
+                      <div className={`w-10 h-10 bg-gradient-to-tr ${feature.color} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                        <span className="text-lg">{feature.icon}</span>
+                      </div>
+                      <span className="text-white font-bold text-lg">{feature.text}</span>
                     </div>
-                    <div>
-                      <span className="text-white font-bold text-base block">{feature.text}</span>
-                      <span className="text-gray-400 text-sm">{feature.desc}</span>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <a
-              href="#gallery"
-              className="w-full bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white py-4 rounded-xl text-lg font-bold shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-105 transition-all duration-300 flex items-center justify-center mb-4"
-            >
-              View Gallery <span className="ml-2 text-xl">→</span>
-            </a>
-            <div className="flex items-center justify-center gap-4 text-green-400/80 text-xs">
-              <span>2-Year Warranty</span>
-              <span className="text-gray-600">•</span>
-              <span>Free Consultation</span>
-              <span className="text-gray-600">•</span>
-              <span>Money-Back Guarantee</span>
+                  </li>
+                ))}
+              </ul>
             </div>
+            <button className="w-full px-7 py-4 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-lg font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-105 transition-all duration-300 mt-auto">
+              View Gallery →
+            </button>
           </div>
         </div>
       </section>
@@ -141,7 +129,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* GALLERY SECTION */}
       <section id="gallery" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-black/70 via-[#0a1a0f]/50 to-[#0d2818]/70">
         <div className="max-w-6xl mx-auto">
@@ -212,7 +199,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* TESTIMONIALS SECTION */}
       <section className="px-8 lg:px-16 py-20 bg-gradient-to-br from-black via-[#051008] to-[#081c0f]">
         <div className="max-w-4xl mx-auto">
@@ -255,14 +241,13 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-16">
             <p className="text-green-400/80 text-lg mb-6">Join 2,000+ satisfied customers in Coimbatore</p>
-            <a href="tel:+919600840058" 
+            <a href="tel:+919600840058"
                className="bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-green-600/30 hover:shadow-green-500/40 transition-all duration-300">
               Get Your Quote Today
             </a>
           </div>
         </div>
       </section>
-
       {/* CONTACT SECTION */}
       <section id="contact" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-black/80 via-[#0a1a0f]/60 to-[#0d2818]/80">
         <div className="max-w-5xl mx-auto text-center">
@@ -288,18 +273,17 @@ export default function HomePage() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-lg mx-auto">
-            <a href="tel:+919600840058" 
+            <a href="tel:+919600840058"
                className="bg-green-600 hover:bg-green-700 px-10 py-4 rounded-xl text-lg font-semibold text-white shadow-xl shadow-green-600/20 hover:shadow-2xl transition-all duration-300">
               Call for Free Quote
             </a>
-            <a href="https://wa.me/919600840058" 
+            <a href="https://wa.me/919600840058"
                className="bg-black/50 border border-green-600 px-10 py-4 rounded-xl text-lg font-semibold text-white hover:bg-green-900/30 transition-all duration-300">
               WhatsApp Now
             </a>
           </div>
         </div>
       </section>
-
       {/* FOOTER */}
       <footer className="bg-gradient-to-br from-black via-[#040b06] to-[#071410] border-t border-green-600/10 px-8 lg:px-16 py-16">
         <div className="max-w-6xl mx-auto">
