@@ -1,10 +1,10 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* HERO SECTION - Fixed Top Gap & Proper Content Positioning */}
-      <section className="relative min-h-[calc(100vh-56px)] flex items-center py-4">
+      {/* HERO SECTION - Minimal Top Gap */}
+      <section className="relative min-h-[calc(100vh-56px)] flex items-start pt-6 pb-4">
         <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start lg:items-center">
             
             {/* LEFT COLUMN - Content (7/12 = 58%) */}
             <div className="lg:col-span-7 space-y-4">
@@ -59,7 +59,7 @@ export default function HomePage() {
                 <span className="text-green-400 font-semibold text-sm">2-Year Warranty</span>
               </div>
 
-              {/* MOVED UP - Urgency Message */}
+              {/* Urgency Message */}
               <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-400/20 rounded-lg px-4 py-2 backdrop-blur-sm">
                 <p className="text-orange-300 text-sm font-medium flex items-center">
                   🔥 <span className="font-bold ml-1">August Special:</span> 
