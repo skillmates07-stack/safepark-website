@@ -152,7 +152,7 @@ export default function HomePage() {
               {
                 icon: "🏠",
                 title: "Perfect Fit",
-                desc: "Designed for Indian homes and weather conditions in Coimbatore"
+                desc: "From sun to storm — always safe."
               }
             ].map((item, idx) => (
               <div key={idx} className="bg-gradient-to-br from-[#0a1a0f]/60 to-[#0d2818]/80 border border-green-600/30 p-8 rounded-2xl text-center shadow-lg hover:shadow-xl hover:shadow-green-900/20 hover:scale-105 transition-all duration-300">
@@ -384,3 +384,4 @@ export default function HomePage() {
     </main>
   );
 }
+
