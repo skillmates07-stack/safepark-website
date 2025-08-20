@@ -1,22 +1,22 @@
 export default function PricingPage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* BALANCED PRICING HERO */}
-      <section className="py-12 px-4 lg:px-8">
+      {/* MINIMAL TOP SPACE HERO */}
+      <section className="py-6 px-4 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-5xl font-black text-white mb-4">
+          <h1 className="text-4xl lg:text-5xl font-black text-white mb-3">
             Choose Your <span className="text-green-400">SafePark</span> Pricing
           </h1>
-          <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
             Find the perfect plan for your vehicle. All models use a <span className="font-semibold text-white">premium GI frame and Oxford 600D fabric.</span>
           </p>
         </div>
       </section>
 
-      {/* BALANCED PRICING CARDS */}
-      <section className="px-4 lg:px-8 pb-16">
+      {/* TIGHT SPACING PRICING CARDS */}
+      <section className="px-4 lg:px-8 pb-12">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 id: 1,
@@ -52,61 +52,61 @@ export default function PricingPage() {
                 examples: ["Toyota Fortuner, Ford Endeavour", "BMW X5, Audi Q7", "Mercedes GLS, Range Rover"]
               }
             ].map((plan) => (
-              <div key={plan.id} className="relative bg-black/40 backdrop-blur-sm border border-green-600/30 rounded-2xl p-8 hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 shadow-lg">
+              <div key={plan.id} className="relative bg-black/40 backdrop-blur-sm border border-green-600/30 rounded-2xl p-6 hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 shadow-lg">
                 
                 {/* Popular Badge */}
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                     ⭐ Most Popular
                   </div>
                 )}
 
                 {/* Plan Number */}
-                <div className={`w-16 h-16 bg-gradient-to-tr ${plan.color} rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-xl`}>
-                  <span className="text-white font-black text-2xl">{plan.id}</span>
+                <div className={`w-14 h-14 bg-gradient-to-tr ${plan.color} rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg`}>
+                  <span className="text-white font-black text-xl">{plan.id}</span>
                 </div>
 
                 {/* Title & Price */}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl lg:text-3xl font-black text-white mb-3">{plan.title}</h3>
-                  <div className="text-4xl lg:text-5xl font-black text-green-400 mb-2">{plan.price}</div>
+                <div className="text-center mb-5">
+                  <h3 className="text-2xl font-black text-white mb-2">{plan.title}</h3>
+                  <div className="text-4xl font-black text-green-400 mb-1">{plan.price}</div>
                   <p className="text-sm text-gray-400">{plan.subtitle}</p>
                 </div>
 
                 {/* Dimensions */}
-                <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className={`w-7 h-7 bg-gradient-to-tr ${plan.color} rounded-lg flex items-center justify-center`}>
-                      <span className="text-white text-sm">📏</span>
+                <div className="mb-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className={`w-6 h-6 bg-gradient-to-tr ${plan.color} rounded-lg flex items-center justify-center`}>
+                      <span className="text-white text-xs">📏</span>
                     </div>
-                    <span className="text-white font-bold text-lg">Dimensions</span>
+                    <span className="text-white font-bold text-base">Dimensions</span>
                   </div>
-                  <p className="text-gray-300 text-base pl-10">{plan.dimensions}</p>
+                  <p className="text-gray-300 text-sm pl-8">{plan.dimensions}</p>
                 </div>
 
                 {/* Suitable For */}
-                <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className={`w-7 h-7 bg-gradient-to-tr ${plan.color} rounded-lg flex items-center justify-center`}>
-                      <span className="text-white text-sm">🚗</span>
+                <div className="mb-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className={`w-6 h-6 bg-gradient-to-tr ${plan.color} rounded-lg flex items-center justify-center`}>
+                      <span className="text-white text-xs">🚗</span>
                     </div>
-                    <span className="text-white font-bold text-lg">Suitable For</span>
+                    <span className="text-white font-bold text-base">Suitable For</span>
                   </div>
-                  <p className="text-gray-300 text-base pl-10">{plan.suitable}</p>
+                  <p className="text-gray-300 text-sm pl-8">{plan.suitable}</p>
                 </div>
 
                 {/* Example Vehicles */}
-                <div className="mb-8">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className={`w-7 h-7 bg-gradient-to-tr ${plan.color} rounded-lg flex items-center justify-center`}>
-                      <span className="text-white text-sm">🔧</span>
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className={`w-6 h-6 bg-gradient-to-tr ${plan.color} rounded-lg flex items-center justify-center`}>
+                      <span className="text-white text-xs">🔧</span>
                     </div>
-                    <span className="text-white font-bold text-lg">Example Vehicles</span>
+                    <span className="text-white font-bold text-base">Example Vehicles</span>
                   </div>
-                  <ul className="text-sm text-gray-300 pl-10 space-y-2">
+                  <ul className="text-sm text-gray-300 pl-8 space-y-1">
                     {plan.examples.map((example, idx) => (
                       <li key={idx} className="flex items-center">
-                        <span className="text-green-400 mr-3 font-bold">•</span>
+                        <span className="text-green-400 mr-2">•</span>
                         {example}
                       </li>
                     ))}
@@ -114,20 +114,20 @@ export default function PricingPage() {
                 </div>
 
                 {/* CTA Button */}
-                <button className={`w-full py-4 px-6 bg-gradient-to-r ${plan.color} hover:scale-105 text-white font-bold text-lg rounded-xl shadow-xl transition-all duration-300`}>
+                <a href="tel:+919600840058" className={`w-full block py-3 px-4 bg-gradient-to-r ${plan.color} hover:scale-105 text-white font-bold text-base rounded-xl shadow-lg transition-all duration-300 text-center`}>
                   Choose {plan.title.split(' - ')[1]}
-                </button>
+                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* BALANCED WHAT'S INCLUDED */}
-      <section className="px-4 lg:px-8 py-16 bg-gradient-to-br from-[#0a1a0f]/60 to-black/80">
+      {/* TIGHT WHAT'S INCLUDED */}
+      <section className="px-4 lg:px-8 py-12 bg-gradient-to-br from-[#0a1a0f]/60 to-black/80">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">What's Included with Every SafePark Model</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <h2 className="text-3xl font-bold text-white mb-8">What's Included with Every SafePark Model</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               {
                 icon: "🛡️",
@@ -155,27 +155,27 @@ export default function PricingPage() {
               }
             ].map((feature, idx) => (
               <div key={idx} className="text-center">
-                <div className={`w-16 h-16 bg-gradient-to-tr ${feature.color} rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-xl`}>
-                  <span className="text-2xl">{feature.icon}</span>
+                <div className={`w-14 h-14 bg-gradient-to-tr ${feature.color} rounded-xl flex items-center justify-center mb-3 mx-auto shadow-lg`}>
+                  <span className="text-xl">{feature.icon}</span>
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
+                <h3 className="text-white font-bold text-base mb-1">{feature.title}</h3>
+                <p className="text-gray-400 text-sm leading-tight">{feature.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* BALANCED CTA SECTION */}
-      <section className="px-4 lg:px-8 py-16 bg-gradient-to-br from-black/80 to-[#0a1a0f]/60">
+      {/* TIGHT CTA SECTION */}
+      <section className="px-4 lg:px-8 py-12 bg-gradient-to-br from-black/80 to-[#0a1a0f]/60">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Protect Your Vehicle?</h2>
-          <p className="text-gray-300 text-lg mb-10">Get your custom quote today with free consultation</p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-            <a href="tel:+919600840058" className="flex-1 bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all duration-300 text-center hover:scale-105">
+          <h2 className="text-3xl font-bold text-white mb-3">Ready to Protect Your Vehicle?</h2>
+          <p className="text-gray-300 text-base mb-8">Get your custom quote today with free consultation</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+            <a href="tel:+919600840058" className="flex-1 bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-xl font-bold text-base shadow-lg transition-all duration-300 text-center hover:scale-105">
               📞 Call for Custom Quote
             </a>
-            <a href="https://wa.me/919600840058" className="flex-1 bg-black/60 border border-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-900/20 transition-all duration-300 text-center hover:scale-105">
+            <a href="https://wa.me/919600840058" className="flex-1 bg-black/60 border border-green-600 text-white px-6 py-3 rounded-xl font-bold text-base hover:bg-green-900/20 transition-all duration-300 text-center hover:scale-105">
               💬 WhatsApp Us
             </a>
           </div>
