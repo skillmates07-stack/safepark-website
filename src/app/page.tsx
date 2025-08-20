@@ -1,13 +1,13 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* HERO SECTION - Proper Alignment & Spacing */}
-      <section className="relative min-h-[calc(100vh-56px)] flex items-center pb-8">
+      {/* HERO SECTION - Fixed Top Gap & Proper Content Positioning */}
+      <section className="relative min-h-[calc(100vh-56px)] flex items-center py-4">
         <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             
             {/* LEFT COLUMN - Content (7/12 = 58%) */}
-            <div className="lg:col-span-7 space-y-5">
+            <div className="lg:col-span-7 space-y-4">
               {/* Badge */}
               <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
@@ -59,6 +59,14 @@ export default function HomePage() {
                 <span className="text-green-400 font-semibold text-sm">2-Year Warranty</span>
               </div>
 
+              {/* MOVED UP - Urgency Message */}
+              <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-400/20 rounded-lg px-4 py-2 backdrop-blur-sm">
+                <p className="text-orange-300 text-sm font-medium flex items-center">
+                  🔥 <span className="font-bold ml-1">August Special:</span> 
+                  <span className="ml-1">Free installation + consultation (Save ₹3,000)</span>
+                </p>
+              </div>
+
               {/* Side-by-Side CTA Buttons */}
               <div className="flex gap-3 max-w-xl pt-2">
                 <a href="tel:+919600840058" className="flex-1 px-6 py-3.5 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white text-base font-bold rounded-xl shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-[1.02] transition-all duration-300 text-center">
@@ -68,11 +76,6 @@ export default function HomePage() {
                   View Gallery
                 </a>
               </div>
-
-              {/* Urgency */}
-              <p className="text-green-400/90 text-sm font-medium">
-                🔥 <span className="font-bold">August Special:</span> Free installation + consultation (Save ₹3,000)
-              </p>
             </div>
 
             {/* RIGHT COLUMN - Product Card (5/12 = 42%) */}
