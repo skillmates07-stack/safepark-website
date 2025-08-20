@@ -1,15 +1,15 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* FULL-WIDTH BALANCED HERO SECTION */}
-      <section className="w-full min-h-[85vh] flex items-center">
-        <div className="w-full max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 px-4 lg:px-8 py-12">
+      {/* FULL-SCREEN CONTAINED HERO SECTION */}
+      <section className="relative min-h-[calc(100vh-56px)] flex items-center pb-16">
+        <div className="w-full max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start lg:items-center">
             
-            {/* LEFT COLUMN - Text Block (50%) */}
-            <div className="flex flex-col justify-center space-y-6 lg:pr-6">
+            {/* LEFT COLUMN - Wider Text Block (60%) */}
+            <div className="lg:col-span-3 space-y-6">
               {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg w-fit">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
                 Made in India &bull; Premium Quality
               </div>
@@ -21,12 +21,12 @@ export default function HomePage() {
               </h1>
 
               {/* Supporting Text */}
-              <p className="text-lg lg:text-xl text-gray-200 font-light leading-relaxed">
+              <p className="text-lg lg:text-xl text-gray-200 font-light leading-relaxed max-w-2xl">
                 Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-green-400 font-medium">complete peace of mind</span>.
               </p>
 
               {/* Benefit Icons Grid */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3 max-w-2xl">
                 {[
                   { icon: "🔥", title: "Fire Protection", desc: "Heat & flame resistant" },
                   { icon: "🌧️", title: "Rain Protection", desc: "100% waterproof coating" },
@@ -60,7 +60,7 @@ export default function HomePage() {
               </div>
 
               {/* Side-by-Side CTA Buttons */}
-              <div className="flex gap-4">
+              <div className="flex gap-4 max-w-2xl">
                 <button className="flex-1 px-6 py-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white text-lg font-bold rounded-xl shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-105 transition-all duration-300">
                   🛡️ Protect My Car Now
                 </button>
@@ -75,65 +75,54 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* RIGHT COLUMN - Feature Card (50%) */}
-            <div className="flex flex-col justify-center lg:pl-6">
-              <div className="relative bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-8 py-10 hover:shadow-green-600/20 hover:scale-[1.02] transition-all duration-500 h-full flex flex-col justify-between">
+            {/* RIGHT COLUMN - Slimmer Product Card (40%) */}
+            <div className="lg:col-span-2">
+              <div className="bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-6 py-8 hover:shadow-green-600/20 hover:scale-[1.02] transition-all duration-500 relative max-w-sm mx-auto lg:mx-0">
                 
                 {/* Premium Badge */}
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-600 to-green-400 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-green-400/20 z-10">
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-600 to-green-400 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-xl border border-green-400/20 z-10">
                   100% UV Protected
-                  <br/>
-                  <span className="font-normal text-xs">Waterproof & Fadeproof</span>
                 </div>
 
-                <div>
-                  {/* Product Icon */}
-                  <div className="w-20 h-20 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-8 shadow-2xl shadow-green-500/30 mx-auto">
-                    <span className="text-3xl">🚗</span>
-                  </div>
-                  
-                  {/* Product Title */}
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-black text-white mb-3 tracking-tight">SafePark Retractable Carport</h3>
-                    <p className="text-green-400 text-base font-semibold">Premium Protection for Your Vehicle</p>
-                  </div>
-                  
-                  {/* Feature List */}
-                  <ul className="space-y-4 mb-8">
-                    {[
-                      { icon: "✨", text: "Galvanized Iron Frame", desc: "Rust-resistant & durable", color: "from-yellow-400 to-orange-400" },
-                      { icon: "🔵", text: "Oxford 600D Fabric", desc: "100% waterproof material", color: "from-blue-400 to-cyan-400" },
-                      { icon: "⚡", text: "Quick Installation", desc: "Ready in 2-3 hours", color: "from-purple-400 to-pink-400" }
-                    ].map((feature, idx) => (
-                      <li key={idx} className="group hover:scale-105 transition-all duration-300">
-                        <div className="flex items-start gap-3">
-                          <div className={`w-10 h-10 bg-gradient-to-tr ${feature.color} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
-                            <span className="text-lg">{feature.icon}</span>
-                          </div>
-                          <div>
-                            <span className="text-white font-bold text-base block">{feature.text}</span>
-                            <span className="text-gray-400 text-sm">{feature.desc}</span>
-                          </div>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Product Icon */}
+                <div className="w-16 h-16 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-6 shadow-2xl shadow-green-500/30 mx-auto">
+                  <span className="text-2xl">🚗</span>
                 </div>
                 
-                <div>
-                  {/* Card CTA */}
-                  <button className="w-full px-6 py-4 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-lg font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-105 transition-all duration-300 mb-4">
-                    See Gallery →
-                  </button>
+                {/* Product Title */}
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-black text-white mb-2 tracking-tight">SafePark Retractable Carport</h3>
+                  <p className="text-green-400 text-sm font-semibold">Premium Protection for Your Vehicle</p>
+                </div>
+                
+                {/* Compact Feature List */}
+                <ul className="space-y-3 mb-6">
+                  {[
+                    { icon: "✨", text: "Galvanized Iron Frame", color: "from-yellow-400 to-orange-400" },
+                    { icon: "🔵", text: "Oxford 600D Fabric", color: "from-blue-400 to-cyan-400" },
+                    { icon: "⚡", text: "Quick Installation", color: "from-purple-400 to-pink-400" }
+                  ].map((feature, idx) => (
+                    <li key={idx} className="group hover:scale-105 transition-all duration-300">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-8 h-8 bg-gradient-to-tr ${feature.color} rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
+                          <span className="text-sm">{feature.icon}</span>
+                        </div>
+                        <span className="text-white font-semibold text-sm">{feature.text}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+                
+                {/* Card CTA */}
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-base font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-105 transition-all duration-300 mb-4">
+                  See Gallery →
+                </button>
 
-                  {/* Trust Elements */}
-                  <div className="flex items-center justify-center gap-3 text-green-400/80 text-xs">
-                    <span>Warranty Included</span>
-                    <span className="text-gray-600">&bull;</span>
-                    <span>Free Consultation</span>
-                    <span className="text-gray-600">&bull;</span>
-                    <span>Money-Back Guarantee</span>
-                  </div>
+                {/* Trust Elements */}
+                <div className="flex items-center justify-center gap-2 text-green-400/80 text-xs">
+                  <span>Warranty</span>
+                  <span className="text-gray-600">&bull;</span>
+                  <span>Free Consultation</span>
                 </div>
               </div>
             </div>
@@ -141,7 +130,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FEATURES SECTION */}
+      {/* FEATURES SECTION - Starts After Hero */}
       <section id="features" className="scroll-mt-32 px-8 lg:px-16 py-20 bg-gradient-to-br from-black/50 via-[#0a1a0f]/30 to-[#0d2818]/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Why Choose SafePark?</h2>
