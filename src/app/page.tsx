@@ -1,126 +1,141 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* BALANCED HERO SECTION - Wider Left, Smaller Right */}
-      <section className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between min-h-[80vh] gap-8 px-4 xl:px-8 py-12">
-        
-        {/* LEFT COLUMN - Wider (60%) */}
-        <div className="flex-1 lg:w-3/5 space-y-6 max-w-2xl">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg">
-            <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-            Made in India &bull; Premium Quality
-          </div>
-
-          {/* Headline */}
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] tracking-tight">
-            <span className="text-white">Everyday Risks.</span><br/>
-            <span className="bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(0,255,132,0.25)]">Lasting Protection.</span>
-          </h1>
-
-          {/* Supporting Text */}
-          <p className="text-lg lg:text-xl text-gray-200 font-light leading-relaxed max-w-xl">
-            Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-green-400 font-medium">complete peace of mind</span>.
-          </p>
-
-          {/* Benefit Icons Grid */}
-          <div className="grid grid-cols-2 gap-4 py-4">
-            {[
-              { icon: "🔥", title: "Fire Protection", desc: "Heat & flame resistant materials" },
-              { icon: "🌧️", title: "Rain Protection", desc: "100% waterproof coating" },
-              { icon: "🛡️", title: "Scratch-Proof", desc: "Durable Oxford 600D fabric" },
-              { icon: "👶", title: "Safe for Kids", desc: "Rounded edges, stable structure" }
-            ].map((benefit, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-3 bg-black/30 backdrop-blur-sm rounded-xl border border-green-600/20 hover:border-green-500/40 transition-all duration-300">
-                <div className="w-10 h-10 bg-gradient-to-tr from-green-500/20 to-green-400/20 rounded-lg flex items-center justify-center text-xl">
-                  {benefit.icon}
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold text-sm">{benefit.title}</h4>
-                  <p className="text-gray-400 text-xs leading-tight">{benefit.desc}</p>
-                </div>
+      {/* FULL-WIDTH BALANCED HERO SECTION */}
+      <section className="w-full min-h-[85vh] flex items-center">
+        <div className="w-full max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 px-4 lg:px-8 py-12">
+            
+            {/* LEFT COLUMN - Text Block (50%) */}
+            <div className="flex flex-col justify-center space-y-6 lg:pr-6">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-green-400/20 text-xs text-white font-medium shadow-lg w-fit">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                Made in India &bull; Premium Quality
               </div>
-            ))}
-          </div>
 
-          {/* Trust Signals */}
-          <div className="flex items-center gap-4 py-2">
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[1,2,3,4,5].map((star) => (
-                  <span key={star} className="text-green-400 text-lg">⭐</span>
+              {/* Headline */}
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] tracking-tight">
+                <span className="text-white">Everyday Risks.</span><br/>
+                <span className="bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(0,255,132,0.25)]">Lasting Protection.</span>
+              </h1>
+
+              {/* Supporting Text */}
+              <p className="text-lg lg:text-xl text-gray-200 font-light leading-relaxed">
+                Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-green-400 font-medium">complete peace of mind</span>.
+              </p>
+
+              {/* Benefit Icons Grid */}
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: "🔥", title: "Fire Protection", desc: "Heat & flame resistant" },
+                  { icon: "🌧️", title: "Rain Protection", desc: "100% waterproof coating" },
+                  { icon: "🛡️", title: "Scratch-Proof", desc: "Durable Oxford fabric" },
+                  { icon: "👶", title: "Safe for Kids", desc: "Rounded edges, stable" }
+                ].map((benefit, idx) => (
+                  <div key={idx} className="flex items-start gap-3 p-3 bg-black/30 backdrop-blur-sm rounded-xl border border-green-600/20 hover:border-green-500/40 transition-all duration-300">
+                    <div className="w-8 h-8 bg-gradient-to-tr from-green-500/20 to-green-400/20 rounded-lg flex items-center justify-center text-lg flex-shrink-0">
+                      {benefit.icon}
+                    </div>
+                    <div className="min-w-0">
+                      <h4 className="text-white font-semibold text-sm">{benefit.title}</h4>
+                      <p className="text-gray-400 text-xs leading-tight">{benefit.desc}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
-              <span className="text-gray-300 font-semibold">2,000+ Protected Cars</span>
-            </div>
-            <div className="text-gray-500">&bull;</div>
-            <span className="text-green-400 font-semibold">2-Year Warranty</span>
-          </div>
 
-          {/* Side-by-Side CTA Buttons */}
-          <div className="flex gap-4 pt-4">
-            <button className="flex-1 px-6 py-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white text-lg font-bold rounded-xl shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-105 transition-all duration-300">
-              🛡️ Protect My Car Now
-            </button>
-            <button className="flex-1 px-6 py-4 bg-black/60 border border-green-500/40 hover:border-green-400 hover:bg-green-900/20 text-white text-lg font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
-              View Gallery
-            </button>
-          </div>
-
-          {/* Urgency */}
-          <p className="text-green-400/90 text-sm font-medium pt-2">
-            🔥 <span className="font-bold">August Special:</span> Free installation + consultation (Save ₹3,000)
-          </p>
-        </div>
-
-        {/* RIGHT COLUMN - Smaller (40%) */}
-        <div className="flex-1 lg:w-2/5 max-w-md">
-          <div className="bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-6 py-8 hover:shadow-green-600/20 hover:scale-[1.02] transition-all duration-500">
-            
-            {/* Premium Badge */}
-            <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-600 to-green-400 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-xl border border-green-400/20 z-10">
-              100% UV Protected
-            </div>
-
-            {/* Product Icon */}
-            <div className="w-16 h-16 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-6 shadow-2xl shadow-green-500/30 mx-auto">
-              <span className="text-2xl">🚗</span>
-            </div>
-            
-            {/* Product Title */}
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-black text-white mb-2 tracking-tight">SafePark Retractable Carport</h3>
-              <p className="text-green-400 text-sm font-semibold">Premium Protection for Your Vehicle</p>
-            </div>
-            
-            {/* Compact Feature List */}
-            <ul className="space-y-3 mb-6">
-              {[
-                { icon: "✨", text: "Galvanized Iron Frame", color: "from-yellow-400 to-orange-400" },
-                { icon: "🔵", text: "Oxford 600D Fabric", color: "from-blue-400 to-cyan-400" },
-                { icon: "⚡", text: "Quick Installation", color: "from-purple-400 to-pink-400" }
-              ].map((feature, idx) => (
-                <li key={idx} className="group hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-8 h-8 bg-gradient-to-tr ${feature.color} rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}>
-                      <span className="text-sm">{feature.icon}</span>
-                    </div>
-                    <span className="text-white font-semibold text-sm">{feature.text}</span>
+              {/* Trust Signals */}
+              <div className="flex items-center gap-4 py-2">
+                <div className="flex items-center gap-2">
+                  <div className="flex">
+                    {[1,2,3,4,5].map((star) => (
+                      <span key={star} className="text-green-400 text-lg">⭐</span>
+                    ))}
                   </div>
-                </li>
-              ))}
-            </ul>
-            
-            {/* Card CTA */}
-            <button className="w-full px-6 py-3 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-base font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-105 transition-all duration-300">
-              See Gallery →
-            </button>
+                  <span className="text-gray-300 font-semibold">2,000+ Protected Cars</span>
+                </div>
+                <div className="text-gray-500">&bull;</div>
+                <span className="text-green-400 font-semibold">2-Year Warranty</span>
+              </div>
 
-            {/* Trust Elements */}
-            <div className="flex items-center justify-center gap-2 text-green-400/80 text-xs mt-4">
-              <span>Warranty Included</span>
-              <span className="text-gray-600">&bull;</span>
-              <span>Free Consultation</span>
+              {/* Side-by-Side CTA Buttons */}
+              <div className="flex gap-4">
+                <button className="flex-1 px-6 py-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white text-lg font-bold rounded-xl shadow-2xl shadow-green-600/25 hover:shadow-green-400/35 hover:scale-105 transition-all duration-300">
+                  🛡️ Protect My Car Now
+                </button>
+                <button className="flex-1 px-6 py-4 bg-black/60 border border-green-500/40 hover:border-green-400 hover:bg-green-900/20 text-white text-lg font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+                  View Gallery
+                </button>
+              </div>
+
+              {/* Urgency */}
+              <p className="text-green-400/90 text-sm font-medium">
+                🔥 <span className="font-bold">August Special:</span> Free installation + consultation (Save ₹3,000)
+              </p>
+            </div>
+
+            {/* RIGHT COLUMN - Feature Card (50%) */}
+            <div className="flex flex-col justify-center lg:pl-6">
+              <div className="relative bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-8 py-10 hover:shadow-green-600/20 hover:scale-[1.02] transition-all duration-500 h-full flex flex-col justify-between">
+                
+                {/* Premium Badge */}
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-600 to-green-400 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-green-400/20 z-10">
+                  100% UV Protected
+                  <br/>
+                  <span className="font-normal text-xs">Waterproof & Fadeproof</span>
+                </div>
+
+                <div>
+                  {/* Product Icon */}
+                  <div className="w-20 h-20 bg-gradient-to-tr from-green-500 to-green-400 rounded-2xl flex items-center justify-center mb-8 shadow-2xl shadow-green-500/30 mx-auto">
+                    <span className="text-3xl">🚗</span>
+                  </div>
+                  
+                  {/* Product Title */}
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-black text-white mb-3 tracking-tight">SafePark Retractable Carport</h3>
+                    <p className="text-green-400 text-base font-semibold">Premium Protection for Your Vehicle</p>
+                  </div>
+                  
+                  {/* Feature List */}
+                  <ul className="space-y-4 mb-8">
+                    {[
+                      { icon: "✨", text: "Galvanized Iron Frame", desc: "Rust-resistant & durable", color: "from-yellow-400 to-orange-400" },
+                      { icon: "🔵", text: "Oxford 600D Fabric", desc: "100% waterproof material", color: "from-blue-400 to-cyan-400" },
+                      { icon: "⚡", text: "Quick Installation", desc: "Ready in 2-3 hours", color: "from-purple-400 to-pink-400" }
+                    ].map((feature, idx) => (
+                      <li key={idx} className="group hover:scale-105 transition-all duration-300">
+                        <div className="flex items-start gap-3">
+                          <div className={`w-10 h-10 bg-gradient-to-tr ${feature.color} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
+                            <span className="text-lg">{feature.icon}</span>
+                          </div>
+                          <div>
+                            <span className="text-white font-bold text-base block">{feature.text}</span>
+                            <span className="text-gray-400 text-sm">{feature.desc}</span>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div>
+                  {/* Card CTA */}
+                  <button className="w-full px-6 py-4 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-lg font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-105 transition-all duration-300 mb-4">
+                    See Gallery →
+                  </button>
+
+                  {/* Trust Elements */}
+                  <div className="flex items-center justify-center gap-3 text-green-400/80 text-xs">
+                    <span>Warranty Included</span>
+                    <span className="text-gray-600">&bull;</span>
+                    <span>Free Consultation</span>
+                    <span className="text-gray-600">&bull;</span>
+                    <span>Money-Back Guarantee</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
