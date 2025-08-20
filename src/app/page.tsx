@@ -1,27 +1,43 @@
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
-      {/* HERO SECTION - Optimized & Properly Sized */}
+      {/* HERO SECTION - Conversion-Optimized */}
       <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 xl:px-8 py-10 min-h-[80vh]">
-        {/* Left: Headline and CTA */}
+        {/* Left: Headline, social proof, CTAs */}
         <div>
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-green-500/20 text-xs text-white mb-5 font-medium shadow">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
             Made in India • Premium Quality
           </div>
-          <h1 className="text-[2.6rem] lg:text-[3.2rem] xl:text-[3.7rem] font-black leading-[1.08] mb-4 tracking-tight">
+          <h1 className="text-[2.5rem] lg:text-[3.2rem] font-black leading-[1.08] mb-4 tracking-tight">
             <span className="bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">Smart Shelters.</span>
             <br />
             <span className="text-white">Lasting Protection.</span>
           </h1>
-          <p className="text-lg text-gray-200 mb-3 font-light max-w-xl">
-            Because your car deserves more than just a cover.<br />
-            <span className="font-semibold text-white">Stylish, portable & weatherproof protection</span> for your luxury, classic, and everyday cars.
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[1,2,3,4,5].map((star) => (
+                  <span key={star} className="text-green-400 text-sm">⭐</span>
+                ))}
+              </div>
+              <span className="text-gray-300 text-sm font-medium">2,000+ Happy Customers</span>
+            </div>
+            <div className="text-gray-400 text-xs">•</div>
+            <span className="text-green-400 text-sm font-medium">2-Year Warranty</span>
+          </div>
+          <p className="text-lg text-gray-200 mb-2 font-light max-w-xl">
+            Because your car deserves more than just a cover.
+            <br />
+            <span className="font-semibold text-white">
+              Stylish, portable & weatherproof protection
+            </span>{" "}
+            for your luxury, classic, and everyday cars.
           </p>
-          <p className="text-base text-green-400 mb-6 font-medium">
+          <p className="text-base text-green-400 mb-5 font-medium">
             Designed for elegance, built for durability in Coimbatore.
           </p>
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-2 mb-5">
             {[
               "Retractable & Movable",
               "Rust-resistant GI Frame",
@@ -36,17 +52,21 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="tel:+919600840058"
-              className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 px-5 py-2.5 rounded-lg text-base font-bold text-white shadow-md hover:scale-105 transition text-center"
+              className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 px-5 py-2.5 rounded-lg text-base font-bold text-white shadow-md hover:scale-105 transition text-center flex items-center justify-center"
             >
-              Book Your Carport Now
+              📞 Get Free Quote Today
+              <span className="ml-2 bg-yellow-400 text-black text-xs px-2 py-0.5 rounded-full font-bold">FREE</span>
             </a>
             <a
-              href="#contact"
-              className="bg-black/70 border border-green-600 px-5 py-2.5 rounded-lg text-base font-bold text-white shadow hover:bg-green-950/50 hover:scale-105 transition text-center"
+              href="#gallery"
+              className="bg-black/70 border border-green-600 px-5 py-2.5 rounded-lg text-base font-semibold text-white shadow hover:bg-green-950/50 hover:scale-105 transition text-center"
             >
-              Get a Free Quote
+              View Gallery
             </a>
           </div>
+          <p className="text-green-400/80 text-sm mt-3">
+            🔥 <span className="font-semibold">Limited Time:</span> Free installation for August orders
+          </p>
         </div>
 
         {/* Right: Card */}
@@ -83,6 +103,11 @@ export default function HomePage() {
             >
               See Gallery <span className="ml-1 text-base">→</span>
             </a>
+            <div className="mt-4 flex items-center gap-2 text-green-400 text-xs justify-center">
+              <span>Warranty Included</span>
+              <span className="text-gray-500">|</span>
+              <span>Free Consultation</span>
+            </div>
           </div>
         </div>
       </section>
@@ -232,7 +257,7 @@ export default function HomePage() {
           </div>
           
           <div className="text-center mt-16">
-            <p className="text-green-400/80 text-lg mb-6">Join 500+ satisfied customers in Coimbatore</p>
+            <p className="text-green-400/80 text-lg mb-6">Join 2,000+ satisfied customers in Coimbatore</p>
             <a href="tel:+919600840058" 
                className="bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-green-600/30 hover:shadow-green-500/40 transition-all duration-300">
               Get Your Quote Today
@@ -296,7 +321,7 @@ export default function HomePage() {
               </p>
               <div className="flex space-x-4">
                 <div className="text-green-500 text-sm">⭐⭐⭐⭐⭐</div>
-                <span className="text-gray-400 text-sm">500+ Happy Customers</span>
+                <span className="text-gray-400 text-sm">2,000+ Happy Customers</span>
               </div>
             </div>
             
