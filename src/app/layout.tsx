@@ -1,25 +1,10 @@
 "use client";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [showFeedback, setShowFeedback] = useState(false);
-  const [feedbackText, setFeedbackText] = useState("");
-
-  const handleSubmitFeedback = () => {
-    if (feedbackText.trim()) {
-      const whatsappUrl = `https://wa.me/919600840058?text=Feedback: ${encodeURIComponent(feedbackText)}`;
-      window.open(whatsappUrl, '_blank');
-      
-      setShowFeedback(false);
-      setFeedbackText('');
-      alert('Thank you for your feedback! We appreciate it.');
-    }
-  };
-
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -60,12 +45,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Call Now
               </a>
-              <button
-                onClick={() => setShowFeedback(true)}
+              {/* REPLACED: Feedback button with Community link */}
+              <a
+                href="/community"
                 className="bg-green-600/90 backdrop-blur-sm hover:bg-green-600 text-white text-sm px-4 py-2 rounded-lg font-semibold shadow-lg shadow-green-600/20 hover:scale-105 hover:shadow-green-600/30 transition-all duration-300"
               >
-                💬 Feedback
-              </button>
+                👥 Community
+              </a>
             </div>
           </nav>
         </header>
@@ -75,53 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
 
-        {/* Feedback Modal */}
-        {showFeedback && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-black/40 backdrop-blur-xl border border-green-400/20 rounded-2xl p-8 max-w-md w-full shadow-2xl shadow-green-900/30">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-white">Share Your Feedback</h3>
-                <button
-                  onClick={() => setShowFeedback(false)}
-                  className="text-gray-400 hover:text-white text-2xl transition-colors duration-300"
-                >
-                  ×
-                </button>
-              </div>
-              
-              <p className="text-green-400/80 text-center mb-6 text-sm">
-                Your thoughts help us improve SafePark! Share questions, suggestions, or any feedback.
-              </p>
-              
-              <textarea
-                value={feedbackText}
-                onChange={(e) => setFeedbackText(e.target.value)}
-                placeholder="What's on your mind? Write anything here..."
-                className="w-full h-32 bg-black/30 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 text-white placeholder-green-400/50 resize-none outline-none mb-6 focus:border-green-400/50 focus:bg-black/40 transition-all duration-300"
-                autoFocus
-              />
-              
-              <div className="flex gap-3">
-                <button
-                  onClick={() => {
-                    setShowFeedback(false);
-                    setFeedbackText('');
-                  }}
-                  className="flex-1 bg-white/10 backdrop-blur-sm text-white py-3 rounded-xl border border-gray-500/20 hover:bg-white/20 transition-all duration-300"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={handleSubmitFeedback}
-                  disabled={!feedbackText.trim()}
-                  className="flex-1 bg-green-600/90 backdrop-blur-sm hover:bg-green-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 disabled:opacity-50 shadow-lg shadow-green-600/20"
-                >
-                  Send Feedback
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* REMOVED: Feedback modal completely */}
       </body>
     </html>
   );
