@@ -58,22 +58,22 @@ export default function PricingPage() {
 
   return (
     <main className="pt-[56px] bg-gradient-to-br from-[#0a0f0a] via-[#0f1411] to-[#141a14] min-h-screen">
-      {/* IMPROVED HERO SECTION */}
-      <section className="py-12 px-4 lg:px-8">
+      {/* COMPACT HERO SECTION */}
+      <section className="py-6 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-5xl font-black mb-6 leading-tight tracking-tight">
+          <h1 className="text-4xl lg:text-5xl font-black mb-3 leading-tight tracking-tight max-w-3xl mx-auto">
             <span className="text-white">Find Your Perfect</span>{' '}
             <span className="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
               SafePark
             </span>{' '}
             <span className="text-white">Protection Plan</span>
           </h1>
-          <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-300 mb-6 max-w-xl mx-auto leading-relaxed">
             Every SafePark includes a strong metal frame and weatherproof fabric for lasting protection.
           </p>
 
           {/* PRICING TOGGLE */}
-          <div className="flex items-center justify-center gap-4 mb-12">
+          <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`text-sm font-medium ${!isAnnual ? 'text-white' : 'text-gray-400'}`}>
               One-time
             </span>
@@ -97,42 +97,42 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* BALANCED PRICING CARDS */}
-      <section className="px-4 lg:px-8 pb-16">
+      {/* COMPACT PRICING CARDS */}
+      <section className="-mt-4 px-4 pb-12">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
             {pricingPlans.map((plan, index) => (
               <div
                 key={plan.id}
-                className={`relative backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 ${
+                className={`relative backdrop-blur-sm border rounded-2xl p-6 transition-all duration-300 ${
                   plan.popular 
-                    ? 'bg-gradient-to-b from-slate-700/50 to-slate-800/70 border-green-400/40 shadow-2xl shadow-green-500/15 ring-1 ring-green-400/25 -translate-y-8 scale-105' 
+                    ? 'bg-gradient-to-b from-slate-700/50 to-slate-800/70 border-green-400/40 shadow-2xl shadow-green-500/15 ring-1 ring-green-400/25 -translate-y-6 scale-105' 
                     : 'bg-gradient-to-b from-slate-700/40 to-slate-800/60 border-slate-500/40 shadow-xl hover:shadow-2xl hover:scale-[1.02] hover:border-slate-400/60'
                 }`}
               >
                 {/* Popular Badge */}
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-green-600 to-green-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-green-600 to-green-500 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg">
                       ⭐ Most Popular
                     </div>
                   </div>
                 )}
 
                 {/* Plan Header */}
-                <div className="text-center mb-8">
-                  <h3 className={`font-bold text-white mb-2 ${plan.popular ? 'text-2xl' : 'text-xl'}`}>{plan.name}</h3>
-                  <p className="text-sm text-gray-300 mb-4">{plan.subtitle}</p>
+                <div className="text-center mb-6">
+                  <h3 className={`font-bold text-white mb-2 ${plan.popular ? 'text-xl' : 'text-lg'}`}>{plan.name}</h3>
+                  <p className="text-xs text-gray-300 mb-3">{plan.subtitle}</p>
                   
                   {/* Price */}
-                  <div className="mb-6">
-                    <div className={`font-black mb-1 ${plan.popular ? 'text-5xl text-green-400' : 'text-4xl text-white'}`}>
+                  <div className="mb-4">
+                    <div className={`font-black mb-1 ${plan.popular ? 'text-4xl text-green-400' : 'text-3xl text-white'}`}>
                       {isAnnual 
                         ? `₹${(parseInt(plan.monthlyPrice.replace('₹', '').replace(',', '')) * 0.8).toLocaleString()}`
                         : plan.monthlyPrice
                       }
                     </div>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-xs text-gray-300">
                       + {isAnnual ? 'annual' : 'one-time'} installation
                     </p>
                   </div>
@@ -140,22 +140,22 @@ export default function PricingPage() {
                   {/* CTA BUTTON */}
                   <a
                     href="tel:+919600840058"
-                    className="w-full block py-3 px-6 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 shadow-2xl shadow-green-500/20 text-white font-bold text-sm rounded-xl transition-all duration-300 hover:scale-105 text-center"
+                    className="w-full block py-2.5 px-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 shadow-lg shadow-green-500/20 text-white font-bold text-sm rounded-lg transition-all duration-300 hover:scale-105 text-center"
                   >
                     Get Started
                   </a>
                 </div>
 
                 {/* Features List */}
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-gradient-to-r from-green-500 to-green-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <li key={idx} className="flex items-start gap-2">
+                      <div className="w-4 h-4 rounded-full bg-gradient-to-r from-green-500 to-green-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-sm text-gray-200 leading-relaxed">{feature}</span>
+                      <span className="text-xs text-gray-200 leading-relaxed">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -165,11 +165,11 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* VISIBLE FEATURES SECTION */}
-      <section className="px-4 lg:px-8 py-16 bg-gradient-to-br from-slate-800/30 to-slate-700/20">
+      {/* COMPACT FEATURES SECTION */}
+      <section className="px-4 py-10 bg-gradient-to-br from-slate-800/30 to-slate-700/20">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-12">What's Included with Every SafePark Model</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <h2 className="text-2xl font-bold text-white mb-8">What's Included with Every SafePark Model</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { icon: "🛡️", title: "Premium Materials", desc: "Galvanized Iron + Oxford 600D" },
               { icon: "⚡", title: "Quick Installation", desc: "Professional setup in 2-3 hours" },
@@ -177,31 +177,31 @@ export default function PricingPage() {
               { icon: "🛠️", title: "2-Year Warranty", desc: "Full parts & service warranty" }
             ].map((feature, idx) => (
               <div key={idx} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center mb-4 mx-auto shadow-xl">
-                  <span className="text-2xl">{feature.icon}</span>
+                <div className="w-12 h-12 bg-gradient-to-tr from-green-500 to-green-400 rounded-lg flex items-center justify-center mb-3 mx-auto shadow-lg">
+                  <span className="text-lg">{feature.icon}</span>
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.desc}</p>
+                <h3 className="text-white font-bold text-sm mb-1">{feature.title}</h3>
+                <p className="text-gray-300 text-xs">{feature.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="px-4 lg:px-8 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Protect Your Vehicle?</h2>
-          <p className="text-gray-300 text-lg mb-10">Get your custom quote today with free consultation</p>
+      {/* COMPACT CTA SECTION */}
+      <section className="px-4 py-10">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-white mb-2">Ready to Protect Your Vehicle?</h2>
+          <p className="text-gray-300 mb-6">Get your custom quote today with free consultation</p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
             <a 
               href="tel:+919600840058" 
-              className="group flex items-center justify-center gap-3 w-full sm:flex-1 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-2xl shadow-green-600/20 hover:shadow-green-500/30 hover:scale-[1.02] min-h-[60px]"
+              className="group flex items-center justify-center gap-2 flex-1 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg shadow-green-600/20 hover:shadow-green-500/30 hover:scale-[1.02]"
             >
-              <div className="flex items-center justify-center w-6 h-6">
+              <div className="flex items-center justify-center w-4 h-4">
                 <svg 
-                  className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-200" 
+                  className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-200" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -219,11 +219,11 @@ export default function PricingPage() {
 
             <a 
               href="https://wa.me/919600840058" 
-              className="group flex items-center justify-center gap-3 w-full sm:flex-1 bg-slate-700/60 backdrop-blur-sm border border-slate-500/50 hover:border-slate-400/70 text-white hover:text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] hover:bg-slate-600/70 min-h-[60px]"
+              className="group flex items-center justify-center gap-2 flex-1 bg-slate-700/60 backdrop-blur-sm border border-slate-500/50 hover:border-slate-400/70 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] hover:bg-slate-600/70"
             >
-              <div className="flex items-center justify-center w-6 h-6">
+              <div className="flex items-center justify-center w-4 h-4">
                 <svg 
-                  className="w-5 h-5 text-green-400 group-hover:scale-110 transition-transform duration-200" 
+                  className="w-4 h-4 text-green-400 group-hover:scale-110 transition-transform duration-200" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
