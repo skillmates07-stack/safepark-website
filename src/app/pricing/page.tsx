@@ -58,8 +58,8 @@ export default function PricingPage() {
 
   return (
     <main className="pt-[56px] bg-gradient-to-br from-[#0a0f0a] via-[#0f1411] to-[#141a14] min-h-screen">
-      {/* BALANCED HERO SECTION */}
-      <section className="py-10 px-4 lg:px-8">
+      {/* PROPERLY POSITIONED HERO SECTION */}
+      <section className="pt-6 pb-10 px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl font-black mb-6 leading-tight tracking-tight">
             <span className="text-white">Find Your Perfect</span>{' '}
