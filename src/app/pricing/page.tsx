@@ -12,9 +12,6 @@ export default function PricingPage() {
       title: "Model 1 - Compact",
       monthlyPrice: "₹16,500",
       subtitle: "Perfect for small cars and compact SUVs",
-      color: "from-blue-500 to-blue-400",
-      borderColor: "border-blue-500/30",
-      buttonColor: "bg-blue-600 hover:bg-blue-500",
       features: [
         "5.5m × 2.5m × 2.3m dimensions",
         "Galvanized iron frame",
@@ -31,9 +28,6 @@ export default function PricingPage() {
       title: "Model 2 - Standard",
       monthlyPrice: "₹18,500",
       subtitle: "Ideal for sedans and mid-size SUVs",
-      color: "from-green-600 to-green-500",
-      borderColor: "border-green-500/30",
-      buttonColor: "bg-green-600 hover:bg-green-500",
       features: [
         "6.0m × 2.6m × 2.5m dimensions",
         "Premium galvanized frame",
@@ -50,9 +44,6 @@ export default function PricingPage() {
       title: "Model 3 - Large", 
       monthlyPrice: "₹21,500",
       subtitle: "Perfect for large SUVs and premium vehicles",
-      color: "from-red-500 to-red-400",
-      borderColor: "border-red-500/30",
-      buttonColor: "bg-red-600 hover:bg-red-500",
       features: [
         "6.5m × 2.8m × 2.5m dimensions",
         "Heavy-duty galvanized frame",
@@ -67,7 +58,7 @@ export default function PricingPage() {
 
   return (
     <main className="pt-[56px] bg-gradient-to-br from-[#121212] via-[#1a1a1a] to-[#0d1117] min-h-screen">
-      {/* BALANCED DARK HERO SECTION */}
+      {/* HERO SECTION */}
       <section className="py-8 px-4 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl font-black mb-4">
@@ -81,7 +72,7 @@ export default function PricingPage() {
             Find the perfect plan for your vehicle. All models use a <span className="font-semibold text-white">premium GI frame and Oxford 600D fabric.</span>
           </p>
 
-          {/* SUBTLE GREEN TOGGLE */}
+          {/* PRICING TOGGLE */}
           <div className="flex items-center justify-center gap-4 mb-12">
             <span className={`text-sm font-medium ${!isAnnual ? 'text-white' : 'text-gray-400'}`}>
               One-time
@@ -106,7 +97,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* BALANCED PRICING CARDS */}
+      {/* UNIFIED PRICING CARDS */}
       <section className="px-4 lg:px-8 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
@@ -146,16 +137,12 @@ export default function PricingPage() {
                     </p>
                   </div>
 
-                  {/* CTA Button */}
+                  {/* UNIFIED GREEN CTA BUTTON */}
                   <a
                     href="tel:+919600840058"
-                    className={`w-full block py-3 px-6 ${
-                      plan.popular 
-                        ? 'bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 shadow-2xl shadow-green-500/20' 
-                        : plan.buttonColor + ' shadow-lg'
-                    } text-white font-bold text-sm rounded-xl transition-all duration-300 hover:scale-105 text-center`}
+                    className="w-full block py-3 px-6 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 shadow-2xl shadow-green-500/20 text-white font-bold text-sm rounded-xl transition-all duration-300 hover:scale-105 text-center"
                   >
-                    {plan.popular ? 'Get Started' : `Schedule a demo`}
+                    Get Started
                   </a>
                 </div>
 
@@ -178,19 +165,19 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* SUBTLE FEATURES SECTION */}
+      {/* FEATURES SECTION */}
       <section className="px-4 lg:px-8 py-16 bg-gradient-to-br from-slate-900/50 to-slate-800/30">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-12">What's Included with Every SafePark Model</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: "🛡️", title: "Premium Materials", desc: "Galvanized Iron + Oxford 600D", color: "from-green-500 to-green-400" },
-              { icon: "⚡", title: "Quick Installation", desc: "Professional setup in 2-3 hours", color: "from-blue-500 to-blue-400" },
-              { icon: "🌧️", title: "Weather Protection", desc: "100% UV & Rain Protection", color: "from-cyan-500 to-cyan-400" },
-              { icon: "🛠️", title: "2-Year Warranty", desc: "Full parts & service warranty", color: "from-purple-500 to-purple-400" }
+              { icon: "🛡️", title: "Premium Materials", desc: "Galvanized Iron + Oxford 600D" },
+              { icon: "⚡", title: "Quick Installation", desc: "Professional setup in 2-3 hours" },
+              { icon: "🌧️", title: "Weather Protection", desc: "100% UV & Rain Protection" },
+              { icon: "🛠️", title: "2-Year Warranty", desc: "Full parts & service warranty" }
             ].map((feature, idx) => (
               <div key={idx} className="text-center">
-                <div className={`w-14 h-14 bg-gradient-to-tr ${feature.color} rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg`}>
+                <div className="w-14 h-14 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg">
                   <span className="text-xl">{feature.icon}</span>
                 </div>
                 <h3 className="text-white font-bold text-base mb-2">{feature.title}</h3>
@@ -201,14 +188,13 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* BALANCED CTA SECTION */}
+      {/* CTA SECTION */}
       <section className="px-4 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Protect Your Vehicle?</h2>
           <p className="text-gray-300 text-lg mb-10">Get your custom quote today with free consultation</p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
-            {/* PRIMARY BUTTON - Call */}
             <a 
               href="tel:+919600840058" 
               className="group flex items-center justify-center gap-3 w-full sm:flex-1 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-2xl shadow-green-600/20 hover:shadow-green-500/30 hover:scale-[1.02] min-h-[60px]"
@@ -231,7 +217,6 @@ export default function PricingPage() {
               <span className="leading-none">Call for Custom Quote</span>
             </a>
 
-            {/* SECONDARY BUTTON - WhatsApp */}
             <a 
               href="https://wa.me/919600840058" 
               className="group flex items-center justify-center gap-3 w-full sm:flex-1 bg-slate-800/80 backdrop-blur-sm border border-slate-600/50 hover:border-slate-500/70 text-gray-200 hover:text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] hover:bg-slate-700/80 min-h-[60px]"
