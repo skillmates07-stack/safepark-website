@@ -58,18 +58,18 @@ export default function PricingPage() {
 
   return (
     <main className="pt-[56px] bg-gradient-to-br from-[#0a0f0a] via-[#0f1411] to-[#141a14] min-h-screen">
-      {/* HERO SECTION */}
-      <section className="py-8 px-4 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-5xl font-black mb-4">
-            <span className="text-white">Choose Your</span>{' '}
+      {/* IMPROVED HERO SECTION */}
+      <section className="py-12 px-4 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl lg:text-5xl font-black mb-6 leading-tight tracking-tight">
+            <span className="text-white">Find Your Perfect</span>{' '}
             <span className="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
               SafePark
             </span>{' '}
-            <span className="text-white">Pricing</span>
+            <span className="text-white">Protection Plan</span>
           </h1>
-          <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Find the perfect plan for your vehicle. All models use a <span className="font-semibold text-white">premium GI frame and Oxford 600D fabric.</span>
+          <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Every SafePark includes a strong metal frame and weatherproof fabric for lasting protection.
           </p>
 
           {/* PRICING TOGGLE */}
