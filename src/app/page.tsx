@@ -6,34 +6,35 @@ export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 min-h-screen">
       
-      {/* UNIFIED TWO-COLUMN HERO SECTION */}
-      <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 flex items-center">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center min-h-[80vh]">
+      {/* PREMIUM TWO-COLUMN HERO SECTION */}
+      <section className="min-h-screen bg-gradient-to-br from-navy-900 via-teal-800 to-emerald-700 flex items-center">
+        <div className="max-w-7xl mx-auto w-full px-6 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
             
             {/* LEFT COLUMN - Text Content */}
             <div className="text-center md:text-left space-y-8">
+              
               {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100/10 border border-emerald-400/20 text-emerald-300 font-medium text-sm backdrop-blur-sm">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100/10 border border-emerald-400/20 text-emerald-300 font-medium text-sm backdrop-blur-sm mb-6">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
                 Made in India • Premium Quality
               </div>
 
-              {/* Headline */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-2xl">
+              {/* Headline - Big & Bold */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white max-w-2xl mx-auto md:mx-0 mb-6">
                 Everyday Risks.
                 <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
                   Lasting Protection.
                 </span>
               </h1>
               
-              {/* Subtext */}
-              <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
+              {/* Subtext - Relaxed & Muted Gray */}
+              <p className="text-lg text-gray-400 leading-relaxed max-w-xl mx-auto md:mx-0 mt-4">
                 Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-emerald-400 font-medium">complete peace of mind</span>.
               </p>
 
-              {/* Trust Signals */}
-              <div className="flex items-center justify-center md:justify-start gap-8">
+              {/* Ratings Block */}
+              <div className="flex items-center justify-center md:justify-start gap-8 mt-4">
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
@@ -46,11 +47,11 @@ export default function HomePage() {
                 <span className="text-emerald-400 font-medium">2-Year Warranty</span>
               </div>
 
-              {/* CTA Buttons - Directly Below Text */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              {/* CTA Buttons - Equal Height & Premium Styling */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
                 <a 
                   href="tel:+919600840058"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
                   <Shield className="w-5 h-5" />
                   Protect My Car Now
@@ -62,7 +63,7 @@ export default function HomePage() {
                     e.preventDefault();
                     document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
                   View Gallery
                   <ArrowRight className="w-4 h-4" />
@@ -77,11 +78,11 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-300/30 rounded-3xl blur-3xl scale-110 opacity-60"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-transparent rounded-3xl"></div>
                 
-                {/* Car Image */}
+                {/* Car Image with Premium Styling */}
                 <img 
                   src="/gallery/hero-car.jpeg" 
                   alt="Premium BMW protected by SafePark" 
-                  className="relative w-full max-w-lg h-[400px] lg:h-[500px] object-cover rounded-3xl shadow-2xl shadow-black/40"
+                  className="relative w-full max-w-lg h-[450px] lg:h-[550px] object-cover rounded-3xl shadow-2xl shadow-black/40"
                 />
               </div>
             </div>
