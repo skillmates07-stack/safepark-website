@@ -78,7 +78,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN - Product Card (5/12 = 42%) - Better Margin */}
+            {/* RIGHT COLUMN - Product Card (5/12 = 42%) - UPDATED WITH PREMIUM LANGUAGE */}
             <div className="lg:col-span-5 flex justify-center lg:justify-start mt-8 lg:mt-2">
               <div className="bg-black/40 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-7 py-8 hover:shadow-green-600/20 hover:scale-[1.01] transition-all duration-500 relative w-full max-w-sm">
                 
@@ -98,12 +98,12 @@ export default function HomePage() {
                   <p className="text-green-400 text-sm font-semibold leading-relaxed">Premium Protection for Your Vehicle</p>
                 </div>
                 
-                {/* Feature List - Better Context Spacing */}
+                {/* Feature List - UPDATED WITH LIFESTYLE-FRIENDLY LANGUAGE */}
                 <ul className="space-y-4 mb-8">
                   {[
-                    { icon: "✨", text: "Galvanized Iron Frame", color: "from-yellow-400 to-orange-400" },
-                    { icon: "🔵", text: "Oxford 600D Fabric", color: "from-blue-400 to-cyan-400" },
-                    { icon: "⚡", text: "Quick Installation", color: "from-purple-400 to-pink-400" }
+                    { icon: "✨", text: "Strong & Durable Frame", color: "from-yellow-400 to-orange-400" },
+                    { icon: "🔵", text: "Premium Weather-Resistant Fabric", color: "from-blue-400 to-cyan-400" },
+                    { icon: "⚡", text: "Hassle-Free Quick Setup", color: "from-purple-400 to-pink-400" }
                   ].map((feature, idx) => (
                     <li key={idx} className="group hover:scale-105 transition-all duration-300">
                       <div className="flex items-center gap-4">
@@ -142,12 +142,12 @@ export default function HomePage() {
               {
                 icon: "🛡️",
                 title: "Premium Protection",
-                desc: "Oxford 600D fabric with 100% UV protection and waterproof coating"
+                desc: "Premium weather-resistant fabric with 100% UV protection and waterproof coating"
               },
               {
                 icon: "⚡",
                 title: "Quick Setup",
-                desc: "Install in minutes with our retractable design and galvanized iron frame"
+                desc: "Hassle-free installation with our retractable design and strong durable frame"
               },
               {
                 icon: "🏠",
@@ -384,4 +384,3 @@ export default function HomePage() {
     </main>
   );
 }
-
