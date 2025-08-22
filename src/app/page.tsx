@@ -6,12 +6,12 @@ export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
       
-      {/* PREMIUM HERO SECTION */}
+      {/* REFINED HERO SECTION */}
       <section className="min-h-screen flex items-center py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
             
-            {/* LEFT COLUMN - Text Content */}
+            {/* LEFT COLUMN - Text Content with More Breathing Room */}
             <div className="text-center md:text-left space-y-8">
               
               {/* Badge */}
@@ -20,16 +20,16 @@ export default function HomePage() {
                 Made in India • Premium Quality
               </div>
 
-              {/* Headline - Bold & Clear */}
+              {/* Headline with Better Spacing */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-2xl mx-auto md:mx-0">
                 Everyday Risks.
-                <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent mt-2">
                   Lasting Protection.
                 </span>
               </h1>
               
-              {/* Subtext */}
-              <p className="text-lg text-gray-300 leading-relaxed max-w-md mx-auto md:mx-0">
+              {/* Subtext with Proper Breathing Room */}
+              <p className="text-lg text-gray-300 leading-relaxed max-w-xl mx-auto md:mx-0">
                 Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-emerald-400 font-medium">complete peace of mind</span>.
               </p>
 
@@ -47,11 +47,11 @@ export default function HomePage() {
                 <span className="text-emerald-400 font-medium">2-Year Warranty</span>
               </div>
 
-              {/* Premium Buttons */}
+              {/* Premium Buttons with Equal Height */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a 
                   href="tel:+919600840058"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2 h-14"
                 >
                   <Shield className="w-5 h-5" />
                   Protect My Car Now
@@ -63,7 +63,7 @@ export default function HomePage() {
                     e.preventDefault();
                     document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2 h-14"
                 >
                   View Gallery
                   <ArrowRight className="w-4 h-4" />
@@ -71,16 +71,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN - Premium Car Image */}
+            {/* RIGHT COLUMN - Refined Car Image */}
             <div className="flex justify-center md:justify-end order-first md:order-last">
-              <div className="relative">
+              <div className="relative w-full max-w-2xl">
                 {/* Subtle Glow */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-300/30 rounded-3xl blur-3xl scale-110 opacity-60"></div>
                 
+                {/* Sleeker Car Image - Wider but Shorter */}
                 <img 
                   src="/gallery/hero-car.jpeg" 
                   alt="Premium BMW protected by SafePark" 
-                  className="relative w-full max-w-lg h-[450px] lg:h-[500px] object-cover rounded-3xl shadow-xl"
+                  className="relative w-full h-[400px] md:h-[420px] object-cover rounded-3xl shadow-xl"
                 />
               </div>
             </div>
@@ -88,7 +89,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FEATURES SECTION */}
+      {/* IMPROVED FEATURES SECTION */}
       <section className="py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -100,35 +101,38 @@ export default function HomePage() {
             </p>
           </div>
           
+          {/* Cards with Consistent Sizes and Better Spacing */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
-                icon: <Shield className="w-12 h-12 mb-4 text-emerald-400" />, 
+                icon: <Shield className="w-12 h-12 mb-6 text-emerald-400" />, 
                 title: "Fire Protection", 
                 desc: "Heat & flame resistant materials with advanced coating technology"
               },
               { 
-                icon: <div className="w-12 h-12 mb-4 bg-blue-500/20 rounded-2xl flex items-center justify-center"><div className="w-6 h-6 bg-blue-400 rounded-full"></div></div>, 
+                icon: <div className="w-12 h-12 mb-6 bg-blue-500/20 rounded-2xl flex items-center justify-center"><div className="w-6 h-6 bg-blue-400 rounded-full"></div></div>, 
                 title: "Rain Protection", 
                 desc: "100% waterproof coating ensures complete weather resistance"
               },
               { 
-                icon: <Shield className="w-12 h-12 mb-4 text-gray-400" />, 
+                icon: <Shield className="w-12 h-12 mb-6 text-gray-400" />, 
                 title: "Scratch-Proof", 
                 desc: "Durable fabric protection prevents surface damage"
               },
               { 
-                icon: <div className="w-12 h-12 mb-4 bg-green-500/20 rounded-2xl flex items-center justify-center"><div className="w-6 h-6 bg-green-400 rounded-full"></div></div>, 
+                icon: <div className="w-12 h-12 mb-6 bg-green-500/20 rounded-2xl flex items-center justify-center"><div className="w-6 h-6 bg-green-400 rounded-full"></div></div>, 
                 title: "Safe for Kids", 
                 desc: "Rounded edges and stable design prioritize safety"
               }
             ].map((feature, idx) => (
               <div 
                 key={idx}
-                className="p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
+                className="p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300 h-full min-h-[280px] flex flex-col justify-between"
               >
-                {feature.icon}
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <div>
+                  {feature.icon}
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                </div>
                 <p className="text-gray-400 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
@@ -143,7 +147,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
               Why Choose SafePark?
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed max-w-md mx-auto">
+            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Premium protection engineered for modern vehicles
             </p>
           </div>
@@ -151,24 +155,24 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Shield className="w-12 h-12 mb-4 text-emerald-400" />,
+                icon: <Shield className="w-12 h-12 mb-6 text-emerald-400" />,
                 title: "Weather Protection",
                 desc: "Advanced weather-resistant fabric with 100% UV protection and waterproof coating technology"
               },
               {
-                icon: <Zap className="w-12 h-12 mb-4 text-emerald-400" />,
+                icon: <Zap className="w-12 h-12 mb-6 text-emerald-400" />,
                 title: "Scratch & Damage Cover",
                 desc: "Revolutionary retractable design prevents scratches, dings, and surface damage from daily hazards"
               },
               {
-                icon: <Award className="w-12 h-12 mb-4 text-emerald-400" />,
+                icon: <Award className="w-12 h-12 mb-6 text-emerald-400" />,
                 title: "Peace of Mind Warranty",
                 desc: "2-year comprehensive warranty with ongoing maintenance and premium customer support guarantee"
               }
             ].map((item, idx) => (
               <div 
                 key={idx} 
-                className="p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur text-center h-full hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
+                className="p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 text-center h-full hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
               >
                 {item.icon}
                 <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
@@ -186,7 +190,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
               See SafePark in Action
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed max-w-md mx-auto">
+            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Real installations, real protection, real results
             </p>
           </div>
@@ -227,7 +231,7 @@ export default function HomePage() {
             ].map((item, idx) => (
               <div 
                 key={idx} 
-                className="p-6 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
+                className="p-6 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
               >
                 {item.type === "video" ? (
                   <video
@@ -286,7 +290,7 @@ export default function HomePage() {
             ].map((review, idx) => (
               <div 
                 key={idx} 
-                className="h-full p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all duration-300"
+                className="h-full p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 hover:bg-gray-800/50 transition-all duration-300"
               >
                 <div className="flex mb-4">
                   {[...Array(review.rating)].map((_, i) => (
@@ -311,53 +315,53 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* READY TO PROTECT SECTION */}
+      {/* REFINED CONTACT SECTION */}
       <section className="py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
               Ready to Protect Your Vehicle?
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed max-w-md mx-auto mb-12">
+            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12">
               Join thousands who chose SafePark for premium protection
             </p>
             
-            {/* Contact Options */}
+            {/* Contact Options with Smaller Icons and Text */}
             <div className="flex justify-center gap-6 mb-12 flex-wrap">
-              <div className="p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
-                <Phone className="w-12 h-12 mb-4 text-emerald-400 mx-auto" />
-                <h3 className="font-bold text-white mb-2">Phone</h3>
-                <a href="tel:+919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium">
+              <div className="p-6 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
+                <Phone className="w-10 h-10 mb-3 text-emerald-400 mx-auto" />
+                <h3 className="font-semibold text-white mb-2 text-sm">Phone</h3>
+                <a href="tel:+919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm">
                   +91 9600840058
                 </a>
               </div>
               
-              <div className="p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
-                <MessageCircle className="w-12 h-12 mb-4 text-emerald-400 mx-auto" />
-                <h3 className="font-bold text-white mb-2">WhatsApp</h3>
-                <a href="https://wa.me/919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium">
+              <div className="p-6 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
+                <MessageCircle className="w-10 h-10 mb-3 text-emerald-400 mx-auto" />
+                <h3 className="font-semibold text-white mb-2 text-sm">WhatsApp</h3>
+                <a href="https://wa.me/919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm">
                   Message Us
                 </a>
               </div>
               
-              <div className="p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
-                <MapPin className="w-12 h-12 mb-4 text-emerald-400 mx-auto" />
-                <h3 className="font-bold text-white mb-2">Location</h3>
-                <p className="text-emerald-400">Coimbatore, Tamil Nadu</p>
+              <div className="p-6 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
+                <MapPin className="w-10 h-10 mb-3 text-emerald-400 mx-auto" />
+                <h3 className="font-semibold text-white mb-2 text-sm">Location</h3>
+                <p className="text-emerald-400 text-sm">Coimbatore, Tamil Nadu</p>
               </div>
             </div>
             
-            {/* Final CTA Buttons */}
-            <div className="flex justify-center gap-4 flex-wrap">
+            {/* Prominent but Balanced CTA Buttons */}
+            <div className="flex justify-center gap-6 flex-wrap">
               <a 
                 href="tel:+919600840058" 
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 text-lg"
               >
                 Call for Free Quote
               </a>
               <a 
                 href="https://wa.me/919600840058" 
-                className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300"
+                className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-10 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 text-lg"
               >
                 WhatsApp Now
               </a>
