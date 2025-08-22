@@ -1,27 +1,22 @@
-'use client';
-
 export default function HomePage() {
   return (
-    <main className="bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
+    <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
       
-      {/* REFINED HERO SECTION */}
-      <section className="pt-16 pb-12 lg:pt-20 lg:pb-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      {/* HERO SECTION - Balanced spacing, no excess left space */}
+      <section className="py-16 lg:py-20">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* LEFT COLUMN - Properly Sized Content */}
+            {/* LEFT COLUMN - Proper width */}
             <div className="lg:col-span-5 space-y-6">
-              {/* Refined Badge */}
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-green-400/30 text-sm text-white font-medium shadow-lg">
-                <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></span>
                 Made in India • Premium Quality
               </div>
 
-              {/* Professional Headlines */}
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight">
-                  <span className="text-white">Everyday Risks.</span>
-                  <br />
+                  <span className="text-white">Everyday Risks.</span><br/>
                   <span className="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
                     Lasting Protection.
                   </span>
@@ -32,12 +27,11 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Trust Signals */}
               <div className="flex items-center gap-6 pt-2">
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[1,2,3,4,5].map((star) => (
-                      <span key={star} className="text-green-400 text-base">⭐</span>
+                      <span key={star} className="text-green-400 text-lg">⭐</span>
                     ))}
                   </div>
                   <span className="text-gray-300 font-semibold text-sm">2,000+ Protected Cars</span>
@@ -46,7 +40,6 @@ export default function HomePage() {
                 <span className="text-green-400 font-semibold text-sm">2-Year Warranty</span>
               </div>
 
-              {/* Professional CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a href="tel:+919600840058" className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-green-600/30 hover:scale-[1.02] transition-all duration-300 text-center">
                   🛡️ Protect My Car Now
@@ -55,36 +48,25 @@ export default function HomePage() {
                   View Gallery
                 </a>
               </div>
-
-              {/* Refined Special Offer */}
-              <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-400/30 rounded-xl px-6 py-4 backdrop-blur-sm">
-                <p className="text-orange-300 font-medium flex items-center">
-                  🔥 <span className="font-bold ml-2">August Special:</span> 
-                  <span className="ml-2">Free installation + consultation (Save ₹3,000)</span>
-                </p>
-              </div>
             </div>
 
-            {/* RIGHT COLUMN - Properly Sized Car Image */}
+            {/* RIGHT COLUMN - Larger car image */}
             <div className="lg:col-span-7">
-              <div className="relative">
-                <img 
-                  src="/gallery/hero-car.jpeg" 
-                  alt="Premium BMW protected by SafePark" 
-                  className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
-                />
-              </div>
+              <img 
+                src="/gallery/hero-car.jpeg" 
+                alt="Premium BMW protected by SafePark" 
+                className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* PRODUCT SHOWCASE - Professional Size */}
+      {/* PRODUCT SHOWCASE - AUGUST SPECIAL REMOVED */}
       <section className="py-16 bg-gradient-to-br from-[#0a1a0f]/50 via-black/30 to-[#0d2818]/50">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <div className="bg-black/60 backdrop-blur-2xl border border-green-500/30 rounded-2xl p-8 shadow-2xl">
             
-            {/* Refined Product Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-gradient-to-r from-green-600 to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
                 100% UV Protected
@@ -98,7 +80,6 @@ export default function HomePage() {
               <p className="text-green-400 font-semibold">Complete Vehicle Care System</p>
             </div>
 
-            {/* Professional Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {[
                 { icon: "✨", text: "Strong & Durable Frame", color: "from-amber-500 to-orange-400" },
@@ -114,7 +95,6 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* Professional CTA */}
             <div className="text-center">
               <a href="#gallery" className="inline-block bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-500 hover:to-emerald-400 text-white px-8 py-3 rounded-xl font-bold shadow-xl hover:scale-[1.02] transition-all duration-300 mb-4">
                 Explore Gallery →
@@ -130,7 +110,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* REFINED PROTECTION LAYERS */}
+      {/* IMPROVED PROTECTION LAYERS SECTION */}
       <section className="py-16 bg-gradient-to-br from-black/80 to-gray-900/60">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
@@ -157,7 +137,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PROFESSIONAL WHY CHOOSE SECTION */}
+      {/* REFINED WHY CHOOSE SECTION */}
       <section className="py-16 bg-gradient-to-br from-[#0a1a0f]/80 via-black/60 to-[#0d2818]/70">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
@@ -193,7 +173,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* REFINED GALLERY SECTION */}
+      {/* FIXED GALLERY SECTION */}
       <section id="gallery" className="py-16 bg-gradient-to-br from-black/70 via-[#0a1a0f]/50 to-[#0d2818]/70">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
@@ -203,31 +183,72 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "Luxury Car Protection",
-              "All-Weather Installation", 
-              "Quick Setup Demo",
-              "Urban Protection",
-              "Family Vehicle Care",
-              "Installation Process"
-            ].map((caption, idx) => (
+              {
+                src: "/gallery/gallery1.jpg",
+                alt: "Luxury car protection setup",
+                caption: "Luxury Car Protection"
+              },
+              {
+                src: "/gallery/gallery2.jpg",
+                alt: "SafePark carport covered in greenery",
+                caption: "All-Weather Protection"
+              },
+              {
+                src: "/gallery/gallery3.jpg",
+                alt: "Car and bike protected together",
+                caption: "Car & Bike Protected"
+              },
+              {
+                src: "/gallery/gallery4.jpg",
+                alt: "Multiple vehicles protected",
+                caption: "Multiple Vehicle Coverage"
+              },
+              {
+                src: "/gallery/gallery5.jpg",
+                alt: "Compact urban installation",
+                caption: "Compact Urban Use"
+              },
+              {
+                src: "/gallery/gallery-video.mp4",
+                alt: "SafePark installation demo",
+                caption: "Installation Demo",
+                type: "video"
+              }
+            ].map((item, idx) => (
               <div key={idx} className="bg-gradient-to-br from-[#0a1a0f]/60 to-[#0d2818]/80 border border-green-600/30 rounded-xl p-4 shadow-lg hover:shadow-xl hover:scale-[1.02] hover:border-green-400/40 transition-all duration-300">
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg mb-4 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-400 rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg">
-                      <span className="text-lg">📸</span>
-                    </div>
-                    <p className="text-gray-400 text-sm">Gallery #{idx + 1}</p>
-                  </div>
+                {item.type === "video" ? (
+                  <video
+                    src={item.src}
+                    controls
+                    className="w-full h-48 object-cover rounded-xl mb-3"
+                    poster="/gallery/gallery1.jpg"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-48 object-cover rounded-xl mb-3 hover:scale-105 transition"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23374151'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='14' fill='%23fff' text-anchor='middle' dominant-baseline='middle'%3EImage%3C/text%3E%3C/svg%3E";
+                    }}
+                  />
+                )}
+                <div className="px-2">
+                  <h3 className="text-white text-lg font-semibold mb-1">{item.caption}</h3>
+                  <p className="text-green-400/70 text-xs">
+                    {item.type === "video" ? "Video Demo" : `Installation #${idx + 1}`}
+                  </p>
                 </div>
-                <h3 className="text-white font-semibold mb-1">{caption}</h3>
-                <p className="text-green-400/70 text-xs">Professional Installation</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* PROFESSIONAL TESTIMONIALS */}
+      {/* TESTIMONIALS */}
       <section className="py-16 bg-gradient-to-br from-black via-[#051008] to-[#081c0f]">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
@@ -273,13 +294,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PROFESSIONAL CONTACT SECTION */}
+      {/* CONTACT */}
       <section className="py-16 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Protect Your Vehicle?</h2>
           <p className="text-lg text-gray-300 mb-12">Join thousands who chose SafePark for premium protection</p>
           
-          <div className="bg-gradient-to-br from-[#0a1a0f]/60 to-[#0d2818]/80 border border-green-600/30 rounded-2xl p-8 mb-12 shadow-2xl">
+          <div className="bg-gradient-to-br from-[#0a1a0f]/70 to-[#0d2818]/90 border border-green-600/40 rounded-2xl p-8 mb-12 shadow-2xl">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center hover:scale-105 transition-transform duration-300">
                 <div className="text-3xl mb-4">📞</div>
@@ -300,17 +321,17 @@ export default function HomePage() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-            <a href="tel:+919600840058" className="bg-gradient-to-r from-green-600 to-emerald-500 text-white px-10 py-4 rounded-xl text-lg font-bold shadow-2xl hover:scale-[1.02] transition-all duration-300">
+            <a href="tel:+919600840058" className="bg-gradient-to-r from-green-600 to-emerald-500 text-white px-10 py-4 rounded-2xl text-lg font-bold shadow-2xl hover:scale-[1.02] transition-all duration-300">
               Call for Free Quote
             </a>
-            <a href="https://wa.me/919600840058" className="border-2 border-green-400 text-green-400 px-10 py-4 rounded-xl text-lg font-bold hover:bg-green-400 hover:text-black transition-all duration-300">
+            <a href="https://wa.me/919600840058" className="border-2 border-green-400 text-green-400 px-10 py-4 rounded-2xl text-lg font-bold hover:bg-green-400 hover:text-black transition-all duration-300">
               WhatsApp Now
             </a>
           </div>
         </div>
       </section>
 
-      {/* REFINED FOOTER */}
+      {/* FOOTER */}
       <footer className="bg-black border-t border-green-400/20 py-12">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -328,7 +349,7 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-4">Contact</h4>
+              <h4 className="text-white font-bold text-lg mb-4">Contact</h4>
               <div className="space-y-3">
                 <a href="tel:+919600840058" className="flex items-center text-gray-300 hover:text-green-400 transition">
                   <span className="mr-3">📞</span>
