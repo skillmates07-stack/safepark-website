@@ -84,33 +84,33 @@ export default function HomePage() {
               {/* REAL CAR IMAGE BACKGROUND */}
               <div className="relative w-full max-w-sm">
                 <img 
-                  src="public/gallery/hero-car.jpeg" 
+                  src="/gallery/hero-car.jpeg" 
                   alt="Premium car protected by SafePark retractable carport" 
                   className="w-full h-auto rounded-3xl shadow-2xl object-cover"
                   style={{ aspectRatio: '4/3' }}
                 />
                 
-                {/* FLOATING PRODUCT CARD OVERLAY */}
-                <div className="absolute bottom-6 right-4 bg-black/60 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-6 py-6 hover:shadow-green-600/20 hover:scale-[1.01] transition-all duration-500 w-80 max-w-[calc(100%-2rem)]">
+                {/* FLOATING PRODUCT CARD OVERLAY - PROPERLY POSITIONED */}
+                <div className="absolute bottom-6 right-4 bg-black/70 backdrop-blur-2xl border border-green-500/30 shadow-2xl rounded-3xl px-6 py-6 hover:shadow-green-600/20 hover:scale-[1.01] transition-all duration-500 w-72 max-w-[calc(100%-2rem)] z-10">
                   
                   {/* Premium Badge */}
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-600 to-green-400 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg border border-green-400/20 z-10">
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-600 to-green-400 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg z-20">
                     100% UV Protected
                   </div>
 
                   {/* Product Icon */}
-                  <div className="w-16 h-16 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center mb-4 shadow-xl shadow-green-500/30 mx-auto">
-                    <span className="text-2xl">🚗</span>
+                  <div className="w-14 h-14 bg-gradient-to-tr from-green-500 to-green-400 rounded-xl flex items-center justify-center mb-4 shadow-xl shadow-green-500/30 mx-auto">
+                    <span className="text-xl">🚗</span>
                   </div>
                   
                   {/* Product Title */}
-                  <div className="text-center mb-6">
-                    <h3 className="text-xl font-black text-white mb-2 tracking-tight leading-tight">SafePark Retractable Carport</h3>
-                    <p className="text-green-400 text-sm font-semibold leading-relaxed">Premium Protection for Your Vehicle</p>
+                  <div className="text-center mb-5">
+                    <h3 className="text-lg font-bold text-white mb-2 tracking-tight leading-tight">SafePark Premium Protection</h3>
+                    <p className="text-green-400 text-xs font-semibold">Complete Vehicle Care System</p>
                   </div>
                   
-                  {/* Feature List - UPDATED WITH LIFESTYLE-FRIENDLY LANGUAGE */}
-                  <ul className="space-y-3 mb-6">
+                  {/* Feature List - COMPACT VERSION */}
+                  <ul className="space-y-2.5 mb-5">
                     {[
                       { icon: "✨", text: "Strong & Durable Frame", color: "from-yellow-400 to-orange-400" },
                       { icon: "🔵", text: "Premium Weather-Resistant Fabric", color: "from-blue-400 to-cyan-400" },
@@ -118,17 +118,17 @@ export default function HomePage() {
                     ].map((feature, idx) => (
                       <li key={idx} className="group hover:scale-105 transition-all duration-300">
                         <div className="flex items-center gap-3">
-                          <div className={`w-8 h-8 bg-gradient-to-tr ${feature.color} rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
-                            <span className="text-base">{feature.icon}</span>
+                          <div className={`w-7 h-7 bg-gradient-to-tr ${feature.color} rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0`}>
+                            <span className="text-xs">{feature.icon}</span>
                           </div>
-                          <span className="text-white font-semibold text-sm">{feature.text}</span>
+                          <span className="text-white font-medium text-xs">{feature.text}</span>
                         </div>
                       </li>
                     ))}
                   </ul>
                   
                   {/* Card CTA */}
-                  <a href="#gallery" className="w-full px-4 py-3 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-sm font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-[1.02] transition-all duration-300 text-center block mb-3">
+                  <a href="#gallery" className="w-full px-4 py-2.5 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-400 text-white text-xs font-bold rounded-xl shadow-xl shadow-green-600/30 hover:shadow-green-500/40 hover:scale-[1.02] transition-all duration-300 text-center block mb-3">
                     See Gallery →
                   </a>
 
@@ -396,4 +396,3 @@ export default function HomePage() {
     </main>
   );
 }
-
