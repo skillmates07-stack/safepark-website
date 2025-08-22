@@ -1,3 +1,5 @@
+'use client';
+
 export default function HomePage() {
   return (
     <main className="pt-[56px] bg-gradient-to-br from-black via-[#0a1a0f] to-[#0d2818] min-h-screen">
@@ -173,7 +175,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FIXED GALLERY SECTION WITH TYPESCRIPT FIX */}
+      {/* GALLERY SECTION - SIMPLIFIED WITHOUT onError */}
       <section id="gallery" className="py-16 bg-gradient-to-br from-black/70 via-[#0a1a0f]/50 to-[#0d2818]/70">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
@@ -231,10 +233,6 @@ export default function HomePage() {
                     alt={item.alt}
                     className="w-full h-48 object-cover rounded-xl mb-3 hover:scale-105 transition"
                     loading="lazy"
-                    onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23374151'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='14' fill='%23fff' text-anchor='middle' dominant-baseline='middle'%3EImage%3C/text%3E%3C/svg%3E";
-                    }}
                   />
                 )}
                 <div className="px-2">
