@@ -58,7 +58,7 @@ export default function PricingPage() {
 
   return (
     <main className="pt-[56px] bg-gradient-to-br from-[#0a0f0a] via-[#0f1411] to-[#141a14] min-h-screen">
-      {/* PROPERLY POSITIONED HERO SECTION */}
+      {/* HERO SECTION */}
       <section className="pt-6 pb-10 px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl font-black mb-6 leading-tight tracking-tight">
@@ -97,7 +97,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* BALANCED PRICING CARDS */}
+      {/* PRICING CARDS */}
       <section className="px-4 lg:px-8 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
@@ -165,57 +165,79 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* ENHANCED FEATURES SECTION - 2x2 GRID WITH POLISHED DESIGN */}
-      <section className="px-4 lg:px-8 py-20 bg-gradient-to-br from-gray-50/5 via-white/10 to-gray-100/5 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-16 text-center">What's Included with Every SafePark Model</h2>
+      {/* PREMIUM REDESIGNED FEATURES SECTION - 2x2 GRID */}
+      <section className="px-4 lg:px-8 py-20 bg-gradient-to-br from-slate-50/5 via-blue-50/8 to-green-50/10 backdrop-blur-sm relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-green-500/5 to-teal-500/5 pointer-events-none"></div>
+        
+        <div className="max-w-5xl mx-auto relative z-10">
+          <h2 className="text-3xl lg:text-4xl font-black text-white mb-4 text-center tracking-tight">
+            What's Included with Every 
+            <span className="bg-gradient-to-r from-green-400 via-green-300 to-teal-300 bg-clip-text text-transparent"> SafePark</span> Model
+          </h2>
+          <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto leading-relaxed">
+            Premium features designed to provide maximum protection and peace of mind for your vehicle
+          </p>
           
-          <div className="grid grid-cols-2 gap-8">
+          {/* CONSISTENT 2x2 GRID WITH EQUAL SIZING */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
             {/* Premium Materials Card */}
-            <div className="group flex flex-col items-center p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-              <div className="w-20 h-20 bg-gradient-to-tr from-green-500 to-green-400 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-green-500/30 group-hover:shadow-green-500/40 transition-all duration-300">
-                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
+            <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-white/8 to-white/4 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:shadow-green-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-green-400/30 hover:bg-gradient-to-br hover:from-green-500/10 hover:to-teal-500/5">
+              <div className="flex flex-col items-center flex-1 justify-center">
+                <div className="w-20 h-20 bg-gradient-to-tr from-green-500 via-green-400 to-teal-400 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-green-500/30 group-hover:shadow-green-400/50 group-hover:scale-110 transition-all duration-500">
+                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-green-300 transition-colors duration-300">Premium Materials</h3>
+                <p className="text-gray-300 text-center leading-relaxed text-sm group-hover:text-gray-200 transition-colors duration-300">Galvanized Iron + Oxford 600D waterproof fabric for maximum durability and longevity</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 text-center">Premium Materials</h3>
-              <p className="text-gray-300 text-center leading-relaxed">Galvanized Iron + Oxford 600D waterproof fabric for maximum durability</p>
             </div>
 
             {/* Quick Installation Card */}
-            <div className="group flex flex-col items-center p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-              <div className="w-20 h-20 bg-gradient-to-tr from-green-500 to-green-400 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-green-500/30 group-hover:shadow-green-500/40 transition-all duration-300">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+            <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-white/8 to-white/4 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:shadow-blue-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-blue-400/30 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-cyan-500/5">
+              <div className="flex flex-col items-center flex-1 justify-center">
+                <div className="w-20 h-20 bg-gradient-to-tr from-green-500 via-green-400 to-teal-400 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-green-500/30 group-hover:shadow-blue-400/50 group-hover:scale-110 transition-all duration-500">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-blue-300 transition-colors duration-300">Quick Installation</h3>
+                <p className="text-gray-300 text-center leading-relaxed text-sm group-hover:text-gray-200 transition-colors duration-300">Professional setup completed in just 2-3 hours by our certified installation technicians</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 text-center">Quick Installation</h3>
-              <p className="text-gray-300 text-center leading-relaxed">Professional setup completed in just 2-3 hours by certified technicians</p>
             </div>
 
-            {/* Weather Protection Card - HIGHLIGHTED */}
-            <div className="group flex flex-col items-center p-8 rounded-2xl bg-gradient-to-br from-green-500/20 to-green-400/10 backdrop-blur-sm border-2 border-green-400/50 shadow-2xl shadow-green-500/20 scale-105 transition-all duration-300 hover:scale-110">
-              <div className="w-24 h-24 bg-gradient-to-tr from-green-400 to-green-300 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-green-400/40">
-                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">Weather Protection</h3>
-              <p className="text-green-200 text-center leading-relaxed font-medium">100% UV & Rain Protection with advanced weatherproof coating</p>
-              <div className="mt-4 px-4 py-2 bg-green-400/20 rounded-full">
-                <span className="text-green-300 text-sm font-semibold">⭐ Most Popular Feature</span>
+            {/* Weather Protection Card - PREMIUM HIGHLIGHT */}
+            <div className="group h-[320px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-green-500/15 via-green-400/10 to-teal-400/10 backdrop-blur-md border-2 border-green-400/40 shadow-2xl shadow-green-500/30 scale-105 hover:scale-110 transition-all duration-500 hover:shadow-green-400/50 hover:border-green-300/60 relative overflow-hidden">
+              {/* Premium glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-green-400/5 to-teal-400/5 rounded-3xl blur-xl"></div>
+              
+              <div className="flex flex-col items-center flex-1 justify-center relative z-10">
+                <div className="w-24 h-24 bg-gradient-to-tr from-green-400 via-green-300 to-teal-300 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-green-400/50 group-hover:shadow-green-300/70 group-hover:scale-110 transition-all duration-500">
+                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-black text-white mb-4 text-center group-hover:text-green-200 transition-colors duration-300">Weather Protection</h3>
+                <p className="text-green-100 text-center leading-relaxed font-medium mb-4 group-hover:text-green-50 transition-colors duration-300">100% UV & Rain Protection with advanced weatherproof coating technology</p>
+                <div className="px-4 py-2 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-full border border-amber-400/30">
+                  <span className="text-amber-200 text-sm font-bold">⭐ Most Popular Feature</span>
+                </div>
               </div>
             </div>
 
             {/* 2-Year Warranty Card */}
-            <div className="group flex flex-col items-center p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-              <div className="w-20 h-20 bg-gradient-to-tr from-green-500 to-green-400 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-green-500/30 group-hover:shadow-green-500/40 transition-all duration-300">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-white/8 to-white/4 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-purple-400/30 hover:bg-gradient-to-br hover:from-purple-500/10 hover:to-pink-500/5">
+              <div className="flex flex-col items-center flex-1 justify-center">
+                <div className="w-20 h-20 bg-gradient-to-tr from-green-500 via-green-400 to-teal-400 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-green-500/30 group-hover:shadow-purple-400/50 group-hover:scale-110 transition-all duration-500">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-purple-300 transition-colors duration-300">2-Year Warranty</h3>
+                <p className="text-gray-300 text-center leading-relaxed text-sm group-hover:text-gray-200 transition-colors duration-300">Complete parts & service warranty with free maintenance and customer support</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 text-center">2-Year Warranty</h3>
-              <p className="text-gray-300 text-center leading-relaxed">Complete parts & service warranty with free maintenance support</p>
             </div>
           </div>
         </div>
