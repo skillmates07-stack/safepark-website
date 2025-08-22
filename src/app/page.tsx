@@ -6,12 +6,12 @@ export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
       
-      {/* REFINED HERO SECTION - Wider Car Image */}
-      <section className="min-h-screen flex items-center py-20 px-6 md:px-12 lg:px-20">
+      {/* HERO SECTION - Closer to Navbar */}
+      <section className="min-h-screen flex items-center pt-8 pb-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-28 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
             
-            {/* LEFT COLUMN - Text Content with Better Breathing Room */}
+            {/* LEFT COLUMN - Text Content */}
             <div className="text-center md:text-left space-y-8">
               
               {/* Badge */}
@@ -28,7 +28,7 @@ export default function HomePage() {
                 </span>
               </h1>
               
-              {/* Subtext with Generous Breathing Room */}
+              {/* Subtext */}
               <p className="text-lg text-gray-300 leading-relaxed max-w-xl mx-auto md:mx-0 mt-6">
                 Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-emerald-400 font-medium">complete peace of mind</span>.
               </p>
@@ -47,7 +47,7 @@ export default function HomePage() {
                 <span className="text-emerald-400 font-medium">2-Year Warranty</span>
               </div>
 
-              {/* Premium Buttons with Equal Height */}
+              {/* Premium Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
                 <a 
                   href="tel:+919600840058"
@@ -71,13 +71,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN - Wider, Sleeker Car Image */}
+            {/* RIGHT COLUMN - Wider Car Image */}
             <div className="flex justify-center md:justify-end order-first md:order-last">
               <div className="relative w-full max-w-[700px]">
-                {/* Enhanced Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-300/30 rounded-3xl blur-3xl scale-110 opacity-60"></div>
                 
-                {/* Wider Car Image - More Horizontal Space */}
                 <img 
                   src="/gallery/hero-car.jpeg" 
                   alt="Premium BMW protected by SafePark" 
@@ -314,9 +312,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ENHANCED CONTACT SECTION - Distinct Background */}
-      <section className="py-20 px-6 md:px-12 lg:px-20 bg-gradient-to-br from-gray-800/60 to-gray-900/80">
-        <div className="max-w-4xl mx-auto">
+      {/* COMPLETELY REDESIGNED CONTACT SECTION */}
+      <section className="py-20 px-6 md:px-12 lg:px-20 bg-gradient-to-br from-gray-800/40 to-gray-900/60">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
               Ready to Protect Your Vehicle?
@@ -324,48 +322,56 @@ export default function HomePage() {
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12">
               Join thousands who chose SafePark for premium protection
             </p>
+          </div>
+          
+          {/* Enhanced Contact Container */}
+          <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/80 backdrop-blur rounded-3xl p-12 shadow-2xl border border-gray-700/50">
             
-            {/* Contact Options with Reduced Sizes & Neat Alignment */}
-            <div className="bg-gray-900/60 backdrop-blur rounded-3xl p-12 mb-12 shadow-2xl border border-gray-700/50">
-              <div className="flex justify-center gap-8 mb-12 flex-wrap">
-                <div className="text-center hover:scale-105 transition-all duration-300">
-                  <Phone className="w-8 h-8 mb-3 text-emerald-400 mx-auto" />
-                  <h3 className="font-semibold text-white mb-2 text-sm">Phone</h3>
-                  <a href="tel:+919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm">
-                    +91 9600840058
-                  </a>
+            {/* Contact Options - Better Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center group hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                  <Phone className="w-8 h-8 text-emerald-400" />
                 </div>
-                
-                <div className="text-center hover:scale-105 transition-all duration-300">
-                  <MessageCircle className="w-8 h-8 mb-3 text-emerald-400 mx-auto" />
-                  <h3 className="font-semibold text-white mb-2 text-sm">WhatsApp</h3>
-                  <a href="https://wa.me/919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm">
-                    Message Us
-                  </a>
-                </div>
-                
-                <div className="text-center hover:scale-105 transition-all duration-300">
-                  <MapPin className="w-8 h-8 mb-3 text-emerald-400 mx-auto" />
-                  <h3 className="font-semibold text-white mb-2 text-sm">Location</h3>
-                  <p className="text-emerald-400 text-sm">Coimbatore, Tamil Nadu</p>
-                </div>
+                <h3 className="font-bold text-white mb-2 text-lg">Phone</h3>
+                <a href="tel:+919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium">
+                  +91 9600840058
+                </a>
               </div>
               
-              {/* Prominent & Balanced CTA Buttons */}
-              <div className="flex justify-center gap-6 flex-wrap">
-                <a 
-                  href="tel:+919600840058" 
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-4 rounded-xl font-semibold hover:scale-105 hover:shadow-xl transition-all duration-300 text-lg w-full max-w-[200px] text-center"
-                >
-                  Call for Free Quote
-                </a>
-                <a 
-                  href="https://wa.me/919600840058" 
-                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-10 py-4 rounded-xl font-semibold hover:scale-105 hover:shadow-xl transition-all duration-300 text-lg w-full max-w-[200px] text-center"
-                >
-                  WhatsApp Now
+              <div className="text-center group hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                  <MessageCircle className="w-8 h-8 text-emerald-400" />
+                </div>
+                <h3 className="font-bold text-white mb-2 text-lg">WhatsApp</h3>
+                <a href="https://wa.me/919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium">
+                  Message Us
                 </a>
               </div>
+              
+              <div className="text-center group hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                  <MapPin className="w-8 h-8 text-emerald-400" />
+                </div>
+                <h3 className="font-bold text-white mb-2 text-lg">Location</h3>
+                <p className="text-emerald-400">Coimbatore, Tamil Nadu</p>
+              </div>
+            </div>
+            
+            {/* Improved CTA Buttons - Much Better Sizing */}
+            <div className="flex flex-col sm:flex-row justify-center gap-6">
+              <a 
+                href="tel:+919600840058" 
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 text-center min-w-[280px] shadow-lg"
+              >
+                Call for Free Quote
+              </a>
+              <a 
+                href="https://wa.me/919600840058" 
+                className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 text-center min-w-[280px]"
+              >
+                WhatsApp Now
+              </a>
             </div>
           </div>
         </div>
