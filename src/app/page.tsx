@@ -4,83 +4,92 @@ import { Shield, Zap, Award, Phone, MessageCircle, MapPin, Star, ArrowRight } fr
 
 export default function HomePage() {
   return (
-    <div className="scroll-smooth bg-gradient-to-br from-slate-900 via-navy-900 to-slate-800 min-h-screen">
+    <div className="scroll-smooth bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 min-h-screen">
       
-      {/* WORLD-CLASS HERO SECTION */}
-      <section className="min-h-screen flex items-center justify-center py-20 px-6 md:px-12 lg:px-20">
-        <div className="max-w-6xl mx-auto w-full text-center">
-          <div className="space-y-8">
+      {/* UNIFIED TWO-COLUMN HERO SECTION */}
+      <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 flex items-center">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center min-h-[80vh]">
             
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100/10 border border-emerald-400/20 text-emerald-300 font-medium text-sm backdrop-blur-sm">
-              <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
-              Made in India • Premium Quality
-            </div>
-
-            {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-3xl mx-auto">
-              Everyday Risks.
-              <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
-                Lasting Protection.
-              </span>
-            </h1>
-            
-            {/* Subtext */}
-            <p className="text-lg text-gray-400 leading-relaxed mt-6 max-w-xl mx-auto">
-              Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-emerald-400 font-medium">complete peace of mind</span>.
-            </p>
-
-            {/* Trust Signals */}
-            <div className="flex justify-center items-center gap-6 mt-8">
-              <div className="flex items-center gap-2">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <span className="text-gray-300 font-medium">2,000+ Protected Cars</span>
+            {/* LEFT COLUMN - Text Content */}
+            <div className="text-center md:text-left space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100/10 border border-emerald-400/20 text-emerald-300 font-medium text-sm backdrop-blur-sm">
+                <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
+                Made in India • Premium Quality
               </div>
-              <div className="w-px h-6 bg-gray-600"></div>
-              <span className="text-emerald-400 font-medium">2-Year Warranty</span>
-            </div>
 
-            {/* CTA Buttons */}
-            <div className="flex justify-center gap-4 mt-8 flex-wrap">
-              <a 
-                href="tel:+919600840058"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2"
-              >
-                <Shield className="w-5 h-5" />
-                Protect My Car Now
-              </a>
+              {/* Headline */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-2xl">
+                Everyday Risks.
+                <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
+                  Lasting Protection.
+                </span>
+              </h1>
               
-              <a 
-                href="#gallery"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-medium hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2"
-              >
-                View Gallery
-                <ArrowRight className="w-4 h-4" />
-              </a>
+              {/* Subtext */}
+              <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
+                Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-emerald-400 font-medium">complete peace of mind</span>.
+              </p>
+
+              {/* Trust Signals */}
+              <div className="flex items-center justify-center md:justify-start gap-8">
+                <div className="flex items-center gap-2">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <span className="text-gray-300 font-medium">2,000+ Protected Cars</span>
+                </div>
+                <div className="w-px h-6 bg-gray-600"></div>
+                <span className="text-emerald-400 font-medium">2-Year Warranty</span>
+              </div>
+
+              {/* CTA Buttons - Directly Below Text */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a 
+                  href="tel:+919600840058"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
+                >
+                  <Shield className="w-5 h-5" />
+                  Protect My Car Now
+                </a>
+                
+                <a 
+                  href="#gallery"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
+                >
+                  View Gallery
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
             </div>
 
-            {/* Hero Image */}
-            <div className="mt-16 relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 via-transparent to-teal-400/20 rounded-3xl blur-3xl scale-110"></div>
-              <img 
-                src="/gallery/hero-car.jpeg" 
-                alt="Premium BMW protected by SafePark" 
-                className="relative w-full max-w-2xl mx-auto h-[400px] lg:h-[500px] object-cover rounded-3xl shadow-2xl"
-              />
+            {/* RIGHT COLUMN - Premium Car Image */}
+            <div className="flex justify-center md:justify-end order-first md:order-last">
+              <div className="relative">
+                {/* Subtle Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-300/30 rounded-3xl blur-3xl scale-110 opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-transparent rounded-3xl"></div>
+                
+                {/* Car Image */}
+                <img 
+                  src="/gallery/hero-car.jpeg" 
+                  alt="Premium BMW protected by SafePark" 
+                  className="relative w-full max-w-lg h-[400px] lg:h-[500px] object-cover rounded-3xl shadow-2xl shadow-black/40"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* COMPLETE PROTECTION SECTION */}
+      {/* FEATURES SECTION */}
       <section className="py-20 px-6 md:px-12 lg:px-20 bg-slate-800/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -185,26 +194,60 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              "Luxury Car Protection",
-              "All-Weather Installation", 
-              "Quick Setup Demo",
-              "Urban Protection",
-              "Family Vehicle Care",
-              "Installation Process"
-            ].map((caption, idx) => (
+              {
+                src: "/gallery/gallery1.jpg",
+                alt: "Luxury car protection setup",
+                caption: "Luxury Car Protection"
+              },
+              {
+                src: "/gallery/gallery2.jpg",
+                alt: "All-weather installation",
+                caption: "All-Weather Installation"
+              },
+              {
+                src: "/gallery/gallery3.jpg",
+                alt: "Quick setup demo",
+                caption: "Quick Setup Demo"
+              },
+              {
+                src: "/gallery/gallery4.jpg",
+                alt: "Urban protection",
+                caption: "Urban Protection"
+              },
+              {
+                src: "/gallery/gallery5.jpg",
+                alt: "Family vehicle care",
+                caption: "Family Vehicle Care"
+              },
+              {
+                src: "/gallery/gallery-video.mp4",
+                alt: "Installation process",
+                caption: "Installation Process",
+                type: "video"
+              }
+            ].map((item, idx) => (
               <div 
                 key={idx} 
                 className="p-6 shadow-lg rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 hover:shadow-xl transition-all duration-300"
               >
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl mb-4 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <div className="w-8 h-8 bg-emerald-400 rounded-lg"></div>
-                    </div>
-                    <p className="text-gray-400 text-sm">Gallery #{idx + 1}</p>
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{caption}</h3>
+                {item.type === "video" ? (
+                  <video
+                    src={item.src}
+                    controls
+                    className="w-full h-48 object-cover rounded-xl mb-4"
+                    poster="/gallery/gallery1.jpg"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-48 object-cover rounded-xl mb-4"
+                    loading="lazy"
+                  />
+                )}
+                <h3 className="text-xl font-semibold text-white mb-2">{item.caption}</h3>
                 <p className="text-emerald-400/70 text-sm">Professional Installation</p>
               </div>
             ))}
