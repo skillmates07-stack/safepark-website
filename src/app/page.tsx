@@ -84,7 +84,7 @@ export default function HomePage() {
               {/* REAL CAR IMAGE BACKGROUND */}
               <div className="relative w-full max-w-sm">
                 <img 
-                  src="/hero-car.jpg" 
+                  src="public/gallery/hero-car.jpeg" 
                   alt="Premium car protected by SafePark retractable carport" 
                   className="w-full h-auto rounded-3xl shadow-2xl object-cover"
                   style={{ aspectRatio: '4/3' }}
@@ -396,3 +396,4 @@ export default function HomePage() {
     </main>
   );
 }
+
