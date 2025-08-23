@@ -57,9 +57,10 @@ export default function PricingPage() {
   ];
 
   return (
-    <>
-      {/* NAVBAR WITH CORRECT COLORS */}
-      <header className="fixed top-0 w-full z-50 bg-[#031924] backdrop-blur-md border-b border-gray-800/50">
+    <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
+      
+      {/* FIXED NAVBAR - MATCHING HOMEPAGE */}
+      <header className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             
@@ -74,9 +75,6 @@ export default function PricingPage() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:items-center md:space-x-8">
               <a href="/" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Home
-              </a>
-              <a href="#features" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Features
               </a>
               <a href="#gallery" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
@@ -106,15 +104,15 @@ export default function PricingPage() {
         </nav>
       </header>
 
-      {/* MAIN CONTENT WITH HERO SECTION COLORS */}
-      <main className="pt-[64px] bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
+      {/* MAIN CONTENT - MATCHING HOMEPAGE COLORS */}
+      <main className="pt-[64px]">
         
         {/* HERO SECTION */}
         <section className="pt-6 pb-10 px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-black mb-6 leading-tight tracking-tight">
               <span className="text-white">Find Your Perfect</span>{' '}
-              <span className="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
                 SafePark
               </span>{' '}
               <span className="text-white">Protection Plan</span>
@@ -134,13 +132,13 @@ export default function PricingPage() {
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full transition-transform ${
-                    isAnnual ? 'translate-x-6 bg-gradient-to-r from-green-400 to-green-500' : 'translate-x-1 bg-white'
+                    isAnnual ? 'translate-x-6 bg-gradient-to-r from-emerald-400 to-emerald-500' : 'translate-x-1 bg-white'
                   }`}
                 />
               </button>
               <span className={`text-sm font-medium ${isAnnual ? 'text-white' : 'text-gray-400'}`}>
                 Annual
-                <span className="ml-1 text-xs bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent font-bold">
+                <span className="ml-1 text-xs bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent font-bold">
                   20% off
                 </span>
               </span>
@@ -148,7 +146,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* PRICING CARDS */}
+        {/* PRICING CARDS - MATCHING ORIGINAL STYLE */}
         <section className="px-4 lg:px-8 pb-16">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
@@ -157,14 +155,14 @@ export default function PricingPage() {
                   key={plan.id}
                   className={`relative backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-b from-slate-700/50 to-slate-800/70 border-green-400/40 shadow-2xl shadow-green-500/15 ring-1 ring-green-400/25 scale-105 translate-y-[-2rem]' 
+                      ? 'bg-gradient-to-b from-slate-700/50 to-slate-800/70 border-emerald-400/40 shadow-2xl shadow-emerald-500/15 ring-1 ring-emerald-400/25 scale-105 translate-y-[-2rem]' 
                       : 'bg-gradient-to-b from-slate-700/40 to-slate-800/60 border-slate-500/40 shadow-xl hover:shadow-2xl hover:scale-[1.02] hover:border-slate-400/60'
                   }`}
                 >
                   {/* Popular Badge */}
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-green-600 to-green-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                      <div className="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
                         ⭐ Most Popular
                       </div>
                     </div>
@@ -177,7 +175,7 @@ export default function PricingPage() {
                     
                     {/* Price */}
                     <div className="mb-6">
-                      <div className={`font-black mb-2 ${plan.popular ? 'text-5xl text-green-400' : 'text-4xl text-white'}`}>
+                      <div className={`font-black mb-2 ${plan.popular ? 'text-5xl text-emerald-400' : 'text-4xl text-white'}`}>
                         {isAnnual 
                           ? `₹${(parseInt(plan.monthlyPrice.replace('₹', '').replace(',', '')) * 0.8).toLocaleString()}`
                           : plan.monthlyPrice
@@ -191,7 +189,7 @@ export default function PricingPage() {
                     {/* CTA BUTTON */}
                     <a
                       href="tel:+919600840058"
-                      className="w-full block py-3 px-6 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 shadow-2xl shadow-green-500/20 text-white font-bold text-sm rounded-xl transition-all duration-300 hover:scale-105 text-center"
+                      className="w-full block py-3 px-6 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 shadow-2xl shadow-emerald-500/20 text-white font-bold text-sm rounded-xl transition-all duration-300 hover:scale-105 text-center"
                     >
                       Get Started
                     </a>
@@ -201,7 +199,7 @@ export default function PricingPage() {
                   <ul className="space-y-3">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-gradient-to-r from-green-500 to-green-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div className="w-5 h-5 rounded-full bg-gradient-to-r from-emerald-500 to-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                           </svg>
@@ -216,32 +214,32 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* PREMIUM REDESIGNED FEATURES SECTION - 2x2 GRID */}
+        {/* FEATURES SECTION - MATCHING ORIGINAL BOX SIZES */}
         <section className="px-4 lg:px-8 py-20 bg-gradient-to-br from-slate-50/5 via-blue-50/8 to-green-50/10 backdrop-blur-sm relative overflow-hidden">
           {/* Subtle background pattern */}
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-green-500/5 to-teal-500/5 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-500/5 to-teal-500/5 pointer-events-none"></div>
           
           <div className="max-w-5xl mx-auto relative z-10">
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-4 text-center tracking-tight">
               What's Included with Every 
-              <span className="bg-gradient-to-r from-green-400 via-green-300 to-teal-300 bg-clip-text text-transparent"> SafePark</span> Model
+              <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-300 bg-clip-text text-transparent"> SafePark</span> Model
             </h2>
             <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto leading-relaxed">
               Premium features designed to provide maximum protection and peace of mind for your vehicle
             </p>
             
-            {/* CONSISTENT 2x2 GRID WITH EQUAL SIZING */}
+            {/* CONSISTENT 2x2 GRID - MATCHING ORIGINAL SIZES */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
               {/* Premium Materials Card */}
-              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-white/8 to-white/4 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:shadow-green-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-green-400/30 hover:bg-gradient-to-br hover:from-green-500/10 hover:to-teal-500/5">
+              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-white/8 to-white/4 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:shadow-emerald-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-emerald-400/30 hover:bg-gradient-to-br hover:from-emerald-500/10 hover:to-teal-500/5">
                 <div className="flex flex-col items-center flex-1 justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-tr from-green-500 via-green-400 to-teal-400 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-green-500/30 group-hover:shadow-green-400/50 group-hover:scale-110 transition-all duration-500">
+                  <div className="w-20 h-20 bg-gradient-to-tr from-emerald-500 via-emerald-400 to-teal-400 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-emerald-500/30 group-hover:shadow-emerald-400/50 group-hover:scale-110 transition-all duration-500">
                     <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-green-300 transition-colors duration-300">Premium Materials</h3>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-emerald-300 transition-colors duration-300">Premium Materials</h3>
                   <p className="text-gray-300 text-center leading-relaxed text-sm group-hover:text-gray-200 transition-colors duration-300">Galvanized Iron + Oxford 600D waterproof fabric for maximum durability and longevity</p>
                 </div>
               </div>
@@ -249,7 +247,7 @@ export default function PricingPage() {
               {/* Quick Installation Card */}
               <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-white/8 to-white/4 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:shadow-blue-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-blue-400/30 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-cyan-500/5">
                 <div className="flex flex-col items-center flex-1 justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-tr from-green-500 via-green-400 to-teal-400 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-green-500/30 group-hover:shadow-blue-400/50 group-hover:scale-110 transition-all duration-500">
+                  <div className="w-20 h-20 bg-gradient-to-tr from-emerald-500 via-emerald-400 to-teal-400 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-emerald-500/30 group-hover:shadow-blue-400/50 group-hover:scale-110 transition-all duration-500">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
@@ -259,21 +257,21 @@ export default function PricingPage() {
                 </div>
               </div>
 
-              {/* Weather Protection Card - PREMIUM HIGHLIGHT */}
-              <div className="group h-[320px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-green-500/15 via-green-400/10 to-teal-400/10 backdrop-blur-md border-2 border-green-400/40 shadow-2xl shadow-green-500/30 scale-105 hover:scale-110 transition-all duration-500 hover:shadow-green-400/50 hover:border-green-300/60 relative overflow-hidden">
+              {/* Weather Protection Card - PREMIUM HIGHLIGHT - SAME SIZE AS OTHERS */}
+              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-emerald-500/15 via-emerald-400/10 to-teal-400/10 backdrop-blur-md border-2 border-emerald-400/40 shadow-2xl shadow-emerald-500/30 transition-all duration-500 hover:scale-[1.02] hover:shadow-emerald-400/50 hover:border-emerald-300/60 relative overflow-hidden">
                 {/* Premium glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-green-400/5 to-teal-400/5 rounded-3xl blur-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/5 to-teal-400/5 rounded-3xl blur-xl"></div>
                 
                 <div className="flex flex-col items-center flex-1 justify-center relative z-10">
-                  <div className="w-24 h-24 bg-gradient-to-tr from-green-400 via-green-300 to-teal-300 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-green-400/50 group-hover:shadow-green-300/70 group-hover:scale-110 transition-all duration-500">
-                    <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-20 h-20 bg-gradient-to-tr from-emerald-400 via-emerald-300 to-teal-300 rounded-full flex items-center justify-center mb-6 shadow-2xl shadow-emerald-400/50 group-hover:shadow-emerald-300/70 group-hover:scale-110 transition-all duration-500">
+                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-black text-white mb-4 text-center group-hover:text-green-200 transition-colors duration-300">Weather Protection</h3>
-                  <p className="text-green-100 text-center leading-relaxed font-medium mb-4 group-hover:text-green-50 transition-colors duration-300">100% UV & Rain Protection with advanced weatherproof coating technology</p>
-                  <div className="px-4 py-2 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-full border border-amber-400/30">
-                    <span className="text-amber-200 text-sm font-bold">⭐ Most Popular Feature</span>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-emerald-200 transition-colors duration-300">Weather Protection</h3>
+                  <p className="text-emerald-100 text-center leading-relaxed text-sm font-medium mb-3 group-hover:text-emerald-50 transition-colors duration-300">100% UV & Rain Protection with advanced weatherproof coating technology</p>
+                  <div className="px-3 py-1 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-full border border-amber-400/30">
+                    <span className="text-amber-200 text-xs font-bold">⭐ Most Popular Feature</span>
                   </div>
                 </div>
               </div>
@@ -281,7 +279,7 @@ export default function PricingPage() {
               {/* 2-Year Warranty Card */}
               <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-white/8 to-white/4 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-purple-400/30 hover:bg-gradient-to-br hover:from-purple-500/10 hover:to-pink-500/5">
                 <div className="flex flex-col items-center flex-1 justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-tr from-green-500 via-green-400 to-teal-400 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-green-500/30 group-hover:shadow-purple-400/50 group-hover:scale-110 transition-all duration-500">
+                  <div className="w-20 h-20 bg-gradient-to-tr from-emerald-500 via-emerald-400 to-teal-400 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-emerald-500/30 group-hover:shadow-purple-400/50 group-hover:scale-110 transition-all duration-500">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -303,7 +301,7 @@ export default function PricingPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
               <a 
                 href="tel:+919600840058" 
-                className="group flex items-center justify-center gap-3 w-full sm:flex-1 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-2xl shadow-green-600/20 hover:shadow-green-500/30 hover:scale-[1.02] min-h-[60px]"
+                className="group flex items-center justify-center gap-3 w-full sm:flex-1 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-2xl shadow-emerald-600/20 hover:shadow-emerald-500/30 hover:scale-[1.02] min-h-[60px]"
               >
                 <div className="flex items-center justify-center w-6 h-6">
                   <svg 
@@ -329,7 +327,7 @@ export default function PricingPage() {
               >
                 <div className="flex items-center justify-center w-6 h-6">
                   <svg 
-                    className="w-5 h-5 text-green-400 group-hover:scale-110 transition-transform duration-200" 
+                    className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform duration-200" 
                     fill="currentColor" 
                     viewBox="0 0 24 24"
                   >
@@ -342,6 +340,6 @@ export default function PricingPage() {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 }
