@@ -1,10 +1,12 @@
 'use client';
 
 import { Shield, Zap, Award, Phone, MessageCircle, MapPin, Star, ArrowRight } from 'lucide-react';
+import Navbar from '../components/layout/Navbar';
 
 export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
+      <Navbar />
       
       {/* HERO SECTION - Closer to Navbar */}
       <section className="min-h-screen flex items-center pt-8 pb-20 px-6 md:px-12 lg:px-20">
