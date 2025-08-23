@@ -7,12 +7,25 @@ import { usePathname } from 'next/navigation';
 export default function Navbar() {
   const pathname = usePathname();
 
+  const handleGalleryClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (pathname === '/') {
+      // If on homepage, scroll to gallery section
+      document.getElementById('gallery')?.scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    } else {
+      // If on other page, go to homepage then scroll
+      window.location.href = '/#gallery';
+    }
+  };
+
   return (
     <header className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
       <nav className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo Section */}
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-4">
             <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">S</span>
@@ -20,24 +33,23 @@ export default function Navbar() {
             <span className="text-emerald-400 font-bold text-2xl">SafePark</span>
           </Link>
 
-          {/* Navigation Links Section */}
+          {/* Navigation Links - CONSISTENT ACROSS ALL PAGES */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
-              href="/"
+              href="/features"
               className={`text-base font-medium transition-colors duration-300 ${
-                pathname === '/' ? 'text-emerald-400' : 'text-white hover:text-emerald-400'
+                pathname === '/features' ? 'text-emerald-400' : 'text-white hover:text-emerald-400'
               }`}
             >
               Features
             </Link>
-            <Link
-              href="/gallery"
-              className={`text-base font-medium transition-colors duration-300 ${
-                pathname === '/gallery' ? 'text-emerald-400' : 'text-white hover:text-emerald-400'
-              }`}
+            <a
+              href="/#gallery"
+              onClick={handleGalleryClick}
+              className="text-base font-medium text-white hover:text-emerald-400 transition-colors duration-300"
             >
               Gallery
-            </Link>
+            </a>
             <Link
               href="/pricing"
               className={`text-base font-medium transition-colors duration-300 ${
@@ -56,7 +68,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Call Now Button Section */}
+          {/* Call Now Button - NO COMMUNITY */}
           <div className="flex items-center">
             <a 
               href="tel:+919600840058" 
@@ -67,6 +79,18 @@ export default function Navbar() {
               </svg>
               Call Now
             </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              className="text-white hover:text-emerald-400 p-2 rounded-md transition-colors duration-300"
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </nav>
