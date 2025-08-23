@@ -59,42 +59,42 @@ export default function PricingPage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
       
-      {/* NAVBAR - MATCHING HOMEPAGE */}
-      <header className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+      {/* LARGER NAVBAR - MATCHING IMAGE */}
+      <header className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-white/10 h-20">
+        <nav className="max-w-7xl mx-auto px-8 h-full">
+          <div className="flex items-center justify-between h-full">
             
             {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">S</span>
               </div>
               <span className="text-emerald-400 font-bold text-xl">SafePark</span>
             </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex md:items-center md:space-x-8">
-              <a href="/" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            {/* Desktop Navigation - Larger Font */}
+            <div className="hidden md:flex md:items-center md:space-x-12">
+              <a href="/" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-lg font-medium transition-colors">
                 Features
               </a>
-              <a href="#gallery" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <a href="#gallery" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-lg font-medium transition-colors">
                 Gallery
               </a>
-              <a href="/pricing" className="text-emerald-400 px-3 py-2 rounded-md text-sm font-medium">
+              <a href="/pricing" className="text-emerald-400 px-3 py-2 rounded-md text-lg font-medium">
                 Pricing
               </a>
-              <a href="#contact" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <a href="#contact" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-lg font-medium transition-colors">
                 Contact
               </a>
             </div>
 
-            {/* Call Now Button */}
+            {/* Larger Call Now Button */}
             <div className="flex items-center">
               <a 
                 href="tel:+919600840058" 
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-colors inline-flex items-center gap-2"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-flex items-center gap-2 shadow-lg"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 Call Now
@@ -105,10 +105,10 @@ export default function PricingPage() {
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="pt-[64px]">
+      <main className="pt-20">
         
         {/* HERO SECTION */}
-        <section className="pt-6 pb-10 px-4 lg:px-8">
+        <section className="pt-8 pb-10 px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-black mb-6 leading-tight tracking-tight">
               <span className="text-white">Find Your Perfect</span>{' '}
@@ -214,7 +214,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* IMPROVED FEATURES SECTION - NO "MOST POPULAR FEATURE" BADGE */}
+        {/* MUCH MORE VISIBLE FEATURE CARDS */}
         <section className="px-4 lg:px-8 py-20 bg-slate-800/30 relative overflow-hidden">
           <div className="max-w-5xl mx-auto relative z-10">
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-4 text-center tracking-tight">
@@ -225,64 +225,64 @@ export default function PricingPage() {
               Premium features designed to provide maximum protection and peace of mind for your vehicle
             </p>
             
-            {/* IMPROVED FEATURE CARDS */}
+            {/* MUCH MORE VISIBLE FEATURE CARDS */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               
               {/* Premium Materials */}
-              <div className="group h-[290px] p-10 rounded-3xl border border-emerald-900/30 bg-gradient-to-br from-slate-900/70 via-slate-900/60 to-emerald-950/60 shadow-xl shadow-black/30 backdrop-blur-md transition-all hover:scale-[1.03] hover:shadow-emerald-400/20 hover:border-emerald-400/20">
-                <div className="flex flex-col items-center justify-center gap-3 h-full">
-                  <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600/20 mb-4 group-hover:bg-emerald-400/30 transition-all">
-                    <svg className="w-8 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+              <div className="group h-[290px] p-10 rounded-2xl border border-white/30 bg-black/60 backdrop-blur-md shadow-2xl shadow-black/50 transition-all duration-300 hover:bg-black/80 hover:border-emerald-400/50 hover:shadow-emerald-400/20 hover:scale-[1.03]">
+                <div className="flex flex-col items-center justify-center gap-4 h-full">
+                  <div className="w-16 h-16 rounded-full bg-emerald-600 shadow-lg shadow-emerald-600/50 flex items-center justify-center mb-4 group-hover:bg-emerald-500 transition-all">
+                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
-                  </span>
-                  <h3 className="text-xl font-bold text-white mb-2 text-center">Premium Materials</h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">Premium Materials</h3>
+                  <p className="text-gray-200 text-center leading-relaxed">
                     Galvanized Iron + Oxford 600D waterproof fabric for maximum durability and longevity
                   </p>
                 </div>
               </div>
               
               {/* Quick Installation */}
-              <div className="group h-[290px] p-10 rounded-3xl border border-emerald-900/30 bg-gradient-to-br from-slate-900/70 via-slate-900/60 to-emerald-950/60 shadow-xl shadow-black/30 backdrop-blur-md transition-all hover:scale-[1.03] hover:shadow-emerald-400/20 hover:border-emerald-400/20">
-                <div className="flex flex-col items-center justify-center gap-3 h-full">
-                  <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600/20 mb-4 group-hover:bg-emerald-400/30 transition-all">
-                    <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+              <div className="group h-[290px] p-10 rounded-2xl border border-white/30 bg-black/60 backdrop-blur-md shadow-2xl shadow-black/50 transition-all duration-300 hover:bg-black/80 hover:border-emerald-400/50 hover:shadow-emerald-400/20 hover:scale-[1.03]">
+                <div className="flex flex-col items-center justify-center gap-4 h-full">
+                  <div className="w-16 h-16 rounded-full bg-emerald-600 shadow-lg shadow-emerald-600/50 flex items-center justify-center mb-4 group-hover:bg-emerald-500 transition-all">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
-                  </span>
-                  <h3 className="text-xl font-bold text-white mb-2 text-center">Quick Installation</h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">Quick Installation</h3>
+                  <p className="text-gray-200 text-center leading-relaxed">
                     Professional setup completed in just 2-3 hours by our certified installation technicians
                   </p>
                 </div>
               </div>
               
               {/* Weather Protection */}
-              <div className="group h-[290px] p-10 rounded-3xl border border-emerald-900/30 bg-gradient-to-br from-slate-900/70 via-slate-900/60 to-emerald-950/60 shadow-xl shadow-black/30 backdrop-blur-md transition-all hover:scale-[1.03] hover:shadow-emerald-400/20 hover:border-emerald-400/20">
-                <div className="flex flex-col items-center justify-center gap-3 h-full">
-                  <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600/20 mb-4 group-hover:bg-emerald-400/30 transition-all">
-                    <svg className="w-8 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+              <div className="group h-[290px] p-10 rounded-2xl border border-white/30 bg-black/60 backdrop-blur-md shadow-2xl shadow-black/50 transition-all duration-300 hover:bg-black/80 hover:border-emerald-400/50 hover:shadow-emerald-400/20 hover:scale-[1.03]">
+                <div className="flex flex-col items-center justify-center gap-4 h-full">
+                  <div className="w-16 h-16 rounded-full bg-emerald-600 shadow-lg shadow-emerald-600/50 flex items-center justify-center mb-4 group-hover:bg-emerald-500 transition-all">
+                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
-                  </span>
-                  <h3 className="text-xl font-bold text-white mb-2 text-center">Weather Protection</h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">Weather Protection</h3>
+                  <p className="text-gray-200 text-center leading-relaxed">
                     100% UV & Rain Protection with advanced weatherproof coating technology
                   </p>
                 </div>
               </div>
               
               {/* 2-Year Warranty */}
-              <div className="group h-[290px] p-10 rounded-3xl border border-emerald-900/30 bg-gradient-to-br from-slate-900/70 via-slate-900/60 to-emerald-950/60 shadow-xl shadow-black/30 backdrop-blur-md transition-all hover:scale-[1.03] hover:shadow-emerald-400/20 hover:border-emerald-400/20">
-                <div className="flex flex-col items-center justify-center gap-3 h-full">
-                  <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600/20 mb-4 group-hover:bg-emerald-400/30 transition-all">
-                    <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+              <div className="group h-[290px] p-10 rounded-2xl border border-white/30 bg-black/60 backdrop-blur-md shadow-2xl shadow-black/50 transition-all duration-300 hover:bg-black/80 hover:border-emerald-400/50 hover:shadow-emerald-400/20 hover:scale-[1.03]">
+                <div className="flex flex-col items-center justify-center gap-4 h-full">
+                  <div className="w-16 h-16 rounded-full bg-emerald-600 shadow-lg shadow-emerald-600/50 flex items-center justify-center mb-4 group-hover:bg-emerald-500 transition-all">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                  </span>
-                  <h3 className="text-xl font-bold text-white mb-2 text-center">2-Year Warranty</h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">2-Year Warranty</h3>
+                  <p className="text-gray-200 text-center leading-relaxed">
                     Complete parts & service warranty with free maintenance and customer support
                   </p>
                 </div>
