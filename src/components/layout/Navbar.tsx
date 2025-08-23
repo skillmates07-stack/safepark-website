@@ -1,104 +1,72 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Features', href: '#features' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '#contact' },
-  ];
+  const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-[#031924]/95 backdrop-blur-md border-b border-gray-800/50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          {/* Logo Section */}
+          <Link href="/" className="flex items-center space-x-4">
             <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">S</span>
             </div>
-            <span className="text-emerald-400 font-bold text-xl">SafePark</span>
+            <span className="text-emerald-400 font-bold text-2xl">SafePark</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-              >
-                {link.name}
-              </Link>
-            ))}
+          {/* Navigation Links Section */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link
+              href="/"
+              className={`text-base font-medium transition-colors duration-300 ${
+                pathname === '/' ? 'text-emerald-400' : 'text-white hover:text-emerald-400'
+              }`}
+            >
+              Features
+            </Link>
+            <Link
+              href="/gallery"
+              className={`text-base font-medium transition-colors duration-300 ${
+                pathname === '/gallery' ? 'text-emerald-400' : 'text-white hover:text-emerald-400'
+              }`}
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/pricing"
+              className={`text-base font-medium transition-colors duration-300 ${
+                pathname === '/pricing' ? 'text-emerald-400' : 'text-white hover:text-emerald-400'
+              }`}
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/contact"
+              className={`text-base font-medium transition-colors duration-300 ${
+                pathname === '/contact' ? 'text-emerald-400' : 'text-white hover:text-emerald-400'
+              }`}
+            >
+              Contact
+            </Link>
           </div>
 
-          {/* Call Now Button - Desktop */}
-          <div className="hidden md:flex md:items-center">
-            <a
-              href="tel:+919600840058"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-colors duration-300 inline-flex items-center gap-2"
+          {/* Call Now Button Section */}
+          <div className="flex items-center">
+            <a 
+              href="tel:+919600840058" 
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded-lg font-bold transition-colors duration-300 inline-flex items-center gap-2"
             >
-              <Phone className="w-4 h-4" />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
               Call Now
             </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-emerald-400 p-2 rounded-md transition-colors duration-300"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <div
-          className={`md:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen
-              ? 'max-h-screen opacity-100 visible'
-              : 'max-h-0 opacity-0 invisible'
-          } overflow-hidden`}
-        >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-[#031924]/98 backdrop-blur-md rounded-lg mt-2 border border-gray-800/50">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-white hover:text-emerald-400 hover:bg-gray-800/50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
-              >
-                {link.name}
-              </Link>
-            ))}
-            
-            {/* Mobile Call Button */}
-            <div className="pt-4 pb-2">
-              <a
-                href="tel:+919600840058"
-                onClick={() => setIsMenuOpen(false)}
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 inline-flex items-center gap-2 w-full justify-center"
-              >
-                <Phone className="w-4 h-4" />
-                Call Now
-              </a>
-            </div>
           </div>
         </div>
       </nav>
