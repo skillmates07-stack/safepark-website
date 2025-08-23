@@ -214,7 +214,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* FEATURES SECTION - VISIBLE CARDS */}
+        {/* IMPROVED FEATURES SECTION - NO "MOST POPULAR FEATURE" BADGE */}
         <section className="px-4 lg:px-8 py-20 bg-slate-800/30 relative overflow-hidden">
           <div className="max-w-5xl mx-auto relative z-10">
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-4 text-center tracking-tight">
@@ -225,61 +225,66 @@ export default function PricingPage() {
               Premium features designed to provide maximum protection and peace of mind for your vehicle
             </p>
             
-            {/* VISIBLE CARDS WITH BETTER CONTRAST */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* IMPROVED FEATURE CARDS */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               
-              {/* Premium Materials Card */}
-              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:bg-white/12 hover:scale-105 transition-all duration-300">
-                <div className="flex flex-col items-center flex-1 justify-center">
-                  <div className="w-12 h-12 mb-6 text-emerald-400">
-                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+              {/* Premium Materials */}
+              <div className="group h-[290px] p-10 rounded-3xl border border-emerald-900/30 bg-gradient-to-br from-slate-900/70 via-slate-900/60 to-emerald-950/60 shadow-xl shadow-black/30 backdrop-blur-md transition-all hover:scale-[1.03] hover:shadow-emerald-400/20 hover:border-emerald-400/20">
+                <div className="flex flex-col items-center justify-center gap-3 h-full">
+                  <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600/20 mb-4 group-hover:bg-emerald-400/30 transition-all">
+                    <svg className="w-8 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 text-center">Premium Materials</h3>
-                  <p className="text-gray-300 text-center leading-relaxed">Galvanized Iron + Oxford 600D waterproof fabric for maximum durability and longevity</p>
+                  </span>
+                  <h3 className="text-xl font-bold text-white mb-2 text-center">Premium Materials</h3>
+                  <p className="text-gray-300 text-center leading-relaxed">
+                    Galvanized Iron + Oxford 600D waterproof fabric for maximum durability and longevity
+                  </p>
                 </div>
               </div>
-
-              {/* Quick Installation Card */}
-              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:bg-white/12 hover:scale-105 transition-all duration-300">
-                <div className="flex flex-col items-center flex-1 justify-center">
-                  <div className="w-12 h-12 mb-6 text-emerald-400">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+              
+              {/* Quick Installation */}
+              <div className="group h-[290px] p-10 rounded-3xl border border-emerald-900/30 bg-gradient-to-br from-slate-900/70 via-slate-900/60 to-emerald-950/60 shadow-xl shadow-black/30 backdrop-blur-md transition-all hover:scale-[1.03] hover:shadow-emerald-400/20 hover:border-emerald-400/20">
+                <div className="flex flex-col items-center justify-center gap-3 h-full">
+                  <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600/20 mb-4 group-hover:bg-emerald-400/30 transition-all">
+                    <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 text-center">Quick Installation</h3>
-                  <p className="text-gray-300 text-center leading-relaxed">Professional setup completed in just 2-3 hours by our certified installation technicians</p>
+                  </span>
+                  <h3 className="text-xl font-bold text-white mb-2 text-center">Quick Installation</h3>
+                  <p className="text-gray-300 text-center leading-relaxed">
+                    Professional setup completed in just 2-3 hours by our certified installation technicians
+                  </p>
                 </div>
               </div>
-
-              {/* Weather Protection Card */}
-              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:bg-white/12 hover:scale-105 transition-all duration-300">
-                <div className="flex flex-col items-center flex-1 justify-center">
-                  <div className="w-12 h-12 mb-6 text-emerald-400">
-                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+              
+              {/* Weather Protection */}
+              <div className="group h-[290px] p-10 rounded-3xl border border-emerald-900/30 bg-gradient-to-br from-slate-900/70 via-slate-900/60 to-emerald-950/60 shadow-xl shadow-black/30 backdrop-blur-md transition-all hover:scale-[1.03] hover:shadow-emerald-400/20 hover:border-emerald-400/20">
+                <div className="flex flex-col items-center justify-center gap-3 h-full">
+                  <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600/20 mb-4 group-hover:bg-emerald-400/30 transition-all">
+                    <svg className="w-8 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 text-center">Weather Protection</h3>
-                  <p className="text-gray-300 text-center leading-relaxed mb-4">100% UV & Rain Protection with advanced weatherproof coating technology</p>
-                  <div className="px-4 py-2 bg-amber-500/20 rounded-full border border-amber-400/30">
-                    <span className="text-amber-300 text-sm font-bold">⭐ Most Popular Feature</span>
-                  </div>
+                  </span>
+                  <h3 className="text-xl font-bold text-white mb-2 text-center">Weather Protection</h3>
+                  <p className="text-gray-300 text-center leading-relaxed">
+                    100% UV & Rain Protection with advanced weatherproof coating technology
+                  </p>
                 </div>
               </div>
-
-              {/* 2-Year Warranty Card */}
-              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:bg-white/12 hover:scale-105 transition-all duration-300">
-                <div className="flex flex-col items-center flex-1 justify-center">
-                  <div className="w-12 h-12 mb-6 text-emerald-400">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+              
+              {/* 2-Year Warranty */}
+              <div className="group h-[290px] p-10 rounded-3xl border border-emerald-900/30 bg-gradient-to-br from-slate-900/70 via-slate-900/60 to-emerald-950/60 shadow-xl shadow-black/30 backdrop-blur-md transition-all hover:scale-[1.03] hover:shadow-emerald-400/20 hover:border-emerald-400/20">
+                <div className="flex flex-col items-center justify-center gap-3 h-full">
+                  <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600/20 mb-4 group-hover:bg-emerald-400/30 transition-all">
+                    <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 text-center">2-Year Warranty</h3>
-                  <p className="text-gray-300 text-center leading-relaxed">Complete parts & service warranty with free maintenance and customer support</p>
+                  </span>
+                  <h3 className="text-xl font-bold text-white mb-2 text-center">2-Year Warranty</h3>
+                  <p className="text-gray-300 text-center leading-relaxed">
+                    Complete parts & service warranty with free maintenance and customer support
+                  </p>
                 </div>
               </div>
             </div>
