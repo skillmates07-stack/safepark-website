@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, MessageCircle, MapPin, Mail, Sen```CheckCircle } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Mail, Send, CheckCircle } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ export default function ContactPage() {
     // Handle form submission
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextArea```ment>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -39,7 +39,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            Ready to experience peace of mind? Get```ur custom SafePark quote in```nutes.
+            Ready to experience peace of mind? Get your custom SafePark quote in minutes.
           </p>
         </div>
       </section>
@@ -49,28 +49,30 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             
-            {/* LEFT COLUMN - Contact Form (3/5) */}
+            {/* LEFT COLUMN - Contact Form */}
             <div className="lg:col-span-3">
               <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/70 backdrop-blur-xl rounded-3xl p-10 shadow-2xl border border-gray-700/50">
                 {!isSubmitted ? (
                   <>
                     <div className="mb-8">
                       <h2 className="text-3xl font-bold text-white mb-3">Get Your Free Quote</h2>
-                      <p className="text-gray-300">Tell us about your car and we'll create a perfect protection plan for you.</p>```                  </div>
+                      <p className="text-gray-300">Tell us about your car and we'll create a perfect protection plan for you.</p>
+                    </div>
                     
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text``` font-semibold text-white mb-2">
+                          <label className="block text-sm font-semibold text-white mb-2">
                             Your Name
                           </label>
                           <input
                             type="text"
                             name="name"
-                            require```                           value={formData.name}
+                            required
+                            value={formData.name}
                             onChange={handleChange}
-                            className="w```ll px-5 py-4 bg-gray-800/60 border border-gray-600/40 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-lg"
-                            placeholder="Enter your full```me"
+                            className="w-full px-5 py-4 bg-gray-800/60 border border-gray-600/40 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-lg"
+                            placeholder="Enter your full name"
                           />
                         </div>
                         
@@ -79,10 +81,11 @@ export default function ContactPage() {
                             Phone Number
                           </label>
                           <input
-                            type="tel"```                          name="phone"
+                            type="tel"
+                            name="phone"
                             required
                             value={formData.phone}
-                            onChange```andleChange}
+                            onChange={handleChange}
                             className="w-full px-5 py-4 bg-gray-800/60 border border-gray-600/40 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-lg"
                             placeholder="+91 9876543210"
                           />
@@ -90,21 +93,23 @@ export default function ContactPage() {
                       </div>
 
                       <div>
-                        <label className```lock text-sm font-semibold text-white mb-2">
+                        <label className="block text-sm font-semibold text-white mb-2">
                           Email Address
                         </label>
                         <input
-                          type="email"```                        name="email"```                        required
+                          type="email"
+                          name="email"
+                          required
                           value={formData.email}
                           onChange={handleChange}
                           className="w-full px-5 py-4 bg-gray-800/60 border border-gray-600/40 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-lg"
-                          placeholder="your```ail@example.com"
+                          placeholder="your.email@example.com"
                         />
                       </div>
 
                       <div>
                         <label className="block text-sm font-semibold text-white mb-2">
-                          Tell Us About Your Car &```eds
+                          Tell Us About Your Car & Needs
                         </label>
                         <textarea
                           name="message"
@@ -112,7 +117,7 @@ export default function ContactPage() {
                           value={formData.message}
                           onChange={handleChange}
                           className="w-full px-5 py-4 bg-gray-800/60 border border-gray-600/40 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-lg resize-none"
-                          placeholder="```t car do you drive```hen would you like```stallation? Any specific concerns?"
+                          placeholder="What car do you drive? When would you like installation? Any specific concerns?"
                         />
                       </div>
 
@@ -120,27 +125,27 @@ export default function ContactPage() {
                         type="submit"
                         className="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-emerald-500/30 flex items-center justify-center gap-3"
                       >
-                        <Send className="w```h-6" />
+                        <Send className="w-6 h-6" />
                         Get My Free Quote
                       </button>
                     </form>
                   </>
                 ) : (
                   <div className="text-center py-16">
-                    <CheckCircle className```-20 h-20 text-emerald-400 mx-auto mb-6" />
+                    <CheckCircle className="w-20 h-20 text-emerald-400 mx-auto mb-6" />
                     <h3 className="text-3xl font-bold text-white mb-4">Thank You!</h3>
                     <p className="text-xl text-gray-300 mb-8">
                       We'll call you within 24 hours with your personalized SafePark quote.
                     </p>
-                    <div className="flex gap```justify-center">
+                    <div className="flex gap-4 justify-center">
                       <a 
                         href="tel:+919600840058" 
-                        className="bg```erald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-lg font-bold transition"
+                        className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-lg font-bold transition"
                       >
                         Call Us Now
                       </a>
                       <a 
-                        href="https```wa.me/919600840058" 
+                        href="https://wa.me/919600840058" 
                         className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-6 py-3 rounded-lg font-bold transition"
                       >
                         WhatsApp
@@ -151,7 +156,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN - Contact Info & Quick Actions (2/5) */}
+            {/* RIGHT COLUMN - Contact Info */}
             <div className="lg:col-span-2 space-y-8">
               
               {/* Quick Contact */}
@@ -161,7 +166,7 @@ export default function ContactPage() {
                 <div className="space-y-6">
                   <a href="tel:+919600840058" className="flex items-center gap-4 group">
                     <div className="w-14 h-14 bg-emerald-500/20 rounded-2xl flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors">
-                      <Phone className="``` h-7 text-emerald-400" />
+                      <Phone className="w-7 h-7 text-emerald-400" />
                     </div>
                     <div>
                       <h4 className="font-bold text-white text-lg">Call Now</h4>
@@ -171,7 +176,7 @@ export default function ContactPage() {
 
                   <a href="https://wa.me/919600840058" className="flex items-center gap-4 group">
                     <div className="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
-                      <MessageCircle className```-7 h-7 text-green-400" />
+                      <MessageCircle className="w-7 h-7 text-green-400" />
                     </div>
                     <div>
                       <h4 className="font-bold text-white text-lg">WhatsApp</h4>
@@ -185,10 +190,11 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-bold text-white text-lg">Email</h4>
-                      <p className="text-blue-400 font-medium">safepark.india@gmail.com</p>```                  </div>
+                      <p className="text-blue-400 font-medium">safepark.india@gmail.com</p>
+                    </div>
                   </div>
 
-                  <div className="flex items```nter gap-4">
+                  <div className="flex items-center gap-4">
                     <div className="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center">
                       <MapPin className="w-7 h-7 text-purple-400" />
                     </div>
