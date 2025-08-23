@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { Shield, Zap, Award, Phone, MessageCircle, MapPin, Star, ArrowRight } from 'lucide-react';
+import Navbar from '../../components/layout/Navbar';
 
 export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -55,51 +57,9 @@ export default function PricingPage() {
 
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
-      
-      {/* NAVBAR - EXACTLY MATCHING HOMEPAGE SIZE */}
-      <header className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-between h-16">
-            
-            {/* Logo - Matching Homepage */}
-            <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-400 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">
-                S
-              </div>
-              <span className="text-white font-bold text-3xl">SafePark</span>
-            </div>
+      <Navbar />
 
-            {/* Desktop Navigation - Matching Homepage */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-white hover:text-emerald-400 transition duration-300">Features</a>
-              <a href="#gallery" className="text-white hover:text-emerald-400 transition duration-300">Gallery</a>
-              <a href="/pricing" className="text-emerald-400">Pricing</a>
-              <a href="#contact" className="text-white hover:text-emerald-400 transition duration-300">Contact</a>
-            </div>
-
-            {/* Call Now Button - Matching Homepage */}
-            <div className="flex items-center space-x-4">
-              <a 
-                href="tel:+919600840058"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded-lg font-bold transition duration-300"
-              >
-                Call Now
-              </a>
-              <a 
-                href="#community"
-                className="bg-emerald-100/10 border border-emerald-400/20 text-emerald-300 px-4 py-2 rounded-lg font-medium backdrop-blur-sm hover:bg-emerald-400/10 transition duration-300 flex items-center gap-2"
-              >
-                <span className="text-emerald-400">👥</span>
-                Community
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* MAIN CONTENT */}
       <main className="pt-16">
-        
         {/* HERO SECTION */}
         <section className="pt-8 pb-10 px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -207,7 +167,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* FEATURE CARDS */}
+        {/* FEATURES SECTION */}
         <section className="px-4 lg:px-8 py-20 bg-slate-800/30 relative overflow-hidden">
           <div className="max-w-5xl mx-auto relative z-10">
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-4 text-center tracking-tight">
@@ -223,11 +183,7 @@ export default function PricingPage() {
               {/* Premium Materials */}
               <div className="h-[280px] p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg text-center transition-all duration-300 hover:bg-white/8 hover:border-emerald-400/30 hover:shadow-emerald-400/10">
                 <div className="flex flex-col items-center justify-center h-full">
-                  <div className="w-12 h-12 mb-6 text-emerald-400">
-                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                  </div>
+                  <Shield className="w-12 h-12 mb-6 text-emerald-400" />
                   <h3 className="text-xl font-bold text-white mb-4">Premium Materials</h3>
                   <p className="text-gray-300 leading-relaxed">Galvanized Iron + Oxford 600D waterproof fabric for maximum durability and longevity</p>
                 </div>
@@ -236,11 +192,7 @@ export default function PricingPage() {
               {/* Quick Installation */}
               <div className="h-[280px] p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg text-center transition-all duration-300 hover:bg-white/8 hover:border-emerald-400/30 hover:shadow-emerald-400/10">
                 <div className="flex flex-col items-center justify-center h-full">
-                  <div className="w-12 h-12 mb-6 text-emerald-400">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
+                  <Zap className="w-12 h-12 mb-6 text-emerald-400" />
                   <h3 className="text-xl font-bold text-white mb-4">Quick Installation</h3>
                   <p className="text-gray-300 leading-relaxed">Professional setup completed in just 2-3 hours by our certified installation technicians</p>
                 </div>
@@ -249,11 +201,7 @@ export default function PricingPage() {
               {/* Weather Protection */}
               <div className="h-[280px] p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg text-center transition-all duration-300 hover:bg-white/8 hover:border-emerald-400/30 hover:shadow-emerald-400/10">
                 <div className="flex flex-col items-center justify-center h-full">
-                  <div className="w-12 h-12 mb-6 text-emerald-400">
-                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                  </div>
+                  <Shield className="w-12 h-12 mb-6 text-emerald-400" />
                   <h3 className="text-xl font-bold text-white mb-4">Weather Protection</h3>
                   <p className="text-gray-300 leading-relaxed">100% UV & Rain Protection with advanced weatherproof coating technology</p>
                 </div>
@@ -262,11 +210,7 @@ export default function PricingPage() {
               {/* 2-Year Warranty */}
               <div className="h-[280px] p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg text-center transition-all duration-300 hover:bg-white/8 hover:border-emerald-400/30 hover:shadow-emerald-400/10">
                 <div className="flex flex-col items-center justify-center h-full">
-                  <div className="w-12 h-12 mb-6 text-emerald-400">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
+                  <Award className="w-12 h-12 mb-6 text-emerald-400" />
                   <h3 className="text-xl font-bold text-white mb-4">2-Year Warranty</h3>
                   <p className="text-gray-300 leading-relaxed">Complete parts & service warranty with free maintenance and customer support</p>
                 </div>
@@ -275,53 +219,172 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* CTA SECTION */}
-        <section className="px-4 lg:px-8 py-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Protect Your Vehicle?</h2>
-            <p className="text-gray-300 text-lg mb-10">Get your custom quote today with free consultation</p>
+        {/* TESTIMONIALS SECTION */}
+        <section className="py-20 px-6 md:px-12 lg:px-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+                What our customers say about SafePark
+              </h2>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
-              <a 
-                href="tel:+919600840058" 
-                className="group flex items-center justify-center gap-3 w-full sm:flex-1 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-2xl shadow-emerald-600/20 hover:shadow-emerald-500/30 hover:scale-[1.02] min-h-[60px]"
-              >
-                <div className="flex items-center justify-center w-6 h-6">
-                  <svg 
-                    className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-200" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth="2" 
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Rajesh Kumar",
+                  location: "Coimbatore",
+                  text: "SafePark completely transformed how I protect my BMW. The installation was incredibly quick and the quality exceeds all expectations.",
+                  rating: 5
+                },
+                {
+                  name: "Priya Sharma", 
+                  location: "Tamil Nadu",
+                  text: "Amazing product with world-class service. The retractable design is genius - no more worrying about weather damage ever again.",
+                  rating: 5
+                },
+                {
+                  name: "Arjun Patel", 
+                  location: "Gujarat",
+                  text: "Professional installation and premium quality materials. SafePark has exceeded my expectations in every way.",
+                  rating: 5
+                }
+              ].map((review, idx) => (
+                <div 
+                  key={idx} 
+                  className="h-full p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 hover:bg-gray-800/50 transition-all duration-300"
+                >
+                  <div className="flex mb-4">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="leading-relaxed text-gray-300 mb-6">
+                    "{review.text}"
+                  </blockquote>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-400 rounded-full mr-4 flex items-center justify-center text-white font-bold">
+                      {review.name.charAt(0)}
+                    </div>
+                    <div>
+                      <div className="font-bold text-white">{review.name}</div>
+                      <div className="text-sm text-gray-500">{review.location}</div>
+                    </div>
+                  </div>
                 </div>
-                <span className="leading-none">Call for Custom Quote</span>
-              </a>
-
-              <a 
-                href="https://wa.me/919600840058" 
-                className="group flex items-center justify-center gap-3 w-full sm:flex-1 bg-slate-700/60 backdrop-blur-sm border border-slate-500/50 hover:border-slate-400/70 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] hover:bg-slate-600/70 min-h-[60px]"
-              >
-                <div className="flex items-center justify-center w-6 h-6">
-                  <svg 
-                    className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform duration-200" 
-                    fill="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.787"/>
-                  </svg>
-                </div>
-                <span className="leading-none">WhatsApp Us</span>
-              </a>
+              ))}
             </div>
           </div>
         </section>
+
+        {/* CONTACT SECTION */}
+        <section className="py-20 px-6 md:px-12 lg:px-20 bg-gradient-to-br from-gray-800/40 to-gray-900/60">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+                Ready to Protect Your Vehicle?
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12">
+                Join thousands who chose SafePark for premium protection
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/80 backdrop-blur rounded-3xl p-12 shadow-2xl border border-gray-700/50">
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="text-center group hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                    <Phone className="w-8 h-8 text-emerald-400" />
+                  </div>
+                  <h3 className="font-bold text-white mb-2 text-lg">Phone</h3>
+                  <a href="tel:+919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium">
+                    +91 9600840058
+                  </a>
+                </div>
+                
+                <div className="text-center group hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                    <MessageCircle className="w-8 h-8 text-emerald-400" />
+                  </div>
+                  <h3 className="font-bold text-white mb-2 text-lg">WhatsApp</h3>
+                  <a href="https://wa.me/919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium">
+                    Message Us
+                  </a>
+                </div>
+                
+                <div className="text-center group hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                    <MapPin className="w-8 h-8 text-emerald-400" />
+                  </div>
+                  <h3 className="font-bold text-white mb-2 text-lg">Location</h3>
+                  <p className="text-emerald-400">Coimbatore, Tamil Nadu</p>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row justify-center gap-6">
+                <a 
+                  href="tel:+919600840058" 
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 text-center min-w-[280px] shadow-lg"
+                >
+                  Call for Free Quote
+                </a>
+                <a 
+                  href="https://wa.me/919600840058" 
+                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 text-center min-w-[280px]"
+                >
+                  WhatsApp Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="py-16 px-6 md:px-12 lg:px-20 bg-black/30 border-t border-white/10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 mb-12">
+              <div>
+                <div className="flex items-center space-x-4 mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-400 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">
+                    S
+                  </div>
+                  <span className="text-white font-bold text-3xl">SafePark</span>
+                </div>
+                <p className="text-gray-400 leading-relaxed mb-6">
+                  Premium retractable carport solutions designed for elegance, engineered for durability, trusted across India.
+                </p>
+                <div className="flex items-center space-x-6">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <span className="text-gray-400">2,000+ Happy Customers</span>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-2xl mb-8">Contact</h4>
+                <div className="space-y-6">
+                  <a href="tel:+919600840058" className="flex items-center text-gray-400 hover:text-emerald-400 transition text-lg">
+                    <Phone className="w-5 h-5 mr-4" />
+                    +91 9600840058
+                  </a>
+                  <a href="https://wa.me/919600840058" className="flex items-center text-gray-400 hover:text-emerald-400 transition text-lg">
+                    <MessageCircle className="w-5 h-5 mr-4" />
+                    WhatsApp
+                  </a>
+                  <div className="flex items-center text-gray-400 text-lg">
+                    <MapPin className="w-5 h-5 mr-4" />
+                    Coimbatore, Tamil Nadu
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border-t border-white/10 pt-8 text-center">
+              <p className="text-gray-400">© 2025 SafePark. Crafted with excellence in Coimbatore, Tamil Nadu</p>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
   );
