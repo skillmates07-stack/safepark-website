@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
       
-      {/* HERO SECTION - Closer to Navbar */}
+      {/* HERO SECTION */}
       <section className="min-h-screen flex items-center pt-8 pb-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
@@ -20,7 +20,7 @@ export default function HomePage() {
                 Made in India • Premium Quality
               </div>
 
-              {/* Headline with Perfect Spacing */}
+              {/* Headline */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-2xl mx-auto md:mx-0">
                 Everyday Risks.
                 <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent mt-3">
@@ -47,7 +47,7 @@ export default function HomePage() {
                 <span className="text-emerald-400 font-medium">2-Year Warranty</span>
               </div>
 
-              {/* Premium Buttons */}
+              {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
                 <a 
                   href="tel:+919600840058"
@@ -71,7 +71,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN - Wider Car Image */}
+            {/* RIGHT COLUMN - Car Image */}
             <div className="flex justify-center md:justify-end order-first md:order-last">
               <div className="relative w-full max-w-[700px]">
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-300/30 rounded-3xl blur-3xl scale-110 opacity-60"></div>
@@ -86,6 +86,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* VISUAL SEPARATOR 1 */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent my-20"></div>
 
       {/* FEATURES SECTION */}
       <section className="py-20 px-6 md:px-12 lg:px-20 bg-slate-800/30">
@@ -137,6 +140,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* VISUAL SEPARATOR 2 */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-20"></div>
+
       {/* WHY CHOOSE SAFEPARK SECTION */}
       <section className="py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto">
@@ -179,6 +185,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* VISUAL SEPARATOR 3 - ENHANCED */}
+      <div className="relative my-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-400/10 to-transparent h-20 blur-2xl"></div>
+        <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent"></div>
+      </div>
 
       {/* GALLERY SECTION */}
       <section id="gallery" className="py-20 px-6 md:px-12 lg:px-20 bg-slate-800/30">
@@ -255,6 +267,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* VISUAL SEPARATOR 4 */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent my-20"></div>
+
       {/* TESTIMONIALS SECTION */}
       <section className="py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto">
@@ -312,7 +327,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* COMPLETELY REDESIGNED CONTACT SECTION */}
+      {/* VISUAL SEPARATOR 5 - FINAL TRANSITION */}
+      <div className="relative my-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/5 via-emerald-400/20 to-emerald-400/5 h-32 blur-3xl"></div>
+        <div className="h-0.5 bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent"></div>
+      </div>
+
+      {/* CONTACT SECTION */}
       <section className="py-20 px-6 md:px-12 lg:px-20 bg-gradient-to-br from-gray-800/40 to-gray-900/60">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -324,10 +345,8 @@ export default function HomePage() {
             </p>
           </div>
           
-          {/* Enhanced Contact Container */}
           <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/80 backdrop-blur rounded-3xl p-12 shadow-2xl border border-gray-700/50">
             
-            {/* Contact Options - Better Layout */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center group hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
@@ -358,7 +377,6 @@ export default function HomePage() {
               </div>
             </div>
             
-            {/* Improved CTA Buttons - Much Better Sizing */}
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <a 
                 href="tel:+919600840058" 
