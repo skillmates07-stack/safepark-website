@@ -28,7 +28,7 @@ export default function PricingPage() {
       id: 2,
       name: "Standard",
       price: 18500,
-      description: "Most popular for```dans and mid-size SUVs",
+      description: "Most popular for sedans and mid-size SUVs",
       features: [
         "6.0m × 2.6m × 2.5m coverage",
         "Heavy-duty galvanized frame",
@@ -45,7 +45,8 @@ export default function PricingPage() {
       id: 3,
       name: "Large",
       price: 21500,
-      description: "Premium protection for large SUVs",```    features: [
+      description: "Premium protection for large SUVs",
+      features: [
         "6.5m × 2.8m × 2.5m coverage",
         "Ultra-strong galvanized frame",
         "Military-grade fabric protection",
@@ -72,7 +73,7 @@ export default function PricingPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12">
-            Premium protection engineered for every vehicle. All plans include professional```stallation and 2-year warranty.
+            Premium protection engineered for every vehicle. All plans include professional installation and 2-year warranty.
           </p>
 
           {/* PRICING TOGGLE */}
@@ -118,7 +119,7 @@ export default function PricingPage() {
                 {/* Popular Badge */}
                 {plan.popular && (
                   <div className="absolute -top-5 left-1/2 transform -translate-x-1/2">
-                    <div className="bg```adient-to-r from-emerald-500 to-emerald-400 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                    <div className="bg-gradient-to-r from-emerald-500 to-emerald-400 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
                       🏆 Most Popular
                     </div>
                   </div>
@@ -131,7 +132,7 @@ export default function PricingPage() {
                   
                   {/* Price Display */}
                   <div className="mb-8">
-                    <div className="```x items-center justify-center gap-1 mb-2">
+                    <div className="flex items-center justify-center gap-1 mb-2">
                       <span className="text-2xl text-emerald-400">₹</span>
                       <span className={`font-black ${plan.popular ? 'text-5xl text-emerald-400' : 'text-4xl text-white'}`}>
                         {(isAnnual ? plan.price * 0.8 : plan.price).toLocaleString()}
@@ -160,7 +161,7 @@ export default function PricingPage() {
                   {plan.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span className="text``` text-gray-200 leading-relaxed">{feature}</span>
+                      <span className="text-sm text-gray-200 leading-relaxed">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -177,7 +178,7 @@ export default function PricingPage() {
             Ready to Protect Your Investment?
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust```fePark with their precious vehicles.
+            Join thousands of satisfied customers who trust SafePark with their precious vehicles.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
