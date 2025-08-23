@@ -214,7 +214,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* FEATURES SECTION - DARK THEME (NO GREEN BACKGROUNDS) */}
+        {/* FEATURES SECTION - VISIBLE CARDS */}
         <section className="px-4 lg:px-8 py-20 bg-slate-800/30 relative overflow-hidden">
           <div className="max-w-5xl mx-auto relative z-10">
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-4 text-center tracking-tight">
@@ -225,11 +225,11 @@ export default function PricingPage() {
               Premium features designed to provide maximum protection and peace of mind for your vehicle
             </p>
             
-            {/* DARK THEME 2x2 GRID */}
+            {/* VISIBLE CARDS WITH BETTER CONTRAST */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
               {/* Premium Materials Card */}
-              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 shadow-lg hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
+              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:bg-white/12 hover:scale-105 transition-all duration-300">
                 <div className="flex flex-col items-center flex-1 justify-center">
                   <div className="w-12 h-12 mb-6 text-emerald-400">
                     <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
@@ -237,12 +237,12 @@ export default function PricingPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 text-center">Premium Materials</h3>
-                  <p className="text-gray-400 text-center leading-relaxed">Galvanized Iron + Oxford 600D waterproof fabric for maximum durability and longevity</p>
+                  <p className="text-gray-300 text-center leading-relaxed">Galvanized Iron + Oxford 600D waterproof fabric for maximum durability and longevity</p>
                 </div>
               </div>
 
               {/* Quick Installation Card */}
-              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 shadow-lg hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
+              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:bg-white/12 hover:scale-105 transition-all duration-300">
                 <div className="flex flex-col items-center flex-1 justify-center">
                   <div className="w-12 h-12 mb-6 text-emerald-400">
                     <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
@@ -250,12 +250,12 @@ export default function PricingPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 text-center">Quick Installation</h3>
-                  <p className="text-gray-400 text-center leading-relaxed">Professional setup completed in just 2-3 hours by our certified installation technicians</p>
+                  <p className="text-gray-300 text-center leading-relaxed">Professional setup completed in just 2-3 hours by our certified installation technicians</p>
                 </div>
               </div>
 
               {/* Weather Protection Card */}
-              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 shadow-lg hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
+              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:bg-white/12 hover:scale-105 transition-all duration-300">
                 <div className="flex flex-col items-center flex-1 justify-center">
                   <div className="w-12 h-12 mb-6 text-emerald-400">
                     <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
@@ -263,7 +263,7 @@ export default function PricingPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 text-center">Weather Protection</h3>
-                  <p className="text-gray-400 text-center leading-relaxed mb-4">100% UV & Rain Protection with advanced weatherproof coating technology</p>
+                  <p className="text-gray-300 text-center leading-relaxed mb-4">100% UV & Rain Protection with advanced weatherproof coating technology</p>
                   <div className="px-4 py-2 bg-amber-500/20 rounded-full border border-amber-400/30">
                     <span className="text-amber-300 text-sm font-bold">⭐ Most Popular Feature</span>
                   </div>
@@ -271,7 +271,7 @@ export default function PricingPage() {
               </div>
 
               {/* 2-Year Warranty Card */}
-              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 shadow-lg hover:bg-gray-800/50 hover:scale-105 transition-all duration-300">
+              <div className="group h-[280px] flex flex-col items-center justify-between p-8 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 hover:bg-white/12 hover:scale-105 transition-all duration-300">
                 <div className="flex flex-col items-center flex-1 justify-center">
                   <div className="w-12 h-12 mb-6 text-emerald-400">
                     <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
@@ -279,7 +279,7 @@ export default function PricingPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 text-center">2-Year Warranty</h3>
-                  <p className="text-gray-400 text-center leading-relaxed">Complete parts & service warranty with free maintenance and customer support</p>
+                  <p className="text-gray-300 text-center leading-relaxed">Complete parts & service warranty with free maintenance and customer support</p>
                 </div>
               </div>
             </div>
