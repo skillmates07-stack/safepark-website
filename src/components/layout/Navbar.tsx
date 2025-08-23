@@ -79,77 +79,7 @@ export default function Navbar() {
               Call Now
             </a>
           </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-emerald-400 p-2 rounded-md transition-colors duration-300"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-          </div>
         </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-black/90 backdrop-blur-md rounded-lg mt-2 p-4 border border-gray-800/50">
-            <Link
-              href="/features"
-              onClick={() => setIsMenuOpen(false)}
-              className={`block py-2 px-3 rounded-md text-base font-medium transition-colors duration-300 ${
-                pathname === '/features' ? 'text-emerald-400 bg-emerald-400/10' : 'text-white hover:text-emerald-400 hover:bg-gray-800/50'
-              }`}
-            >
-              Features
-            </Link>
-            <a
-              href="/#gallery"
-              onClick={(e) => {
-                handleGalleryClick(e);
-                setIsMenuOpen(false);
-              }}
-              className="block py-2 px-3 rounded-md text-base font-medium text-white hover:text-emerald-400 hover:bg-gray-800/50 transition-colors duration-300"
-            >
-              Gallery
-            </a>
-            <Link
-              href="/pricing"
-              onClick={() => setIsMenuOpen(false)}
-              className={`block py-2 px-3 rounded-md text-base font-medium transition-colors duration-300 ${
-                pathname === '/pricing' ? 'text-emerald-400 bg-emerald-400/10' : 'text-white hover:text-emerald-400 hover:bg-gray-800/50'
-              }`}
-            >
-              Pricing
-            </Link>
-            <Link
-              href="/contact"
-              onClick={() => setIsMenuOpen(false)}
-              className={`block py-2 px-3 rounded-md text-base font-medium transition-colors duration-300 ${
-                pathname === '/contact' ? 'text-emerald-400 bg-emerald-400/10' : 'text-white hover:text-emerald-400 hover:bg-gray-800/50'
-              }`}
-            >
-              Contact
-            </Link>
-            <div className="pt-4">
-              <a 
-                href="tel:+919600840058" 
-                className="block w-full bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300 text-center"
-              >
-                Call Now
-              </a>
-            </div>
-          </div>
-        )}
       </nav>
     </header>
   );
