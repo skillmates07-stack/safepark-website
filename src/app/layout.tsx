@@ -1,7 +1,11 @@
-import './globals.css';
-import Navbar from '../components/layout/Navbar';
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Navbar from '../components/layout/Navbar'
 
-export const metadata = {
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
   title: 'SafePark - Premium Car Protection Solutions',
   description: 'Professional retractable carport solutions designed for elegance, engineered for durability, trusted across India.',
 }
@@ -9,14 +13,14 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen text-white">
+      <body className={inter.className}>
         <Navbar />
         {children}
       </body>
     </html>
-  );
+  )
 }
