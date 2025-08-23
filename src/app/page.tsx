@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
       
-      {/* HERO SECTION - Closer to Navbar */}
+      {/* HERO SECTION */}
       <section className="min-h-screen flex items-center pt-8 pb-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
@@ -20,17 +20,17 @@ export default function HomePage() {
                 Made in India • Premium Quality
               </div>
 
-              {/* Headline with Perfect Spacing */}
+              {/* Headline */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-2xl mx-auto md:mx-0">
-                Everyday Risks.
+                Your Precious Car,
                 <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent mt-3">
-                  Lasting Protection.
+                  Safe & Sound.
                 </span>
               </h1>
               
               {/* Subtext */}
               <p className="text-lg text-gray-300 leading-relaxed max-w-xl mx-auto md:mx-0 mt-6">
-                Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-emerald-400 font-medium">complete peace of mind</span>.
+                Every morning, you step out hoping your car looks just like yesterday. With SafePark, those little worries about <span className="font-semibold text-white">weather, dust, and daily life</span> simply melt away. <span className="text-emerald-400 font-medium">Drive happy, park worry-free.</span>
               </p>
 
               {/* Reviews Block */}
@@ -41,13 +41,13 @@ export default function HomePage() {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <span className="text-gray-300 font-medium">2,000+ Protected Cars</span>
+                  <span className="text-gray-300 font-medium">2,000+ Happy Owners</span>
                 </div>
                 <div className="w-px h-6 bg-gray-600"></div>
-                <span className="text-emerald-400 font-medium">2-Year Warranty</span>
+                <span className="text-emerald-400 font-medium">2-Year Promise</span>
               </div>
 
-              {/* Premium Buttons */}
+              {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
                 <a 
                   href="tel:+919600840058"
@@ -65,20 +65,20 @@ export default function HomePage() {
                   }}
                   className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2 h-14"
                 >
-                  View Gallery
+                  See Success Stories
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </div>
 
-            {/* RIGHT COLUMN - Wider Car Image */}
+            {/* RIGHT COLUMN - Car Image */}
             <div className="flex justify-center md:justify-end order-first md:order-last">
               <div className="relative w-full max-w-[700px]">
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-300/30 rounded-3xl blur-3xl scale-110 opacity-60"></div>
                 
                 <img 
                   src="/gallery/hero-car.jpeg" 
-                  alt="Premium BMW protected by SafePark" 
+                  alt="Beautiful car protected by SafePark" 
                   className="relative w-full h-[380px] md:h-[400px] object-cover rounded-3xl shadow-xl"
                 />
               </div>
@@ -92,10 +92,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
-              Complete Protection for Every Risk
+              Protection That Actually Works
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
-              Four layers of premium defense engineered for your vehicle's safety
+              Four smart layers of defense between your car and everything life throws at it
             </p>
           </div>
           
@@ -103,23 +103,23 @@ export default function HomePage() {
             {[
               { 
                 icon: <Shield className="w-12 h-12 mb-6 text-emerald-400" />, 
-                title: "Fire Protection", 
-                desc: "Heat & flame resistant materials with advanced coating technology"
+                title: "Heat & Fire Safe", 
+                desc: "Advanced materials that laugh at summer heat and unexpected sparks"
               },
               { 
                 icon: <div className="w-12 h-12 mb-6 bg-blue-500/20 rounded-2xl flex items-center justify-center"><div className="w-6 h-6 bg-blue-400 rounded-full"></div></div>, 
-                title: "Rain Protection", 
-                desc: "100% waterproof coating ensures complete weather resistance"
+                title: "Monsoon Ready", 
+                desc: "Your car stays bone dry, even when the clouds open up completely"
               },
               { 
                 icon: <Shield className="w-12 h-12 mb-6 text-gray-400" />, 
-                title: "Scratch-Proof", 
-                desc: "Durable fabric protection prevents surface damage"
+                title: "Scratch Shield", 
+                desc: "No more morning surprises—your paint stays perfect, always"
               },
               { 
                 icon: <div className="w-12 h-12 mb-6 bg-green-500/20 rounded-2xl flex items-center justify-center"><div className="w-6 h-6 bg-green-400 rounded-full"></div></div>, 
-                title: "Safe for Kids", 
-                desc: "Rounded edges and stable design prioritize safety"
+                title: "Family Friendly", 
+                desc: "Soft edges and stable design—safe for curious kids and pets"
               }
             ].map((feature, idx) => (
               <div 
@@ -137,15 +137,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE SAFEPARK SECTION */}
+      {/* WHY CHOOSE SECTION */}
       <section className="py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
-              Why Choose SafePark?
+              Why Families Choose SafePark
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
-              Premium protection engineered for modern vehicles
+              Because your car deserves the same care you'd give anything precious
             </p>
           </div>
           
@@ -153,18 +153,18 @@ export default function HomePage() {
             {[
               {
                 icon: <Shield className="w-12 h-12 mb-6 text-emerald-400" />,
-                title: "Weather Protection",
-                desc: "Advanced weather-resistant fabric with 100% UV protection and waterproof coating technology"
+                title: "All-Weather Guardian",
+                desc: "Rain or shine, dust storms or hail—your car stays pristine while you focus on life's important moments"
               },
               {
                 icon: <Zap className="w-12 h-12 mb-6 text-emerald-400" />,
-                title: "Scratch & Damage Cover",
-                desc: "Revolutionary retractable design prevents scratches, dings, and surface damage from daily hazards"
+                title: "Morning Peace of Mind",
+                desc: "No more checking the weather app or rushing to move your car. Just smooth mornings and happy drives"
               },
               {
                 icon: <Award className="w-12 h-12 mb-6 text-emerald-400" />,
-                title: "Peace of Mind Warranty",
-                desc: "2-year comprehensive warranty with ongoing maintenance and premium customer support guarantee"
+                title: "Two Years of Trust",
+                desc: "We stand behind every SafePark with comprehensive coverage and friendly support whenever you need it"
               }
             ].map((item, idx) => (
               <div 
@@ -180,15 +180,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GALLERY SECTION - Must have id="gallery" */}
+      {/* GALLERY SECTION - IMPORTANT: HAS id="gallery" */}
       <section id="gallery" className="py-20 px-6 md:px-12 lg:px-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
-              See SafePark in Action
+              Real Stories, Real Protection
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
-              Real installations, real protection, real results
+              See how SafePark transforms driveways and lives across India
             </p>
           </div>
           
@@ -197,32 +197,32 @@ export default function HomePage() {
               {
                 src: "/gallery/gallery1.jpg",
                 alt: "Luxury car protection setup",
-                caption: "Luxury Car Protection"
+                caption: "City Life, Clean Car"
               },
               {
                 src: "/gallery/gallery2.jpg",
                 alt: "All-weather installation",
-                caption: "All-Weather Installation"
+                caption: "Monsoon-Ready Setup"
               },
               {
                 src: "/gallery/gallery3.jpg",
                 alt: "Quick setup demo",
-                caption: "Quick Setup Demo"
+                caption: "Quick Morning Routine"
               },
               {
                 src: "/gallery/gallery4.jpg",
                 alt: "Urban protection",
-                caption: "Urban Protection"
+                caption: "Family Driveway Peace"
               },
               {
                 src: "/gallery/gallery5.jpg",
                 alt: "Family vehicle care",
-                caption: "Family Vehicle Care"
+                caption: "Weekend Adventures Protected"
               },
               {
                 src: "/gallery/gallery-video.mp4",
                 alt: "Installation process",
-                caption: "Installation Process",
+                caption: "See Setup Process",
                 type: "video"
               }
             ].map((item, idx) => (
@@ -248,7 +248,7 @@ export default function HomePage() {
                   />
                 )}
                 <h3 className="text-white font-bold text-lg mb-2">{item.caption}</h3>
-                <p className="text-emerald-400/70 text-sm">Professional Installation</p>
+                <p className="text-emerald-400/70 text-sm">Safe & Sound</p>
               </div>
             ))}
           </div>
@@ -260,8 +260,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
-              What our customers say about SafePark
+              What Our Family Says
             </h2>
+            <p className="text-lg text-gray-300">
+              Once you experience this peace of mind, you never want to go back
+            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -269,19 +272,19 @@ export default function HomePage() {
               {
                 name: "Rajesh Kumar",
                 location: "Coimbatore",
-                text: "SafePark completely transformed how I protect my BMW. The installation was incredibly quick and the quality exceeds all expectations.",
+                text: "I used to check the weather every night before bed. Now with SafePark, I sleep easy knowing my BMW is perfectly safe, no matter what.",
                 rating: 5
               },
               {
                 name: "Priya Sharma", 
                 location: "Tamil Nadu",
-                text: "Amazing product with world-class service. The retractable design is genius - no more worrying about weather damage ever again.",
+                text: "My kids love playing near the car, and I love that I don't have to worry anymore. SafePark gives us both the freedom to be ourselves.",
                 rating: 5
               },
               {
                 name: "Arjun Patel", 
                 location: "Gujarat",
-                text: "Professional installation and premium quality materials. SafePark has exceeded my expectations in every way.",
+                text: "Best investment I've made for my car. Every morning feels like a small victory—spotless, protected, ready for the day ahead.",
                 rating: 5
               }
             ].map((review, idx) => (
@@ -312,28 +315,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* COMPLETELY REDESIGNED CONTACT SECTION */}
+      {/* CONTACT SECTION */}
       <section className="py-20 px-6 md:px-12 lg:px-20 bg-gradient-to-br from-gray-800/40 to-gray-900/60">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
-              Ready to Protect Your Vehicle?
+              Ready to Protect Your Investment?
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12">
-              Join thousands who chose SafePark for premium protection
+              Join thousands of happy families who trust SafePark with their precious rides
             </p>
           </div>
           
-          {/* Enhanced Contact Container */}
           <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/80 backdrop-blur rounded-3xl p-12 shadow-2xl border border-gray-700/50">
             
-            {/* Contact Options - Better Layout */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center group hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
                   <Phone className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="font-bold text-white mb-2 text-lg">Phone</h3>
+                <h3 className="font-bold text-white mb-2 text-lg">Call Us</h3>
                 <a href="tel:+919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium">
                   +91 9600840058
                 </a>
@@ -353,18 +354,17 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
                   <MapPin className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="font-bold text-white mb-2 text-lg">Location</h3>
+                <h3 className="font-bold text-white mb-2 text-lg">Visit Us</h3>
                 <p className="text-emerald-400">Coimbatore, Tamil Nadu</p>
               </div>
             </div>
             
-            {/* Improved CTA Buttons - Much Better Sizing */}
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <a 
                 href="tel:+919600840058" 
                 className="bg-emerald-600 hover:bg-emerald-500 text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 text-center min-w-[280px] shadow-lg"
               >
-                Call for Free Quote
+                Call for Your Quote
               </a>
               <a 
                 href="https://wa.me/919600840058" 
@@ -389,7 +389,7 @@ export default function HomePage() {
                 <span className="text-white font-bold text-3xl">SafePark</span>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Premium retractable carport solutions designed for elegance, engineered for durability, trusted across India.
+                Premium car protection designed by families, for families. From our workshop in Coimbatore to driveways across India.
               </p>
               <div className="flex items-center space-x-6">
                 <div className="flex">
@@ -397,11 +397,11 @@ export default function HomePage() {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <span className="text-gray-400">2,000+ Happy Customers</span>
+                <span className="text-gray-400">2,000+ Protected Families</span>
               </div>
             </div>
             <div>
-              <h4 className="text-white font-bold text-2xl mb-8">Contact</h4>
+              <h4 className="text-white font-bold text-2xl mb-8">Get in Touch</h4>
               <div className="space-y-6">
                 <a href="tel:+919600840058" className="flex items-center text-gray-400 hover:text-emerald-400 transition text-lg">
                   <Phone className="w-5 h-5 mr-4" />
@@ -420,7 +420,7 @@ export default function HomePage() {
           </div>
           
           <div className="border-t border-white/10 pt-8 text-center">
-            <p className="text-gray-400">© 2025 SafePark. Crafted with excellence in Coimbatore, Tamil Nadu</p>
+            <p className="text-gray-400">© 2025 SafePark. Crafted with care in Tamil Nadu, protecting families across India.</p>
           </div>
         </div>
       </footer>
