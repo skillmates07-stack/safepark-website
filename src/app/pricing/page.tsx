@@ -56,49 +56,45 @@ export default function PricingPage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
       
-      {/* BALANCED NAVBAR - PERFECT SIZE */}
-      <header className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* NAVBAR - EXACTLY MATCHING HOMEPAGE SIZE */}
+      <header className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-16">
             
-            {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
+            {/* Logo - Matching Homepage */}
+            <div className="flex items-center space-x-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-400 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">
+                S
               </div>
-              <span className="text-emerald-400 font-bold text-xl">SafePark</span>
+              <span className="text-white font-bold text-3xl">SafePark</span>
             </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex md:items-center md:space-x-8">
-              <a href="/" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Features
-              </a>
-              <a href="#gallery" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Gallery
-              </a>
-              <a href="/pricing" className="text-emerald-400 px-3 py-2 rounded-md text-sm font-medium">
-                Pricing
-              </a>
-              <a href="#contact" className="text-white hover:text-emerald-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Contact
-              </a>
+            {/* Desktop Navigation - Matching Homepage */}
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="/" className="text-white hover:text-emerald-400 transition duration-300">Features</a>
+              <a href="#gallery" className="text-white hover:text-emerald-400 transition duration-300">Gallery</a>
+              <a href="/pricing" className="text-emerald-400">Pricing</a>
+              <a href="#contact" className="text-white hover:text-emerald-400 transition duration-300">Contact</a>
             </div>
 
-            {/* Call Now Button */}
-            <div className="flex items-center">
+            {/* Call Now Button - Matching Homepage */}
+            <div className="flex items-center space-x-4">
               <a 
-                href="tel:+919600840058" 
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-colors inline-flex items-center gap-2"
+                href="tel:+919600840058"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded-lg font-bold transition duration-300"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
                 Call Now
+              </a>
+              <a 
+                href="#community"
+                className="bg-emerald-100/10 border border-emerald-400/20 text-emerald-300 px-4 py-2 rounded-lg font-medium backdrop-blur-sm hover:bg-emerald-400/10 transition duration-300 flex items-center gap-2"
+              >
+                <span className="text-emerald-400">👥</span>
+                Community
               </a>
             </div>
           </div>
-        </nav>
+        </div>
       </header>
 
       {/* MAIN CONTENT */}
@@ -211,7 +207,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* CLEAN READABLE FEATURE CARDS */}
+        {/* FEATURE CARDS */}
         <section className="px-4 lg:px-8 py-20 bg-slate-800/30 relative overflow-hidden">
           <div className="max-w-5xl mx-auto relative z-10">
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-4 text-center tracking-tight">
@@ -222,7 +218,6 @@ export default function PricingPage() {
               Premium features designed to provide maximum protection and peace of mind for your vehicle
             </p>
             
-            {/* CLEAN, READABLE FEATURE CARDS */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
               {/* Premium Materials */}
