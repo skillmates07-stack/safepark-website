@@ -25,7 +25,7 @@ export default function PricingPage() {
       buttonClass: "bg-white/10 border border-white/20 text-white hover:bg-white/20",
       popular: false,
       cardClass: "bg-white/[0.06] border-white/20",
-      icon: <Shield className="w-6 h-6 text-green-400" />
+      icon: <Shield className="w-7 h-7 text-green-400" />
     },
     {
       id: 2,
@@ -45,7 +45,7 @@ export default function PricingPage() {
       buttonClass: "bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold",
       popular: true,
       cardClass: "bg-emerald-500/[0.08] border-emerald-400/40",
-      icon: <Umbrella className="w-6 h-6 text-blue-400" />
+      icon: <Umbrella className="w-7 h-7 text-blue-400" />
     },
     {
       id: 3,
@@ -65,43 +65,43 @@ export default function PricingPage() {
       buttonClass: "bg-white/10 border border-white/20 text-white hover:bg-white/20",
       popular: false,
       cardClass: "bg-white/[0.06] border-white/20",
-      icon: <Zap className="w-6 h-6 text-yellow-400" />
+      icon: <Zap className="w-7 h-7 text-yellow-400" />
     },
   ];
 
   return (
     <div className="bg-gradient-to-br from-neutral-900 via-slate-900 to-neutral-800 min-h-screen">
       
-      {/* HERO SECTION - COMPACT */}
-      <section className="pt-24 pb-8 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm">
+      {/* HERO SECTION - PERFECT SIZE */}
+      <section className="pt-26 pb-10 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-5 py-2 mb-7 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm">
             <CheckCircle2 className="w-4 h-4" />
             Trusted by 2,000+ car owners
           </div>
           
-          <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-3 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 tracking-tight">
             Choose Your 
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> SafePark Plan</span>
           </h1>
           
-          <p className="text-base text-gray-300 mb-6 max-w-xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Professional installation & comprehensive warranty included.
           </p>
 
           {/* Pricing Toggle */}
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <span className={`text-sm font-medium transition-colors ${!isAnnual ? 'text-white' : 'text-gray-400'}`}>
+          <div className="flex items-center justify-center gap-4 mb-10">
+            <span className={`text-base font-medium transition-colors ${!isAnnual ? 'text-white' : 'text-gray-400'}`}>
               One-time Payment
             </span>
             <button
               onClick={() => setIsAnnual(!isAnnual)}
-              className={`relative inline-flex h-6 w-10 items-center rounded-full transition-colors focus:outline-none ${isAnnual ? 'bg-emerald-500' : 'bg-slate-700'}`}
+              className={`relative inline-flex h-7 w-12 items-center rounded-full transition-colors focus:outline-none ${isAnnual ? 'bg-emerald-500' : 'bg-slate-700'}`}
             >
-              <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${isAnnual ? 'translate-x-4' : 'translate-x-1'}`} />
+              <span className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform ${isAnnual ? 'translate-x-5' : 'translate-x-1'}`} />
             </button>
             <div className="text-left">
-              <span className={`text-sm font-medium transition-colors ${isAnnual ? 'text-white' : 'text-gray-400'}`}>
+              <span className={`text-base font-medium transition-colors ${isAnnual ? 'text-white' : 'text-gray-400'}`}>
                 Annual Plan
               </span>
               <div className="text-xs text-emerald-400 font-semibold">Save 20%</div>
@@ -110,16 +110,16 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* PRICING CARDS - COMPACT */}
-      <section className="px-6 sm:px-8 lg:px-16 pb-12">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* PRICING CARDS - PERFECT BALANCE */}
+      <section className="px-6 sm:px-8 lg:px-16 pb-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan) => (
             <div
               key={plan.id}
               className={`
                 relative rounded-2xl border backdrop-blur-xl shadow-xl transition-all duration-500 hover:scale-[1.01]
                 ${plan.popular 
-                  ? "ring-2 ring-emerald-400/50 scale-[1.02] md:-translate-y-3 shadow-emerald-500/20" 
+                  ? "ring-2 ring-emerald-400/50 scale-[1.02] md:-translate-y-4 shadow-emerald-500/20" 
                   : "shadow-black/20"
                 }
                 ${plan.cardClass}
@@ -127,54 +127,54 @@ export default function PricingPage() {
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-xl">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-xl">
                     ⭐ Most Popular
                   </div>
                 </div>
               )}
 
-              <div className="p-5">
-                {/* Header - Compact */}
-                <div className="text-center mb-4">
-                  <div className="flex justify-center mb-2">{plan.icon}</div>
-                  <h3 className="text-lg font-bold text-white mb-1">{plan.name}</h3>
-                  <p className="text-sm text-gray-400 mb-3">{plan.subtitle}</p>
+              <div className="p-6">
+                {/* Header - Balanced */}
+                <div className="text-center mb-6">
+                  <div className="flex justify-center mb-3">{plan.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-sm text-gray-400 mb-4">{plan.subtitle}</p>
                   
-                  {/* Pricing Display - Compact */}
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    <span className="text-sm text-gray-400 line-through">₹{plan.originalPrice.toLocaleString()}</span>
-                    <span className="text-xs bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-medium">
+                  {/* Pricing Display */}
+                  <div className="flex items-center justify-center gap-2 mb-3">
+                    <span className="text-base text-gray-400 line-through">₹{plan.originalPrice.toLocaleString()}</span>
+                    <span className="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded font-medium">
                       Save ₹{plan.save.toLocaleString()}
                     </span>
                   </div>
                   
-                  <div className="flex items-end justify-center mb-2">
-                    <span className="text-base text-emerald-400 font-bold">₹</span>
-                    <span className={`font-bold ${plan.popular ? 'text-3xl text-emerald-400' : 'text-2xl text-white'}`}>
+                  <div className="flex items-end justify-center mb-3">
+                    <span className="text-lg text-emerald-400 font-bold">₹</span>
+                    <span className={`font-bold ${plan.popular ? 'text-4xl text-emerald-400' : 'text-3xl text-white'}`}>
                       {(isAnnual ? plan.price * 0.8 : plan.price).toLocaleString()}
                     </span>
                   </div>
                   
-                  <p className="text-xs text-gray-400 mb-3">One-time payment • Free installation</p>
+                  <p className="text-xs text-gray-400 mb-4">One-time payment • Free installation</p>
                   
-                  {/* CTA Button - Compact */}
+                  {/* CTA Button */}
                   <a
                     href="tel:+919600840058"
-                    className={`w-full py-2.5 rounded-lg text-sm font-medium transition-all duration-300 text-center flex items-center justify-center gap-2 ${plan.buttonClass}`}
+                    className={`w-full py-3 rounded-lg text-base font-medium transition-all duration-300 text-center flex items-center justify-center gap-2 ${plan.buttonClass}`}
                   >
                     <Phone className="w-4 h-4" />
                     Get Started
                   </a>
                 </div>
 
-                {/* Features Section - Compact */}
-                <div className="border-t border-white/10 pt-3">
-                  <h4 className="text-xs font-semibold text-gray-300 mb-2">Everything included:</h4>
-                  <ul className="space-y-2">
+                {/* Features Section */}
+                <div className="border-t border-white/10 pt-4">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-3">Everything included:</h4>
+                  <ul className="space-y-2.5">
                     {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs text-gray-200">
-                        <CheckCircle2 className="w-3 h-3 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-200">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -186,28 +186,28 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* CTA SECTION - MUCH SMALLER */}
-      <section className="px-6 pb-12">
-        <div className="max-w-2xl mx-auto">
-          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl border border-white/20 p-6 text-center shadow-2xl">
-            <h2 className="text-xl font-bold text-white mb-2">
+      {/* CTA SECTION - PERFECT SIZE */}
+      <section className="px-6 pb-16">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl border border-white/20 p-8 text-center shadow-2xl">
+            <h2 className="text-2xl font-bold text-white mb-3">
               Ready to Protect Your Investment?
             </h2>
-            <p className="text-sm text-gray-300 mb-4">
+            <p className="text-base text-gray-300 mb-6">
               Join thousands who trust SafePark for premium protection.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+919600840058"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4" />
                 Get Free Quote Now
               </a>
               <a 
                 href="https://wa.me/919600840058"
-                className="bg-white/10 border border-white/30 text-white hover:bg-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-white/10 border border-white/30 text-white hover:bg-white/20 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <ArrowRight className="w-4 h-4" />
                 WhatsApp Team
