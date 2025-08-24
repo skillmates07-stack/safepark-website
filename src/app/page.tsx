@@ -1,53 +1,53 @@
 'use client';
 
-import { Shield, Zap, Award, Phone, MessageCircle, MapPin, Star, ArrowRight } from 'lucide-react';
+import { Shield, Umbrella, Zap, UserCheck, Phone, MessageCircle, MapPin, Star, Award, ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
-      
-      {/* HERO SECTION */}
-      <section className="pt-32 pb-20 min-h-[80vh] flex items-center px-6 md:px-12 lg:px-20">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
+
+      {/* HERO SECTION - COMPACT & BALANCED */}
+      <section className="pt-24 pb-12 px-6 md:px-12 lg:px-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
-            <div className="text-center md:text-left space-y-8">
-              
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100/10 border border-emerald-400/20 text-emerald-300 font-medium text-sm backdrop-blur-sm">
+            {/* Left Content */}
+            <div className="text-center md:text-left">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100/10 border border-emerald-400/20 text-emerald-300 font-medium text-sm backdrop-blur-sm mb-6">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
                 Made in India • Premium Quality
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-2xl mx-auto md:mx-0">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-4">
                 Everyday Risks.
-                <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent mt-3">
+                <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent mt-2">
                   Lasting Protection.
                 </span>
               </h1>
               
-              <p className="text-lg text-gray-300 leading-relaxed max-w-xl mx-auto md:mx-0 mt-6">
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-emerald-400 font-medium">complete peace of mind</span>.
               </p>
 
-              <div className="flex items-center justify-center md:justify-start gap-8 mt-8">
+              <div className="flex items-center justify-center md:justify-start gap-6 mb-8">
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <span className="text-gray-300 font-medium">2,000+ Protected Cars</span>
+                  <span className="text-gray-300 font-medium text-sm">2,000+ Protected Cars</span>
                 </div>
-                <div className="w-px h-6 bg-gray-600"></div>
-                <span className="text-emerald-400 font-medium">2-Year Warranty</span>
+                <div className="w-px h-4 bg-gray-600"></div>
+                <span className="text-emerald-400 font-medium text-sm">2-Year Warranty</span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a 
                   href="tel:+919600840058"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2 h-14"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
-                  <Shield className="w-5 h-5" />
+                  <Shield className="w-4 h-4" />
                   Protect My Car Now
                 </a>
                 
@@ -57,7 +57,7 @@ export default function HomePage() {
                     e.preventDefault();
                     document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2 h-14"
+                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-6 py-3 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
                   View Gallery
                   <ArrowRight className="w-4 h-4" />
@@ -65,14 +65,15 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex justify-center md:justify-end order-first md:order-last">
-              <div className="relative w-full max-w-[650px]">
+            {/* Right Image */}
+            <div className="flex justify-center md:justify-end">
+              <div className="relative w-full max-w-[500px]">
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-300/30 rounded-3xl blur-3xl scale-110 opacity-60"></div>
                 
                 <img 
                   src="/gallery/hero-car.jpeg" 
                   alt="Premium BMW protected by SafePark" 
-                  className="relative w-full h-[380px] md:h-[420px] object-cover rounded-3xl shadow-xl"
+                  className="relative w-full h-[320px] object-cover rounded-3xl shadow-xl"
                 />
               </div>
             </div>
@@ -80,15 +81,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR 1 */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
+      {/* VISUAL SEPARATOR */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-12"></div>
 
-      {/* FEATURES SECTION - COMPACT GLASSMORPHISM */}
+      {/* FEATURES SECTION - UNIQUE ICONS, GLASSMORPHISM */}
       <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Glass Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-emerald-500/5 to-purple-500/5 backdrop-blur-3xl"></div>
         
-        <div className="max-w-5xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               Complete Protection for Every Risk
@@ -101,22 +102,22 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { 
-                icon: <Shield className="w-10 h-10 mb-4 text-emerald-400" />, 
+                icon: <Shield className="w-10 h-10 mb-4 text-red-400" />, 
                 title: "Fire Protection", 
                 desc: "Heat & flame resistant materials with advanced coating technology"
               },
               { 
-                icon: <div className="w-10 h-10 mb-4 bg-blue-500/30 rounded-2xl flex items-center justify-center"><div className="w-5 h-5 bg-blue-400 rounded-full"></div></div>, 
+                icon: <Umbrella className="w-10 h-10 mb-4 text-blue-400" />, 
                 title: "Rain Protection", 
                 desc: "100% waterproof coating ensures complete weather resistance"
               },
               { 
-                icon: <Shield className="w-10 h-10 mb-4 text-gray-400" />, 
+                icon: <Zap className="w-10 h-10 mb-4 text-yellow-400" />, 
                 title: "Scratch-Proof", 
                 desc: "Durable fabric protection prevents surface damage"
               },
               { 
-                icon: <div className="w-10 h-10 mb-4 bg-green-500/30 rounded-2xl flex items-center justify-center"><div className="w-5 h-5 bg-green-400 rounded-full"></div></div>, 
+                icon: <UserCheck className="w-10 h-10 mb-4 text-green-400" />, 
                 title: "Safe for Kids", 
                 desc: "Rounded edges and stable design prioritize safety"
               }
@@ -131,7 +132,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10">
-                    {feature.icon}
+                    <div className="flex justify-center">{feature.icon}</div>
                     <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
                   </div>
                   <p className="text-gray-400 leading-relaxed text-sm relative z-10">{feature.desc}</p>
@@ -142,15 +143,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR 2 */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
+      {/* VISUAL SEPARATOR */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-12"></div>
 
-      {/* WHY CHOOSE SECTION - PREMIUM GLASSMORPHISM */}
+      {/* WHY CHOOSE SECTION - GLASSMORPHISM */}
       <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Glass Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-cyan-500/5 to-blue-500/5 backdrop-blur-3xl"></div>
         
-        <div className="max-w-5xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               Why Choose SafePark?
@@ -188,7 +189,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10">
-                    {item.icon}
+                    <div className="flex justify-center">{item.icon}</div>
                     <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
                     <p className="text-gray-300 leading-relaxed text-sm">{item.desc}</p>
                   </div>
@@ -199,12 +200,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR 3 */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
+      {/* VISUAL SEPARATOR */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-12"></div>
 
       {/* GALLERY SECTION */}
       <section id="gallery" className="py-12 px-6 md:px-12 lg:px-20 bg-slate-800/30">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               See SafePark in Action
@@ -277,15 +278,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR 4 */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
+      {/* VISUAL SEPARATOR */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-12"></div>
 
       {/* TESTIMONIALS SECTION - COMPACT GLASSMORPHISM */}
       <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/5 via-emerald-500/5 to-cyan-500/5"></div>
         
-        <div className="max-w-5xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               What our customers say about SafePark
@@ -348,8 +349,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR 5 */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
+      {/* VISUAL SEPARATOR */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-12"></div>
 
       {/* CTA SECTION - COMPACT GLASSMORPHISM */}
       <section className="py-12 px-6 md:px-12 lg:px-20 relative">
