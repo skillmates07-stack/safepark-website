@@ -23,9 +23,9 @@ export default function PricingPage() {
         "Perfect for Swift, i20, City, Polo",
         "2-year comprehensive warranty",
       ],
-      buttonClass: "border border-slate-400 text-slate-300 hover:bg-slate-700 hover:text-white",
+      buttonClass: "bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:border-white/40",
       popular: false,
-      border: "border-slate-700"
+      cardClass: "bg-white/[0.03] border-white/10"
     },
     {
       id: 2,
@@ -45,7 +45,7 @@ export default function PricingPage() {
       ],
       buttonClass: "bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold shadow-lg",
       popular: true,
-      border: "border-emerald-500"
+      cardClass: "bg-emerald-500/[0.08] border-emerald-400/30"
     },
     {
       id: 3,
@@ -63,9 +63,9 @@ export default function PricingPage() {
         "Designed for Fortuner, X5, Range Rover",
         "Lifetime structural warranty",
       ],
-      buttonClass: "border border-purple-400 text-purple-300 hover:bg-purple-700 hover:text-white",
+      buttonClass: "bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:border-white/40",
       popular: false,
-      border: "border-purple-800"
+      cardClass: "bg-white/[0.03] border-white/10"
     },
   ];
 
@@ -110,68 +110,75 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* PRICING CARDS - PERFECT BALANCE */}
+      {/* PRICING CARDS - ENHANCED GLASSY THEME */}
       <section className="px-6 pb-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan) => (
             <div
               key={plan.id}
               className={`
-                relative rounded-2xl ${plan.border} bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-sm
-                shadow-xl transition-all duration-300 hover:scale-[1.01]
-                ${plan.popular ? "ring-2 ring-emerald-400/50 scale-[1.02] md:-translate-y-4" : ""}
+                relative rounded-3xl border backdrop-blur-xl
+                shadow-2xl transition-all duration-500 hover:scale-[1.02]
+                ${plan.popular 
+                  ? "ring-2 ring-emerald-400/40 scale-[1.03] md:-translate-y-6 shadow-emerald-500/20" 
+                  : "shadow-black/20"
+                }
+                ${plan.cardClass}
               `}
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-4 py-1.5 rounded-full text-xs font-semibold shadow-lg">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-xl backdrop-blur-sm">
                     ⭐ Most Popular
                   </div>
                 </div>
               )}
 
-              <div className="p-6">
+              {/* Card Content */}
+              <div className="p-8">
                 {/* Header */}
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-white mb-1">{plan.name}</h3>
-                  <p className="text-sm text-gray-400 mb-4">{plan.subtitle}</p>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-base text-gray-300 mb-5">{plan.subtitle}</p>
                   
-                  {/* Pricing */}
-                  <div className="flex items-center justify-center gap-2 mb-3">
-                    <span className="text-base text-gray-400 line-through">₹{plan.originalPrice.toLocaleString()}</span>
-                    <span className="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded font-medium">
+                  {/* Pricing Display */}
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <span className="text-lg text-gray-400 line-through">₹{plan.originalPrice.toLocaleString()}</span>
+                    <span className="text-sm bg-red-500/20 text-red-400 px-3 py-1.5 rounded-full font-semibold backdrop-blur-sm">
                       Save ₹{plan.save.toLocaleString()}
                     </span>
                   </div>
                   
-                  <div className="flex items-end justify-center mb-3">
-                    <span className="text-lg text-emerald-400 font-bold">₹</span>
-                    <span className={`font-bold ${plan.popular ? 'text-4xl text-emerald-400' : 'text-3xl text-white'}`}>
+                  <div className="flex items-end justify-center mb-4">
+                    <span className="text-xl text-emerald-400 font-bold">₹</span>
+                    <span className={`font-bold ${plan.popular ? 'text-5xl text-emerald-400' : 'text-4xl text-white'}`}>
                       {(isAnnual ? plan.price * 0.8 : plan.price).toLocaleString()}
                     </span>
                   </div>
                   
-                  <p className="text-xs text-gray-400 mb-3">One-time payment • Free installation</p>
-                  <p className="text-sm text-gray-300 mb-5">{plan.description}</p>
+                  <p className="text-sm text-gray-400 mb-4">One-time payment • Free installation</p>
+                  <p className="text-base text-gray-200 mb-8 leading-relaxed">{plan.description}</p>
                   
-                  {/* CTA Button */}
+                  {/* Enhanced CTA Button */}
                   <a
                     href="tel:+919600840058"
-                    className={`w-full py-3 rounded-lg text-base font-medium transition-all duration-300 text-center flex items-center justify-center gap-2 ${plan.buttonClass}`}
+                    className={`w-full py-4 rounded-xl text-lg font-semibold transition-all duration-300 text-center flex items-center justify-center gap-3 backdrop-blur-sm hover:scale-105 ${plan.buttonClass}`}
                   >
-                    {plan.popular && <Phone className="w-4 h-4" />}
+                    <Phone className="w-5 h-5" />
                     Get Started
                   </a>
                 </div>
 
-                {/* Features */}
-                <div className="border-t border-white/10 pt-5">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-4">Everything included:</h4>
-                  <ul className="space-y-3">
+                {/* Enhanced Features Section */}
+                <div className="border-t border-white/20 pt-6">
+                  <h4 className="text-base font-bold text-white mb-5">Everything included:</h4>
+                  <ul className="space-y-4">
                     {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-200">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <li key={i} className="flex items-start gap-3 text-base text-gray-200 leading-relaxed">
+                        <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                        </div>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -183,30 +190,41 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="px-6 pb-16">
-        <div className="max-w-4xl mx-auto rounded-2xl bg-gradient-to-br from-emerald-500/8 to-cyan-500/8 border border-emerald-500/20 p-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-            Ready to Protect Your Investment?
-          </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
-            Join thousands who trust SafePark for premium protection.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+919600840058"
-              className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
-            >
-              <Phone className="w-4 h-4" />
-              Get Free Quote Now
-            </a>
-            <a 
-              href="https://wa.me/919600840058"
-              className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
-            >
-              <ArrowRight className="w-4 h-4" />
-              WhatsApp Team
-            </a>
+      {/* GLASSY CTA SECTION */}
+      <section className="px-6 pb-20">
+        <div className="max-w-4xl mx-auto relative">
+          {/* Background Glow Effects */}
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-purple-500/10 rounded-3xl blur-3xl"></div>
+          <div className="absolute top-4 left-4 w-32 h-32 bg-emerald-500/20 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-4 right-4 w-24 h-24 bg-cyan-500/20 rounded-full blur-2xl"></div>
+          
+          {/* Main Glass Card */}
+          <div className="relative bg-white/[0.08] backdrop-blur-2xl rounded-3xl border border-white/20 p-12 text-center shadow-2xl">
+            <div className="relative z-10">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
+                Ready to Protect Your Investment?
+              </h2>
+              <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Join thousands who trust SafePark for premium protection.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-5 justify-center">
+                <a 
+                  href="tel:+919600840058"
+                  className="group bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/30 backdrop-blur-sm inline-flex items-center justify-center gap-3"
+                >
+                  <Phone className="w-5 h-5 transition-transform group-hover:scale-110" />
+                  Get Free Quote Now
+                </a>
+                <a 
+                  href="https://wa.me/919600840058"
+                  className="group bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm inline-flex items-center justify-center gap-3"
+                >
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  WhatsApp Team
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
