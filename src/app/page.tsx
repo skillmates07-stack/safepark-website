@@ -6,10 +6,10 @@ export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
       
-      {/* HERO SECTION - BALANCED HEIGHT */}
-      <section className="min-h-[85vh] flex items-center pt-8 pb-16 px-6 md:px-12 lg:px-20">
+      {/* HERO SECTION - PERFECT TOP SPACING */}
+      <section className="pt-32 pb-20 min-h-[90vh] flex items-center px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
             
             <div className="text-center md:text-left space-y-8">
               
@@ -72,7 +72,7 @@ export default function HomePage() {
                 <img 
                   src="/gallery/hero-car.jpeg" 
                   alt="Premium BMW protected by SafePark" 
-                  className="relative w-full h-[360px] md:h-[400px] object-cover rounded-3xl shadow-xl"
+                  className="relative w-full h-[380px] md:h-[420px] object-cover rounded-3xl shadow-xl"
                 />
               </div>
             </div>
@@ -81,10 +81,10 @@ export default function HomePage() {
       </section>
 
       {/* VISUAL SEPARATOR 1 */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent my-16"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-20"></div>
 
       {/* FEATURES SECTION */}
-      <section className="py-16 px-6 md:px-12 lg:px-20 bg-slate-800/30">
+      <section className="py-20 px-6 md:px-12 lg:px-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
@@ -120,7 +120,7 @@ export default function HomePage() {
             ].map((feature, idx) => (
               <div 
                 key={idx}
-                className="p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300 h-full min-h-[260px] flex flex-col justify-between"
+                className="p-8 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300 h-full min-h-[280px] flex flex-col justify-between"
               >
                 <div>
                   {feature.icon}
@@ -134,12 +134,12 @@ export default function HomePage() {
       </section>
 
       {/* VISUAL SEPARATOR 2 */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-20"></div>
 
-      {/* WHY CHOOSE SAFEPARK SECTION */}
-      <section className="py-16 px-6 md:px-12 lg:px-20">
+      {/* WHY CHOOSE SECTION */}
+      <section className="py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
               Why Choose SafePark?
             </h2>
@@ -179,14 +179,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR 3 - ENHANCED */}
-      <div className="relative my-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-400/10 to-transparent h-20 blur-2xl"></div>
-        <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent"></div>
-      </div>
+      {/* VISUAL SEPARATOR 3 */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-20"></div>
 
       {/* GALLERY SECTION */}
-      <section id="gallery" className="py-16 px-6 md:px-12 lg:px-20 bg-slate-800/30">
+      <section id="gallery" className="py-20 px-6 md:px-12 lg:px-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
@@ -261,12 +258,12 @@ export default function HomePage() {
       </section>
 
       {/* VISUAL SEPARATOR 4 */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent my-16"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-20"></div>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="py-16 px-6 md:px-12 lg:px-20">
+      <section className="py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
               What our customers say about SafePark
             </h2>
@@ -320,66 +317,63 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR 5 - FINAL TRANSITION */}
-      <div className="relative my-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/5 via-emerald-400/20 to-emerald-400/5 h-32 blur-3xl"></div>
-        <div className="h-0.5 bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent"></div>
-      </div>
+      {/* VISUAL SEPARATOR 5 */}
+      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-20"></div>
 
-      {/* CONTACT SECTION */}
-      <section className="py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-br from-gray-800/40 to-gray-900/60">
+      {/* CONTACT SECTION - IMPROVED GLASS DESIGN */}
+      <section className="py-20 px-6 md:px-12 lg:px-20 bg-gradient-to-br from-emerald-950/40 to-slate-900/60">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
               Ready to Protect Your Vehicle?
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12">
+            <p className="text-xl text-emerald-200 leading-relaxed max-w-2xl mx-auto">
               Join thousands who chose SafePark for premium protection
             </p>
           </div>
           
-          <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/80 backdrop-blur rounded-3xl p-12 shadow-2xl border border-gray-700/50">
+          <div className="bg-black/40 backdrop-blur-xl rounded-3xl border border-emerald-700/30 shadow-2xl p-12">
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
-                  <Phone className="w-8 h-8 text-emerald-400" />
+                <div className="w-20 h-20 bg-emerald-500/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                  <Phone className="w-10 h-10 text-emerald-400" />
                 </div>
-                <h3 className="font-bold text-white mb-2 text-lg">Phone</h3>
-                <a href="tel:+919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium">
+                <h3 className="font-bold text-white mb-2 text-xl">Phone</h3>
+                <a href="tel:+919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium text-lg">
                   +91 9600840058
                 </a>
               </div>
               
               <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
-                  <MessageCircle className="w-8 h-8 text-emerald-400" />
+                <div className="w-20 h-20 bg-emerald-500/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                  <MessageCircle className="w-10 h-10 text-emerald-400" />
                 </div>
-                <h3 className="font-bold text-white mb-2 text-lg">WhatsApp</h3>
-                <a href="https://wa.me/919600840058" className="text-emerald-400 hover:text-emerald-300 font-medium">
+                <h3 className="font-bold text-white mb-2 text-xl">WhatsApp</h3>
+                <a href="https://wa.me/919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium text-lg">
                   Message Us
                 </a>
               </div>
               
               <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
-                  <MapPin className="w-8 h-8 text-emerald-400" />
+                <div className="w-20 h-20 bg-emerald-500/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                  <MapPin className="w-10 h-10 text-emerald-400" />
                 </div>
-                <h3 className="font-bold text-white mb-2 text-lg">Location</h3>
-                <p className="text-emerald-400">Coimbatore, Tamil Nadu</p>
+                <h3 className="font-bold text-white mb-2 text-xl">Location</h3>
+                <p className="text-emerald-200 text-lg">Coimbatore, Tamil Nadu</p>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <div className="flex flex-col sm:flex-row justify-center gap-6 mt-10">
               <a 
                 href="tel:+919600840058" 
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 text-center min-w-[280px] shadow-lg"
+                className="bg-emerald-500 hover:bg-emerald-400 text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 text-center shadow-lg"
               >
                 Call for Free Quote
               </a>
               <a 
                 href="https://wa.me/919600840058" 
-                className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 text-center min-w-[280px]"
+                className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 text-center"
               >
                 WhatsApp Now
               </a>
@@ -389,7 +383,7 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-14 px-6 md:px-12 lg:px-20 bg-black/30 border-t border-white/10">
+      <footer className="py-16 px-6 md:px-12 lg:px-20 bg-black/30 border-t border-white/10">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 mb-12">
             <div>
