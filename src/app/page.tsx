@@ -1,18 +1,18 @@
 'use client';
 
-import { Shield, Umbrella, Zap, UserCheck, Phone, MessageCircle, MapPin, Star, Award, ArrowRight } from 'lucide-react';
+import { Shield, Umbrella, Zap, UserCheck, Phone, MessageCircle, MapPin, Star, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
 
-      {/* HERO SECTION - BALANCED */}
+      {/* HERO SECTION - PERFECT PROPORTIONS */}
       <section className="pt-28 pb-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             {/* Left Content */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100/10 border border-emerald-400/20 text-emerald-300 font-medium text-sm backdrop-blur-sm mb-6">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
                 Made in India • Premium Quality
@@ -29,7 +29,7 @@ export default function HomePage() {
                 Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-emerald-400 font-medium">complete peace of mind</span>.
               </p>
 
-              <div className="flex items-center justify-center md:justify-start gap-8 mb-8">
+              <div className="flex items-center justify-center lg:justify-start gap-8 mb-8">
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
@@ -42,10 +42,10 @@ export default function HomePage() {
                 <span className="text-emerald-400 font-medium">2-Year Warranty</span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a 
                   href="tel:+919600840058"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
                   <Shield className="w-5 h-5" />
                   Protect My Car Now
@@ -57,7 +57,7 @@ export default function HomePage() {
                     e.preventDefault();
                     document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
                   View Gallery
                   <ArrowRight className="w-4 h-4" />
@@ -66,14 +66,14 @@ export default function HomePage() {
             </div>
 
             {/* Right Image */}
-            <div className="flex justify-center md:justify-end order-first md:order-last">
-              <div className="relative w-full max-w-[650px]">
+            <div className="flex justify-center lg:justify-end order-first lg:order-last">
+              <div className="relative w-full max-w-[600px]">
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-300/30 rounded-3xl blur-3xl scale-110 opacity-60"></div>
                 
                 <img 
                   src="/gallery/hero-car.jpeg" 
                   alt="Premium BMW protected by SafePark" 
-                  className="relative w-full h-[380px] md:h-[420px] object-cover rounded-3xl shadow-xl"
+                  className="relative w-full h-[350px] md:h-[400px] object-cover rounded-3xl shadow-2xl"
                 />
               </div>
             </div>
@@ -81,8 +81,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FEATURES SECTION - COMPACT CARDS */}
-      <section className="py-12 px-6 md:px-12 lg:px-20 relative">
+      {/* FEATURES SECTION - BALANCED CARDS */}
+      <section className="py-16 px-6 md:px-12 lg:px-20 relative">
         {/* Background Glass Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-emerald-500/5 to-purple-500/5 backdrop-blur-3xl"></div>
         
@@ -91,7 +91,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               Complete Protection for Every Risk
             </h2>
-            <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Four layers of premium defense engineered for your vehicle's safety
             </p>
           </div>
@@ -123,14 +123,14 @@ export default function HomePage() {
                 key={idx}
                 className="group relative"
               >
-                {/* Compact Glass Card */}
-                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-emerald-500/20 h-[220px] flex flex-col justify-between">
+                {/* Perfectly Sized Glass Card */}
+                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-emerald-500/20 h-[200px] flex flex-col justify-between">
                   {/* Subtle glow on hover */}
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10">
                     <div className="flex justify-center">{feature.icon}</div>
-                    <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
                   </div>
                   <p className="text-gray-400 leading-relaxed text-sm relative z-10">{feature.desc}</p>
                 </div>
@@ -140,8 +140,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE SECTION - COMPACT CARDS */}
-      <section className="py-12 px-6 md:px-12 lg:px-20 relative">
+      {/* WHY CHOOSE SECTION - PERFECT CARDS */}
+      <section className="py-16 px-6 md:px-12 lg:px-20 relative">
         {/* Background Glass Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-cyan-500/5 to-blue-500/5 backdrop-blur-3xl"></div>
         
@@ -150,7 +150,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               Why Choose SafePark?
             </h2>
-            <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Premium protection engineered for modern vehicles
             </p>
           </div>
@@ -177,14 +177,14 @@ export default function HomePage() {
                 key={idx} 
                 className="group relative"
               >
-                {/* Compact Glass Card */}
-                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-emerald-500/20 h-[240px] flex flex-col justify-between">
+                {/* Perfect Glass Card */}
+                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-emerald-500/20 h-[220px] flex flex-col justify-between">
                   {/* Subtle glow on hover */}
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10">
                     <div className="flex justify-center">{item.icon}</div>
-                    <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
                     <p className="text-gray-300 leading-relaxed text-sm">{item.desc}</p>
                   </div>
                 </div>
@@ -194,14 +194,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GALLERY SECTION - COMPACT */}
-      <section id="gallery" className="py-12 px-6 md:px-12 lg:px-20 bg-slate-800/30">
+      {/* GALLERY SECTION */}
+      <section id="gallery" className="py-16 px-6 md:px-12 lg:px-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               See SafePark in Action
             </h2>
-            <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Real installations, real protection, real results
             </p>
           </div>
@@ -269,8 +269,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION - COMPACT */}
-      <section className="py-12 px-6 md:px-12 lg:px-20 relative">
+      {/* TESTIMONIALS SECTION */}
+      <section className="py-16 px-6 md:px-12 lg:px-20 relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/5 via-emerald-500/5 to-cyan-500/5"></div>
         
@@ -306,8 +306,8 @@ export default function HomePage() {
                 key={idx} 
                 className="group relative"
               >
-                {/* Compact Glass Card */}
-                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.10] h-[200px] flex flex-col justify-between">
+                {/* Perfect Glass Card */}
+                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.10] h-[180px] flex flex-col justify-between">
                   {/* Subtle inner glow */}
                   <div className="absolute inset-1 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
@@ -337,8 +337,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA SECTION - COMPACT */}
-      <section className="py-12 px-6 md:px-12 lg:px-20 relative">
+      {/* CTA SECTION - PERFECT SIZE */}
+      <section className="py-16 px-6 md:px-12 lg:px-20 relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/8 via-cyan-500/8 to-purple-500/8"></div>
         
@@ -352,13 +352,13 @@ export default function HomePage() {
             </p>
           </div>
           
-          {/* Compact Glass Container */}
-          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl border border-white/20 p-6 shadow-2xl">
+          {/* Perfect Glass Container */}
+          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl border border-white/20 p-8 shadow-2xl">
             
-            {/* Contact Icons Row - Compact */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            {/* Contact Icons Row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:bg-emerald-500/30 transition-colors">
+                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald-500/30 transition-colors">
                   <Phone className="w-6 h-6 text-emerald-400" />
                 </div>
                 <h3 className="font-bold text-white mb-1">Phone</h3>
@@ -368,7 +368,7 @@ export default function HomePage() {
               </div>
               
               <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:bg-emerald-500/30 transition-colors">
+                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald-500/30 transition-colors">
                   <MessageCircle className="w-6 h-6 text-emerald-400" />
                 </div>
                 <h3 className="font-bold text-white mb-1">WhatsApp</h3>
@@ -378,7 +378,7 @@ export default function HomePage() {
               </div>
               
               <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:bg-emerald-500/30 transition-colors">
+                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald-500/30 transition-colors">
                   <MapPin className="w-6 h-6 text-emerald-400" />
                 </div>
                 <h3 className="font-bold text-white mb-1">Location</h3>
@@ -386,8 +386,8 @@ export default function HomePage() {
               </div>
             </div>
             
-            {/* CTA Buttons - Compact */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+919600840058" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-center inline-flex items-center justify-center gap-2"
