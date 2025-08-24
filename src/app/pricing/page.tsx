@@ -69,7 +69,7 @@ export default function PricingPage() {
   return (
     <div className="bg-gradient-to-br from-neutral-900 via-slate-900 to-neutral-800 min-h-screen">
       
-      {/* HERO - COMPACT */}
+      {/* HERO SECTION */}
       <section className="pt-24 pb-8 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium">
@@ -107,9 +107,9 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* PRICING CARDS - COMPACT */}
-      <section className="px-6 pb-12">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* PRICING CARDS - PROPER SPACING */}
+      <section className="px-4 sm:px-8 lg:px-16 pb-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
           {plans.map((plan) => (
             <div
               key={plan.id}
@@ -179,7 +179,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* CTA - COMPACT GLASSY */}
+      {/* CTA SECTION - COMPACT GLASSY */}
       <section className="px-6 pb-12">
         <div className="max-w-3xl mx-auto bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/20 p-6 text-center">
           <h2 className="text-xl font-bold text-white mb-2">
