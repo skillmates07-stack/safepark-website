@@ -81,10 +81,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
-
-      {/* FEATURES SECTION - UNIQUE ICONS, GLASSMORPHISM */}
+      {/* FEATURES SECTION - UNIQUE ICONS, GLASSMORPHISM (NO LINES) */}
       <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Glass Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-emerald-500/5 to-purple-500/5 backdrop-blur-3xl"></div>
@@ -143,10 +140,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
-
-      {/* WHY CHOOSE SECTION - GLASSMORPHISM */}
+      {/* WHY CHOOSE SECTION - GLASSMORPHISM (NO LINES) */}
       <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Glass Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-cyan-500/5 to-blue-500/5 backdrop-blur-3xl"></div>
@@ -200,10 +194,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
-
-      {/* GALLERY SECTION */}
+      {/* GALLERY SECTION (NO LINES) */}
       <section id="gallery" className="py-12 px-6 md:px-12 lg:px-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
@@ -278,10 +269,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
-
-      {/* TESTIMONIALS SECTION - COMPACT GLASSMORPHISM */}
+      {/* TESTIMONIALS SECTION - COMPACT GLASSMORPHISM (NO LINES) */}
       <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/5 via-emerald-500/5 to-cyan-500/5"></div>
@@ -349,10 +337,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL SEPARATOR */}
-      <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
-
-      {/* CTA SECTION - PERFECTLY SIZED GLASSMORPHISM */}
+      {/* CTA SECTION - PERFECTLY SIZED GLASSMORPHISM (NO LINES) */}
       <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/8 via-cyan-500/8 to-purple-500/8"></div>
