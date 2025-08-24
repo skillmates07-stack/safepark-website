@@ -72,8 +72,8 @@ export default function PricingPage() {
   return (
     <div className="bg-gradient-to-br from-neutral-900 via-slate-900 to-neutral-800 min-h-screen">
       
-      {/* HERO SECTION - PERFECT SIZE */}
-      <section className="pt-26 pb-10 px-6">
+      {/* HERO SECTION - NAVBAR SAFE SPACING */}
+      <section className="pt-32 pb-10 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-5 py-2 mb-7 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm">
             <CheckCircle2 className="w-4 h-4" />
