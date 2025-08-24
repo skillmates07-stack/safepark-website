@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
       
-      {/* HERO SECTION - PERFECT TOP SPACING */}
+      {/* HERO SECTION */}
       <section className="pt-32 pb-20 min-h-[80vh] flex items-center px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
@@ -83,14 +83,17 @@ export default function HomePage() {
       {/* VISUAL SEPARATOR 1 */}
       <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
 
-      {/* FEATURES SECTION */}
-      <section className="py-14 px-6 md:px-12 lg:px-20 bg-slate-800/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+      {/* FEATURES SECTION - COMPACT GLASSMORPHISM */}
+      <section className="py-12 px-6 md:px-12 lg:px-20 relative">
+        {/* Background Glass Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-emerald-500/5 to-purple-500/5 backdrop-blur-3xl"></div>
+        
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               Complete Protection for Every Risk
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Four layers of premium defense engineered for your vehicle's safety
             </p>
           </div>
@@ -98,35 +101,41 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { 
-                icon: <Shield className="w-12 h-12 mb-4 text-emerald-400" />, 
+                icon: <Shield className="w-10 h-10 mb-4 text-emerald-400" />, 
                 title: "Fire Protection", 
                 desc: "Heat & flame resistant materials with advanced coating technology"
               },
               { 
-                icon: <div className="w-12 h-12 mb-4 bg-blue-500/20 rounded-2xl flex items-center justify-center"><div className="w-6 h-6 bg-blue-400 rounded-full"></div></div>, 
+                icon: <div className="w-10 h-10 mb-4 bg-blue-500/30 rounded-2xl flex items-center justify-center"><div className="w-5 h-5 bg-blue-400 rounded-full"></div></div>, 
                 title: "Rain Protection", 
                 desc: "100% waterproof coating ensures complete weather resistance"
               },
               { 
-                icon: <Shield className="w-12 h-12 mb-4 text-gray-400" />, 
+                icon: <Shield className="w-10 h-10 mb-4 text-gray-400" />, 
                 title: "Scratch-Proof", 
                 desc: "Durable fabric protection prevents surface damage"
               },
               { 
-                icon: <div className="w-12 h-12 mb-4 bg-green-500/20 rounded-2xl flex items-center justify-center"><div className="w-6 h-6 bg-green-400 rounded-full"></div></div>, 
+                icon: <div className="w-10 h-10 mb-4 bg-green-500/30 rounded-2xl flex items-center justify-center"><div className="w-5 h-5 bg-green-400 rounded-full"></div></div>, 
                 title: "Safe for Kids", 
                 desc: "Rounded edges and stable design prioritize safety"
               }
             ].map((feature, idx) => (
               <div 
                 key={idx}
-                className="p-6 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 text-center hover:bg-gray-800/50 hover:scale-105 transition-all duration-300 h-full min-h-[240px] flex flex-col justify-between"
+                className="group relative"
               >
-                <div>
-                  {feature.icon}
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                {/* Glass Card */}
+                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-emerald-500/20 min-h-[200px] flex flex-col justify-between">
+                  {/* Subtle glow on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="relative z-10">
+                    {feature.icon}
+                    <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
+                  </div>
+                  <p className="text-gray-400 leading-relaxed text-sm relative z-10">{feature.desc}</p>
                 </div>
-                <p className="text-gray-400 leading-relaxed text-sm">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -137,34 +146,34 @@ export default function HomePage() {
       <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
 
       {/* WHY CHOOSE SECTION - PREMIUM GLASSMORPHISM */}
-      <section className="py-16 px-6 md:px-12 lg:px-20 relative">
+      <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Glass Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-cyan-500/5 to-blue-500/5 backdrop-blur-3xl"></div>
         
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               Why Choose SafePark?
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Premium protection engineered for modern vehicles
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                icon: <Shield className="w-12 h-12 mb-6 text-emerald-400" />,
+                icon: <Shield className="w-10 h-10 mb-4 text-emerald-400" />,
                 title: "Weather Protection",
                 desc: "Advanced weather-resistant fabric with 100% UV protection and waterproof coating technology"
               },
               {
-                icon: <Zap className="w-12 h-12 mb-6 text-emerald-400" />,
+                icon: <Zap className="w-10 h-10 mb-4 text-emerald-400" />,
                 title: "Scratch & Damage Cover",
                 desc: "Revolutionary retractable design prevents scratches, dings, and surface damage from daily hazards"
               },
               {
-                icon: <Award className="w-12 h-12 mb-6 text-emerald-400" />,
+                icon: <Award className="w-10 h-10 mb-4 text-emerald-400" />,
                 title: "Peace of Mind Warranty",
                 desc: "2-year comprehensive warranty with ongoing maintenance and premium customer support guarantee"
               }
@@ -174,14 +183,14 @@ export default function HomePage() {
                 className="group relative"
               >
                 {/* Glass Card */}
-                <div className="relative bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.12] hover:shadow-emerald-500/20">
+                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-emerald-500/20">
                   {/* Subtle glow on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10">
                     {item.icon}
-                    <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{item.desc}</p>
+                    <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                    <p className="text-gray-300 leading-relaxed text-sm">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -194,13 +203,13 @@ export default function HomePage() {
       <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
 
       {/* GALLERY SECTION */}
-      <section id="gallery" className="py-14 px-6 md:px-12 lg:px-20 bg-slate-800/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-4">
+      <section id="gallery" className="py-12 px-6 md:px-12 lg:px-20 bg-slate-800/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               See SafePark in Action
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Real installations, real protection, real results
             </p>
           </div>
@@ -241,13 +250,13 @@ export default function HomePage() {
             ].map((item, idx) => (
               <div 
                 key={idx} 
-                className="p-5 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
+                className="p-4 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
               >
                 {item.type === "video" ? (
                   <video
                     src={item.src}
                     controls
-                    className="w-full h-40 object-cover rounded-xl mb-3"
+                    className="w-full h-36 object-cover rounded-xl mb-3"
                     poster="/gallery/gallery1.jpg"
                   >
                     Your browser does not support the video tag.
@@ -256,7 +265,7 @@ export default function HomePage() {
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-40 object-cover rounded-xl mb-3"
+                    className="w-full h-36 object-cover rounded-xl mb-3"
                     loading="lazy"
                   />
                 )}
@@ -271,19 +280,19 @@ export default function HomePage() {
       {/* VISUAL SEPARATOR 4 */}
       <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
 
-      {/* TESTIMONIALS SECTION - PREMIUM GLASSMORPHISM */}
-      <section className="py-16 px-6 md:px-12 lg:px-20 relative">
+      {/* TESTIMONIALS SECTION - COMPACT GLASSMORPHISM */}
+      <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/5 via-emerald-500/5 to-cyan-500/5"></div>
         
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               What our customers say about SafePark
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 name: "Rajesh Kumar",
@@ -309,17 +318,17 @@ export default function HomePage() {
                 className="group relative"
               >
                 {/* Glass Card */}
-                <div className="relative bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.12]">
+                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.10]">
                   {/* Subtle inner glow */}
-                  <div className="absolute inset-1 bg-gradient-to-br from-white/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-1 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10">
-                    <div className="flex mb-4">
+                    <div className="flex mb-3">
                       {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <blockquote className="leading-relaxed text-gray-300 mb-6 text-sm">
+                    <blockquote className="leading-relaxed text-gray-300 mb-4 text-sm">
                       "{review.text}"
                     </blockquote>
                     <div className="flex items-center">
@@ -342,76 +351,72 @@ export default function HomePage() {
       {/* VISUAL SEPARATOR 5 */}
       <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent my-16"></div>
 
-      {/* CTA SECTION - PREMIUM GLASSMORPHISM */}
-      <section className="py-16 px-6 md:px-12 lg:px-20 relative">
+      {/* CTA SECTION - COMPACT GLASSMORPHISM */}
+      <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-purple-500/10"></div>
         <div className="absolute top-10 left-1/4 w-32 h-32 bg-emerald-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-1/4 w-40 h-40 bg-cyan-500/20 rounded-full blur-3xl"></div>
         
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
               Ready to Protect Your Vehicle?
             </h2>
-            <p className="text-xl text-emerald-200 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-emerald-200 leading-relaxed max-w-2xl mx-auto">
               Join thousands who chose SafePark for premium protection
             </p>
           </div>
           
-          {/* Premium Glass Container */}
+          {/* Compact Glass Container */}
           <div className="relative group">
-            {/* Multi-layer glass effect */}
-            <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-3xl rounded-3xl"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-transparent to-cyan-500/10 rounded-3xl"></div>
-            
-            <div className="relative bg-white/[0.08] backdrop-blur-2xl rounded-3xl border border-white/20 p-12 shadow-2xl transition-all duration-500 group-hover:bg-white/[0.12] group-hover:shadow-emerald-500/20">
+            <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl border border-white/20 p-8 shadow-2xl transition-all duration-500 group-hover:bg-white/[0.10] group-hover:shadow-emerald-500/20">
               
               {/* Contact Icons Row */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center group/item hover:scale-105 transition-all duration-300">
-                  <div className="w-20 h-20 bg-emerald-500/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover/item:bg-emerald-500/30 transition-colors backdrop-blur-sm">
-                    <Phone className="w-10 h-10 text-emerald-400" />
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover/item:bg-emerald-500/30 transition-colors backdrop-blur-sm">
+                    <Phone className="w-8 h-8 text-emerald-400" />
                   </div>
-                  <h3 className="font-bold text-white mb-2 text-xl">Phone</h3>
-                  <a href="tel:+919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium text-lg transition-colors">
+                  <h3 className="font-bold text-white mb-1 text-lg">Phone</h3>
+                  <a href="tel:+919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium transition-colors">
                     +91 9600840058
                   </a>
                 </div>
                 
                 <div className="text-center group/item hover:scale-105 transition-all duration-300">
-                  <div className="w-20 h-20 bg-emerald-500/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover/item:bg-emerald-500/30 transition-colors backdrop-blur-sm">
-                    <MessageCircle className="w-10 h-10 text-emerald-400" />
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover/item:bg-emerald-500/30 transition-colors backdrop-blur-sm">
+                    <MessageCircle className="w-8 h-8 text-emerald-400" />
                   </div>
-                  <h3 className="font-bold text-white mb-2 text-xl">WhatsApp</h3>
-                  <a href="https://wa.me/919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium text-lg transition-colors">
+                  <h3 className="font-bold text-white mb-1 text-lg">WhatsApp</h3>
+                  <a href="https://wa.me/919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium transition-colors">
                     Message Us
                   </a>
                 </div>
                 
                 <div className="text-center group/item hover:scale-105 transition-all duration-300">
-                  <div className="w-20 h-20 bg-emerald-500/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover/item:bg-emerald-500/30 transition-colors backdrop-blur-sm">
-                    <MapPin className="w-10 h-10 text-emerald-400" />
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover/item:bg-emerald-500/30 transition-colors backdrop-blur-sm">
+                    <MapPin className="w-8 h-8 text-emerald-400" />
                   </div>
-                  <h3 className="font-bold text-white mb-2 text-xl">Location</h3>
-                  <p className="text-emerald-200 text-lg">Coimbatore, Tamil Nadu</p>
+                  <h3 className="font-bold text-white mb-1 text-lg">Location</h3>
+                  <p className="text-emerald-200">Coimbatore, Tamil Nadu</p>
                 </div>
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="tel:+919600840058" 
-                  className="group/btn bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/30 hover:scale-105 text-center inline-flex items-center justify-center gap-3 backdrop-blur-sm"
+                  className="group/btn bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-emerald-500/30 hover:scale-105 text-center inline-flex items-center justify-center gap-2 backdrop-blur-sm"
                 >
-                  <Phone className="w-6 h-6 transition-transform group-hover/btn:scale-110" />
+                  <Phone className="w-5 h-5 transition-transform group-hover/btn:scale-110" />
                   Call for Free Quote
                 </a>
                 <a 
                   href="https://wa.me/919600840058" 
-                  className="group/btn bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105 text-center inline-flex items-center justify-center gap-3 backdrop-blur-sm"
+                  className="group/btn bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 text-center inline-flex items-center justify-center gap-2 backdrop-blur-sm"
                 >
-                  <ArrowRight className="w-6 h-6 transition-transform group-hover/btn:translate-x-1" />
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
                   WhatsApp Now
                 </a>
               </div>
