@@ -1,12 +1,12 @@
 'use client';
 
-import { Shield, Umbrella, Zap, UserCheck, Phone, MessageCircle, MapPin, Star, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Shield, Umbrella, Zap, UserCheck, Phone, MessageCircle, MapPin, Star, Award, ArrowRight, CheckCircle2, Play } from 'lucide-react';
 
 export default function HomePage() {
   return (
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen">
 
-      {/* HERO SECTION - PERFECT PROPORTIONS */}
+      {/* HERO SECTION - ENTERPRISE GRADE */}
       <section className="pt-28 pb-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -18,17 +18,18 @@ export default function HomePage() {
                 Made in India • Premium Quality
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white mb-6">
                 Everyday Risks.
-                <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent mt-3">
+                <span className="block bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent mt-2">
                   Lasting Protection.
                 </span>
               </h1>
               
-              <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
+              <p className="text-xl text-gray-300 leading-relaxed mb-8 max-w-xl">
                 Your car faces <span className="font-semibold text-white">hidden threats every day</span>. From unexpected weather to kids playing nearby, give yourself <span className="text-emerald-400 font-medium">complete peace of mind</span>.
               </p>
 
+              {/* Social Proof */}
               <div className="flex items-center justify-center lg:justify-start gap-8 mb-8">
                 <div className="flex items-center gap-2">
                   <div className="flex">
@@ -42,7 +43,8 @@ export default function HomePage() {
                 <span className="text-emerald-400 font-medium">2-Year Warranty</span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <a 
                   href="tel:+919600840058"
                   className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
@@ -59,36 +61,59 @@ export default function HomePage() {
                   }}
                   className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
+                  <Play className="w-4 h-4" />
                   View Gallery
-                  <ArrowRight className="w-4 h-4" />
                 </a>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>Free Installation</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>2-4 Hour Setup</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>No Hidden Costs</span>
+                </div>
               </div>
             </div>
 
             {/* Right Image */}
             <div className="flex justify-center lg:justify-end order-first lg:order-last">
               <div className="relative w-full max-w-[600px]">
+                {/* Background Effects */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-300/30 rounded-3xl blur-3xl scale-110 opacity-60"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-3xl blur-2xl opacity-40"></div>
                 
                 <img 
                   src="/gallery/hero-car.jpeg" 
                   alt="Premium BMW protected by SafePark" 
-                  className="relative w-full h-[350px] md:h-[400px] object-cover rounded-3xl shadow-2xl"
+                  className="relative w-full h-[350px] md:h-[400px] object-cover rounded-3xl shadow-2xl border border-white/10"
                 />
+                
+                {/* Floating Badge */}
+                <div className="absolute top-4 left-4 bg-emerald-500/90 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-sm font-semibold">
+                  Premium Protection
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FEATURES SECTION - BALANCED CARDS */}
+      {/* FEATURES SECTION - STRIPE STYLE */}
       <section className="py-16 px-6 md:px-12 lg:px-20 relative">
-        {/* Background Glass Effect */}
+        {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-emerald-500/5 to-purple-500/5 backdrop-blur-3xl"></div>
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-4">
               Complete Protection for Every Risk
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
@@ -101,32 +126,37 @@ export default function HomePage() {
               { 
                 icon: <Shield className="w-10 h-10 mb-4 text-red-400" />, 
                 title: "Fire Protection", 
-                desc: "Heat & flame resistant materials with advanced coating technology"
+                desc: "Heat & flame resistant materials with advanced coating technology",
+                gradient: "from-red-500/10 to-orange-500/10"
               },
               { 
                 icon: <Umbrella className="w-10 h-10 mb-4 text-blue-400" />, 
                 title: "Rain Protection", 
-                desc: "100% waterproof coating ensures complete weather resistance"
+                desc: "100% waterproof coating ensures complete weather resistance",
+                gradient: "from-blue-500/10 to-cyan-500/10"
               },
               { 
                 icon: <Zap className="w-10 h-10 mb-4 text-yellow-400" />, 
                 title: "Scratch-Proof", 
-                desc: "Durable fabric protection prevents surface damage"
+                desc: "Durable fabric protection prevents surface damage",
+                gradient: "from-yellow-500/10 to-amber-500/10"
               },
               { 
                 icon: <UserCheck className="w-10 h-10 mb-4 text-green-400" />, 
                 title: "Safe for Kids", 
-                desc: "Rounded edges and stable design prioritize safety"
+                desc: "Rounded edges and stable design prioritize safety",
+                gradient: "from-green-500/10 to-emerald-500/10"
               }
             ].map((feature, idx) => (
               <div 
                 key={idx}
                 className="group relative"
               >
-                {/* Perfectly Sized Glass Card */}
-                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-emerald-500/20 h-[200px] flex flex-col justify-between">
-                  {/* Subtle glow on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Enterprise Card */}
+                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-2xl h-[200px] flex flex-col justify-between overflow-hidden">
+                  
+                  {/* Hover Gradient */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
                   <div className="relative z-10">
                     <div className="flex justify-center">{feature.icon}</div>
@@ -140,14 +170,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE SECTION - PERFECT CARDS */}
+      {/* VALUE PROPS SECTION - ZENDESK STYLE */}
       <section className="py-16 px-6 md:px-12 lg:px-20 relative">
-        {/* Background Glass Effect */}
+        {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-cyan-500/5 to-blue-500/5 backdrop-blur-3xl"></div>
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-4">
               Why Choose SafePark?
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
@@ -155,37 +185,46 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Shield className="w-10 h-10 mb-4 text-emerald-400" />,
+                icon: <Shield className="w-12 h-12 mb-6 text-emerald-400" />,
                 title: "Weather Protection",
-                desc: "Advanced weather-resistant fabric with 100% UV protection and waterproof coating technology"
+                desc: "Advanced weather-resistant fabric with 100% UV protection and waterproof coating technology",
+                stats: "100% Waterproof"
               },
               {
-                icon: <Zap className="w-10 h-10 mb-4 text-emerald-400" />,
+                icon: <Zap className="w-12 h-12 mb-6 text-emerald-400" />,
                 title: "Scratch & Damage Cover",
-                desc: "Revolutionary retractable design prevents scratches, dings, and surface damage from daily hazards"
+                desc: "Revolutionary retractable design prevents scratches, dings, and surface damage from daily hazards",
+                stats: "Military Grade"
               },
               {
-                icon: <Award className="w-10 h-10 mb-4 text-emerald-400" />,
+                icon: <Award className="w-12 h-12 mb-6 text-emerald-400" />,
                 title: "Peace of Mind Warranty",
-                desc: "2-year comprehensive warranty with ongoing maintenance and premium customer support guarantee"
+                desc: "2-year comprehensive warranty with ongoing maintenance and premium customer support guarantee",
+                stats: "2-Year Coverage"
               }
             ].map((item, idx) => (
               <div 
                 key={idx} 
                 className="group relative"
               >
-                {/* Perfect Glass Card */}
-                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-emerald-500/20 h-[220px] flex flex-col justify-between">
-                  {/* Subtle glow on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Enterprise Card */}
+                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.10] hover:shadow-2xl min-h-[280px] flex flex-col justify-between">
+                  
+                  {/* Hover Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Stats Badge */}
+                  <div className="absolute -top-3 right-4 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 px-3 py-1 rounded-full text-xs font-bold backdrop-blur-sm">
+                    {item.stats}
+                  </div>
                   
                   <div className="relative z-10">
                     <div className="flex justify-center">{item.icon}</div>
-                    <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-300 leading-relaxed text-sm">{item.desc}</p>
+                    <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+                    <p className="text-gray-300 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -194,11 +233,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GALLERY SECTION */}
+      {/* GALLERY SECTION - SHOPIFY STYLE */}
       <section id="gallery" className="py-16 px-6 md:px-12 lg:px-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-4">
               See SafePark in Action
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
@@ -211,74 +250,91 @@ export default function HomePage() {
               {
                 src: "/gallery/gallery1.jpg",
                 alt: "Luxury car protection setup",
-                caption: "Luxury Car Protection"
+                caption: "Luxury Car Protection",
+                tag: "Premium"
               },
               {
                 src: "/gallery/gallery2.jpg",
                 alt: "All-weather installation",
-                caption: "All-Weather Installation"
+                caption: "All-Weather Installation",
+                tag: "Weatherproof"
               },
               {
                 src: "/gallery/gallery3.jpg",
                 alt: "Quick setup demo",
-                caption: "Quick Setup Demo"
+                caption: "Quick Setup Demo",
+                tag: "Fast Setup"
               },
               {
                 src: "/gallery/gallery4.jpg",
                 alt: "Urban protection",
-                caption: "Urban Protection"
+                caption: "Urban Protection",
+                tag: "City Ready"
               },
               {
                 src: "/gallery/gallery5.jpg",
                 alt: "Family vehicle care",
-                caption: "Family Vehicle Care"
+                caption: "Family Vehicle Care",
+                tag: "Family Safe"
               },
               {
                 src: "/gallery/gallery-video.mp4",
                 alt: "Installation process",
                 caption: "Installation Process",
+                tag: "Professional",
                 type: "video"
               }
             ].map((item, idx) => (
               <div 
                 key={idx} 
-                className="p-4 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
+                className="group relative p-4 rounded-2xl shadow-lg bg-gray-900/50 backdrop-blur border border-gray-800/50 hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
               >
-                {item.type === "video" ? (
-                  <video
-                    src={item.src}
-                    controls
-                    className="w-full h-36 object-cover rounded-xl mb-3"
-                    poster="/gallery/gallery1.jpg"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    className="w-full h-36 object-cover rounded-xl mb-3"
-                    loading="lazy"
-                  />
-                )}
-                <h3 className="text-white font-bold text-base mb-1">{item.caption}</h3>
-                <p className="text-emerald-400/70 text-xs">Professional Installation</p>
+                <div className="relative overflow-hidden rounded-xl">
+                  {item.type === "video" ? (
+                    <video
+                      src={item.src}
+                      controls
+                      className="w-full h-40 object-cover"
+                      poster="/gallery/gallery1.jpg"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  )}
+                  
+                  {/* Tag */}
+                  <div className="absolute top-2 right-2 bg-emerald-500/90 backdrop-blur-sm text-white px-2 py-1 rounded text-xs font-bold">
+                    {item.tag}
+                  </div>
+                </div>
+                
+                <div className="mt-4">
+                  <h3 className="text-white font-bold text-base mb-1">{item.caption}</h3>
+                  <p className="text-emerald-400/70 text-xs">Professional Installation</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
+      {/* TESTIMONIALS SECTION - STRIPE STYLE */}
       <section className="py-16 px-6 md:px-12 lg:px-20 relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/5 via-emerald-500/5 to-cyan-500/5"></div>
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
-              What our customers say about SafePark
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-4">
+              Trusted by Thousands
             </h2>
+            <p className="text-lg text-gray-300">What our customers say about SafePark</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -287,27 +343,31 @@ export default function HomePage() {
                 name: "Rajesh Kumar",
                 location: "Coimbatore",
                 text: "SafePark completely transformed how I protect my BMW. The installation was incredibly quick and the quality exceeds all expectations.",
-                rating: 5
+                rating: 5,
+                role: "BMW Owner"
               },
               {
                 name: "Priya Sharma", 
                 location: "Tamil Nadu",
                 text: "Amazing product with world-class service. The retractable design is genius - no more worrying about weather damage ever again.",
-                rating: 5
+                rating: 5,
+                role: "Entrepreneur"
               },
               {
                 name: "Arjun Patel", 
                 location: "Gujarat",
                 text: "Professional installation and premium quality materials. SafePark has exceeded my expectations in every way.",
-                rating: 5
+                rating: 5,
+                role: "Business Owner"
               }
             ].map((review, idx) => (
               <div 
                 key={idx} 
                 className="group relative"
               >
-                {/* Perfect Glass Card */}
-                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.10] h-[180px] flex flex-col justify-between">
+                {/* Enterprise Testimonial Card */}
+                <div className="relative bg-white/[0.06] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.10] h-[220px] flex flex-col justify-between">
+                  
                   {/* Subtle inner glow */}
                   <div className="absolute inset-1 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
@@ -317,16 +377,17 @@ export default function HomePage() {
                         <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <blockquote className="leading-relaxed text-gray-300 mb-4 text-sm">
+                    <blockquote className="leading-relaxed text-gray-300 mb-4 text-sm italic">
                       "{review.text}"
                     </blockquote>
+                    
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-400 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">
                         {review.name.charAt(0)}
                       </div>
                       <div>
                         <div className="font-bold text-white text-sm">{review.name}</div>
-                        <div className="text-xs text-gray-500">{review.location}</div>
+                        <div className="text-xs text-emerald-400">{review.role} • {review.location}</div>
                       </div>
                     </div>
                   </div>
@@ -337,52 +398,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA SECTION - PERFECT SIZE */}
+      {/* CTA SECTION - ENTERPRISE STYLE */}
       <section className="py-16 px-6 md:px-12 lg:px-20 relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/8 via-cyan-500/8 to-purple-500/8"></div>
         
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold leading-tight text-white mb-3">
+            <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-white mb-4">
               Ready to Protect Your Vehicle?
             </h2>
-            <p className="text-base text-emerald-200 leading-relaxed max-w-xl mx-auto">
-              Join thousands who chose SafePark for premium protection
+            <p className="text-lg text-emerald-200 leading-relaxed max-w-2xl mx-auto">
+              Join thousands who chose SafePark for premium protection. Get started in minutes.
             </p>
           </div>
           
-          {/* Perfect Glass Container */}
-          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl border border-white/20 p-8 shadow-2xl">
+          {/* Enterprise Glass Container */}
+          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-3xl border border-white/20 p-8 lg:p-12 shadow-2xl">
             
             {/* Contact Icons Row */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
               <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald-500/30 transition-colors">
-                  <Phone className="w-6 h-6 text-emerald-400" />
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                  <Phone className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="font-bold text-white mb-1">Phone</h3>
-                <a href="tel:+919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium text-sm transition-colors">
+                <h3 className="font-bold text-white mb-2 text-lg">Phone</h3>
+                <a href="tel:+919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium transition-colors">
                   +91 9600840058
                 </a>
               </div>
               
               <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald-500/30 transition-colors">
-                  <MessageCircle className="w-6 h-6 text-emerald-400" />
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                  <MessageCircle className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="font-bold text-white mb-1">WhatsApp</h3>
-                <a href="https://wa.me/919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium text-sm transition-colors">
+                <h3 className="font-bold text-white mb-2 text-lg">WhatsApp</h3>
+                <a href="https://wa.me/919600840058" className="text-emerald-300 hover:text-emerald-200 font-medium transition-colors">
                   Message Us
                 </a>
               </div>
               
               <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald-500/30 transition-colors">
-                  <MapPin className="w-6 h-6 text-emerald-400" />
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/30 transition-colors">
+                  <MapPin className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="font-bold text-white mb-1">Location</h3>
-                <p className="text-emerald-200 text-sm">Coimbatore, Tamil Nadu</p>
+                <h3 className="font-bold text-white mb-2 text-lg">Location</h3>
+                <p className="text-emerald-200">Coimbatore, Tamil Nadu</p>
               </div>
             </div>
             
@@ -390,16 +451,16 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+919600840058" 
-                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-center inline-flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/30 text-center inline-flex items-center justify-center gap-2"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-5 h-5" />
                 Call for Free Quote
               </a>
               <a 
                 href="https://wa.me/919600840058" 
-                className="bg-white/10 border border-white/30 text-white hover:bg-white/20 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-center inline-flex items-center justify-center gap-2"
+                className="bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 text-center inline-flex items-center justify-center gap-2"
               >
-                <ArrowRight className="w-4 h-4" />
+                <MessageCircle className="w-5 h-5" />
                 WhatsApp Now
               </a>
             </div>
@@ -407,50 +468,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-12 px-6 md:px-12 lg:px-20 bg-black/30 border-t border-white/10">
+      {/* FOOTER - ENTERPRISE STYLE */}
+      <footer className="py-16 px-6 md:px-12 lg:px-20 bg-black/40 border-t border-white/10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
             <div>
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl">
+              <div className="flex items-center space-x-4 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-400 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">
                   S
                 </div>
-                <span className="text-white font-bold text-2xl">SafePark</span>
+                <span className="text-white font-bold text-3xl">SafePark</span>
               </div>
-              <p className="text-gray-400 leading-relaxed mb-4 text-sm">
+              <p className="text-gray-400 leading-relaxed mb-6 text-lg">
                 Premium retractable carport solutions designed for elegance, engineered for durability, trusted across India.
               </p>
               <div className="flex items-center space-x-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <span className="text-gray-400 text-sm">2,000+ Happy Customers</span>
+                <span className="text-gray-400 text-lg">2,000+ Happy Customers</span>
               </div>
             </div>
             <div>
-              <h4 className="text-white font-bold text-xl mb-6">Contact</h4>
-              <div className="space-y-4">
-                <a href="tel:+919600840058" className="flex items-center text-gray-400 hover:text-emerald-400 transition text-base">
-                  <Phone className="w-4 h-4 mr-3" />
+              <h4 className="text-white font-bold text-2xl mb-8">Contact</h4>
+              <div className="space-y-6">
+                <a href="tel:+919600840058" className="flex items-center text-gray-400 hover:text-emerald-400 transition text-lg">
+                  <Phone className="w-5 h-5 mr-4" />
                   +91 9600840058
                 </a>
-                <a href="https://wa.me/919600840058" className="flex items-center text-gray-400 hover:text-emerald-400 transition text-base">
-                  <MessageCircle className="w-4 h-4 mr-3" />
+                <a href="https://wa.me/919600840058" className="flex items-center text-gray-400 hover:text-emerald-400 transition text-lg">
+                  <MessageCircle className="w-5 h-5 mr-4" />
                   WhatsApp
                 </a>
-                <div className="flex items-center text-gray-400 text-base">
-                  <MapPin className="w-4 h-4 mr-3" />
+                <div className="flex items-center text-gray-400 text-lg">
+                  <MapPin className="w-5 h-5 mr-4" />
                   Coimbatore, Tamil Nadu
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-white/10 pt-6 text-center">
-            <p className="text-gray-400 text-sm">© 2025 SafePark. Crafted with excellence in Coimbatore, Tamil Nadu</p>
+          <div className="border-t border-white/10 pt-8 text-center">
+            <p className="text-gray-400 text-lg">© 2025 SafePark. Crafted with excellence in Coimbatore, Tamil Nadu</p>
           </div>
         </div>
       </footer>
