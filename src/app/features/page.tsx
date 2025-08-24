@@ -7,7 +7,7 @@ export default function FeaturesPage() {
     <div className="bg-gradient-to-br from-neutral-900 via-slate-900 to-neutral-800 min-h-screen">
       
       {/* HERO SECTION - FEATURES */}
-      <section className="pt-32 pb-16 px-6 md:px-12 lg:px-20">
+      <section className="pt-32 pb-12 px-6 md:px-12 lg:px-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm">
             <CheckCircle2 className="w-4 h-4" />
@@ -24,7 +24,7 @@ export default function FeaturesPage() {
             for your valuable investment. Every feature is engineered for durability and peace of mind.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+919600840058"
               className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
@@ -45,12 +45,12 @@ export default function FeaturesPage() {
       </section>
 
       {/* ENHANCED FEATURES SECTION - ENTERPRISE GRADE */}
-      <section className="py-16 px-6 md:px-12 lg:px-20 relative">
+      <section className="py-12 px-6 md:px-12 lg:px-20 relative">
         {/* Background Glass Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-emerald-500/5 to-purple-500/5 backdrop-blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm">
               ⚡ Premium Protection Technology
             </div>
@@ -162,9 +162,9 @@ export default function FeaturesPage() {
       </section>
 
       {/* DETAILED FEATURES BREAKDOWN */}
-      <section className="py-16 px-6 md:px-12 lg:px-20 bg-slate-800/30">
+      <section className="py-12 px-6 md:px-12 lg:px-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-6">
               Technical Specifications
             </h2>
@@ -214,37 +214,32 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="py-16 px-6 md:px-12 lg:px-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-3xl border border-white/20 p-12 text-center shadow-2xl">
-            {/* Background Effects */}
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-purple-500/10 rounded-3xl blur-3xl"></div>
+      {/* COMPACT CTA SECTION - MUCH SMALLER */}
+      <section className="py-8 px-6 md:px-12 lg:px-20">
+        <div className="max-w-2xl mx-auto">
+          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl border border-white/20 p-6 text-center shadow-2xl">
+            <h2 className="text-xl font-bold text-white mb-2">
+              Ready to Experience Premium Protection?
+            </h2>
+            <p className="text-sm text-gray-300 mb-4">
+              Get your personalized quote and join thousands of satisfied customers.
+            </p>
             
-            <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
-                Ready to Experience Premium Protection?
-              </h2>
-              <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Get your personalized quote and join thousands of satisfied customers who chose SafePark.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <a 
-                  href="tel:+919600840058"
-                  className="group bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/30 backdrop-blur-sm inline-flex items-center justify-center gap-3"
-                >
-                  <Phone className="w-5 h-5 transition-transform group-hover:scale-110" />
-                  Get Free Quote Now
-                </a>
-                <a 
-                  href="/pricing"
-                  className="group bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm inline-flex items-center justify-center gap-3"
-                >
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                  View Pricing Plans
-                </a>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a 
+                href="tel:+919600840058"
+                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+              >
+                <Phone className="w-4 h-4" />
+                Get Free Quote Now
+              </a>
+              <a 
+                href="/pricing"
+                className="bg-white/10 border border-white/30 text-white hover:bg-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+              >
+                <ArrowRight className="w-4 h-4" />
+                View Pricing Plans
+              </a>
             </div>
           </div>
         </div>
