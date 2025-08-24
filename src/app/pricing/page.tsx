@@ -64,7 +64,7 @@ export default function PricingPage() {
     <div className="scroll-smooth bg-gradient-to-br from-[#0f172a] via-[#0f2d2a] to-[#052e16] min-h-screen pt-20">
 
       {/* HERO SECTION */}
-      <section className="py-20 px-6 md:px-12 lg:px-20">
+      <section className="pt-16 pb-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-black leading-tight text-white mb-6">
             Choose Your
@@ -103,16 +103,16 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* PRICING CARDS */}
+      {/* PRICING CARDS - TIERED DESIGN */}
       <section className="px-6 md:px-12 lg:px-20 pb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
             {plans.map((plan) => (
               <div
                 key={plan.id}
                 className={`relative backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 ${
                   plan.popular 
-                    ? `bg-gradient-to-br ${plan.gradient} border-2 ${plan.borderColor} shadow-2xl shadow-emerald-500/20 scale-105` 
+                    ? `bg-gradient-to-br ${plan.gradient} border-2 ${plan.borderColor} shadow-2xl shadow-emerald-500/20 md:-translate-y-8 scale-105 z-10` 
                     : `bg-gradient-to-br ${plan.gradient} border ${plan.borderColor} shadow-xl hover:shadow-2xl hover:scale-[1.02]`
                 }`}
               >
@@ -143,10 +143,10 @@ export default function PricingPage() {
                     </p>
                   </div>
 
-                  {/* CTA Button */}
+                  {/* CTA Button - BIGGER SIZE */}
                   <a
                     href="tel:+919600840058"
-                    className={`w-full block py-4 px-6 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 text-center ${
+                    className={`w-full block py-5 px-6 rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 text-center ${
                       plan.popular
                         ? 'bg-emerald-500 hover:bg-emerald-400 text-white shadow-xl'
                         : 'bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:border-white/40'
@@ -184,14 +184,14 @@ export default function PricingPage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
               href="tel:+919600840058" 
-              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 shadow-2xl hover:shadow-emerald-500/30 hover:scale-105 inline-flex items-center justify-center gap-3"
+              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white px-12 py-5 rounded-2xl font-bold text-xl transition-all duration-300 shadow-2xl hover:shadow-emerald-500/30 hover:scale-105 inline-flex items-center justify-center gap-3"
             >
               <Phone className="w-6 h-6" />
               Get Free Quote Now
             </a>
             <a 
               href="https://wa.me/919600840058" 
-              className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-3"
+              className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-12 py-5 rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-3"
             >
               <ArrowRight className="w-6 h-6" />
               WhatsApp Team
