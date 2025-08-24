@@ -62,7 +62,7 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* ENHANCED FEATURES SECTION - CREATIVE ENTERPRISE GRADE (NO LINES) */}
+      {/* ENHANCED FEATURES SECTION - CREATIVE ENTERPRISE GRADE */}
       <section className="py-16 px-6 md:px-12 lg:px-20 relative">
         {/* Enhanced Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/8 via-emerald-500/8 to-purple-500/8 backdrop-blur-3xl"></div>
@@ -123,10 +123,10 @@ export default function FeaturesPage() {
                 className="group relative"
               >
                 {/* Enhanced Glass Card with Creative Elements */}
-                <div className={`relative bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.12] hover:shadow-2xl min-h-[480px] flex flex-col justify-between overflow-hidden`}>
+                <div className={relative bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.12] hover:shadow-2xl min-h-[480px] flex flex-col justify-between overflow-hidden}>
                   
                   {/* Creative Background Gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                  <div className={absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500}></div>
                   
                   {/* Enhanced Highlight Badge */}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -213,7 +213,7 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* TECHNICAL SPECIFICATIONS - CREATIVE ENHANCEMENT (NO LINES) */}
+      {/* TECHNICAL SPECIFICATIONS - CREATIVE ENHANCEMENT */}
       <section className="py-16 px-6 md:px-12 lg:px-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -275,7 +275,7 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* COMPACT CTA SECTION (NO LINES) */}
+      {/* COMPACT CTA SECTION */}
       <section className="py-12 px-6 md:px-12 lg:px-20">
         <div className="max-w-3xl mx-auto">
           <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-3xl border border-white/20 p-8 text-center shadow-2xl">
@@ -307,4 +307,5 @@ export default function FeaturesPage() {
       </section>
     </div>
   );
-}
+}  
+
