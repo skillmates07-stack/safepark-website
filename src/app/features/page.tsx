@@ -123,10 +123,10 @@ export default function FeaturesPage() {
                 className="group relative"
               >
                 {/* Enhanced Glass Card with Creative Elements */}
-                <div className={relative bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.12] hover:shadow-2xl min-h-[480px] flex flex-col justify-between overflow-hidden}>
+                <div className="relative bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.12] hover:shadow-2xl min-h-[480px] flex flex-col justify-between overflow-hidden">
                   
                   {/* Creative Background Gradient */}
-                  <div className={absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
                   {/* Enhanced Highlight Badge */}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -307,5 +307,4 @@ export default function FeaturesPage() {
       </section>
     </div>
   );
-}  
-
+}
