@@ -6,7 +6,7 @@ export default function FeaturesPage() {
   return (
     <div className="bg-gradient-to-br from-neutral-900 via-slate-900 to-neutral-800 min-h-screen">
       
-      {/* HERO SECTION */}
+      {/* HERO SECTION - WAS MISSING */}
       <section className="pt-32 pb-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm">
@@ -62,7 +62,7 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* FEATURES SECTION - FIXED CARD HEIGHTS */}
+      {/* MAIN FEATURES SECTION - YOUR CURRENT CARDS */}
       <section className="py-16 px-6 md:px-12 lg:px-20 relative">
         {/* Enhanced Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/8 via-emerald-500/8 to-purple-500/8 backdrop-blur-3xl"></div>
@@ -122,14 +122,14 @@ export default function FeaturesPage() {
                 key={idx}
                 className="group relative"
               >
-                {/* FIXED HEIGHT CARD - NO MORE CONTENT CUTOFF */}
-                <div className="relative bg-white/[0.08] backdrop-blur-xl rounded-3xl p-6 border border-white/20 shadow-2xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.12] hover:shadow-2xl min-h-[550px] flex flex-col overflow-hidden">
+                {/* Enhanced Glass Card with Creative Elements */}
+                <div className="relative bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl text-center transition-all duration-500 hover:scale-105 hover:bg-white/[0.12] hover:shadow-2xl min-h-[480px] flex flex-col justify-between overflow-hidden">
                   
                   {/* Creative Background Gradient */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
                   {/* Enhanced Highlight Badge */}
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl backdrop-blur-sm border border-white/20">
                       {feature.highlight}
                     </div>
@@ -139,17 +139,12 @@ export default function FeaturesPage() {
                   <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-white/5 to-transparent rounded-full"></div>
                   <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-full"></div>
                   
-                  {/* CONTENT WITH PROPER SPACING */}
-                  <div className="relative z-10 flex-1 flex flex-col justify-between pt-4">
+                  <div className="relative z-10">
+                    <div className="flex justify-center mb-6">{feature.icon}</div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                    <p className="text-gray-300 leading-relaxed text-sm mb-8">{feature.desc}</p>
                     
-                    {/* Top Section */}
-                    <div>
-                      <div className="flex justify-center mb-4">{feature.icon}</div>
-                      <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                      <p className="text-gray-300 leading-relaxed text-sm mb-6">{feature.desc}</p>
-                    </div>
-                    
-                    {/* Middle Section - Features List */}
+                    {/* Enhanced Feature List */}
                     <div className="text-left mb-6">
                       <ul className="space-y-3">
                         {feature.features.map((item, i) => (
@@ -162,13 +157,13 @@ export default function FeaturesPage() {
                         ))}
                       </ul>
                     </div>
-                    
-                    {/* Bottom Section - Warranty */}
-                    <div className="pt-4 border-t border-white/20">
-                      <div className="flex items-center justify-center gap-2 text-emerald-400 text-sm font-semibold">
-                        <Award className="w-4 h-4" />
-                        <span>2-Year Warranty</span>
-                      </div>
+                  </div>
+                  
+                  {/* Enhanced Bottom Trust Signal */}
+                  <div className="relative z-10 pt-6 border-t border-white/20">
+                    <div className="flex items-center justify-center gap-2 text-emerald-400 text-sm font-semibold">
+                      <Award className="w-4 h-4" />
+                      <span>2-Year Warranty</span>
                     </div>
                   </div>
                 </div>
@@ -280,30 +275,30 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* COMPACT CTA SECTION - MUCH SMALLER */}
-      <section className="py-10 px-6 md:px-12 lg:px-20">
-        <div className="max-w-2xl mx-auto">
-          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl border border-white/20 p-6 text-center shadow-2xl">
-            <h2 className="text-xl font-bold text-white mb-3">
+      {/* COMPACT CTA SECTION */}
+      <section className="py-12 px-6 md:px-12 lg:px-20">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-3xl border border-white/20 p-8 text-center shadow-2xl">
+            <h2 className="text-2xl font-bold text-white mb-3">
               Ready to Experience Premium Protection?
             </h2>
-            <p className="text-sm text-gray-300 mb-6">
-              Get your personalized quote and join thousands of satisfied customers.
+            <p className="text-base text-gray-300 mb-6">
+              Get your personalized quote and join thousands of satisfied customers who chose SafePark.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+919600840058"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/30 inline-flex items-center justify-center gap-2"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-5 h-5" />
                 Get Free Quote Now
               </a>
               <a 
                 href="/pricing"
-                className="bg-white/10 border border-white/30 text-white hover:bg-white/20 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
               >
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
                 View Pricing Plans
               </a>
             </div>
